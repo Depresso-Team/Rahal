@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A81B72AABB1E500586168 /* RahalApp.swift */; };
-		CC5A81BA2AABB1E500586168 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A81B92AABB1E500586168 /* ContentView.swift */; };
 		CC5A81BC2AABB1E600586168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5A81BB2AABB1E600586168 /* Assets.xcassets */; };
 		CC5A81BF2AABB1E600586168 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5A81BE2AABB1E600586168 /* Preview Assets.xcassets */; };
+		CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A81CB2AABB37C00586168 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC5A81B42AABB1E500586168 /* Rahal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rahal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5A81B72AABB1E500586168 /* RahalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RahalApp.swift; sourceTree = "<group>"; };
-		CC5A81B92AABB1E500586168 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC5A81BB2AABB1E600586168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5A81BE2AABB1E600586168 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC5A81CB2AABB37C00586168 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +35,7 @@
 		CC5A81AB2AABB1E500586168 = {
 			isa = PBXGroup;
 			children = (
+				CC5A81C52AABB27F00586168 /* Support */,
 				CC5A81B62AABB1E500586168 /* Rahal */,
 				CC5A81B52AABB1E500586168 /* Products */,
 			);
@@ -51,9 +52,10 @@
 		CC5A81B62AABB1E500586168 /* Rahal */ = {
 			isa = PBXGroup;
 			children = (
-				CC5A81B72AABB1E500586168 /* RahalApp.swift */,
-				CC5A81B92AABB1E500586168 /* ContentView.swift */,
-				CC5A81BB2AABB1E600586168 /* Assets.xcassets */,
+				CC5A81C62AABB30900586168 /* Root */,
+				CC5A81C92AABB31A00586168 /* View */,
+				CC5A81C82AABB31600586168 /* Model */,
+				CC5A81C72AABB30F00586168 /* ViewModel */,
 				CC5A81BD2AABB1E600586168 /* Preview Content */,
 			);
 			path = Rahal;
@@ -65,6 +67,44 @@
 				CC5A81BE2AABB1E600586168 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC5A81C52AABB27F00586168 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CC5A81BB2AABB1E600586168 /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		CC5A81C62AABB30900586168 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CC5A81B72AABB1E500586168 /* RahalApp.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		CC5A81C72AABB30F00586168 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CC5A81C82AABB31600586168 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC5A81C92AABB31A00586168 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC5A81CB2AABB37C00586168 /* SplashView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC5A81BA2AABB1E500586168 /* ContentView.swift in Sources */,
 				CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */,
+				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
