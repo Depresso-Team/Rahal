@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC28B06F2AABB487003390DE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0692AABB487003390DE /* HTTPClient.swift */; };
-		CC28B0702AABB487003390DE /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B06A2AABB487003390DE /* HTTPMethods.swift */; };
-		CC28B0712AABB487003390DE /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B06B2AABB487003390DE /* RequestError.swift */; };
-		CC28B0722AABB487003390DE /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B06C2AABB487003390DE /* EndPoint.swift */; };
 		CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A81B72AABB1E500586168 /* RahalApp.swift */; };
 		CC5A81BC2AABB1E600586168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5A81BB2AABB1E600586168 /* Assets.xcassets */; };
 		CC5A81BF2AABB1E600586168 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5A81BE2AABB1E600586168 /* Preview Assets.xcassets */; };
@@ -18,10 +14,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC28B0692AABB487003390DE /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		CC28B06A2AABB487003390DE /* HTTPMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
-		CC28B06B2AABB487003390DE /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
-		CC28B06C2AABB487003390DE /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		CC5A81B42AABB1E500586168 /* Rahal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rahal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5A81B72AABB1E500586168 /* RahalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RahalApp.swift; sourceTree = "<group>"; };
 		CC5A81BB2AABB1E600586168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,47 +32,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC28B0672AABB487003390DE /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-				CC28B0682AABB487003390DE /* Core */,
-				CC28B06D2AABB487003390DE /* EndPoint */,
-				CC28B06E2AABB487003390DE /* Service */,
-			);
-			name = NetworkLayer;
-			path = ../../../../Downloads/Ra7al/NetworkLayer;
-			sourceTree = "<group>";
-		};
-		CC28B0682AABB487003390DE /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				CC28B0692AABB487003390DE /* HTTPClient.swift */,
-				CC28B06A2AABB487003390DE /* HTTPMethods.swift */,
-				CC28B06B2AABB487003390DE /* RequestError.swift */,
-				CC28B06C2AABB487003390DE /* EndPoint.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		CC28B06D2AABB487003390DE /* EndPoint */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EndPoint;
-			sourceTree = "<group>";
-		};
-		CC28B06E2AABB487003390DE /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		CC5A81AB2AABB1E500586168 = {
 			isa = PBXGroup;
 			children = (
 				CC5A81C52AABB27F00586168 /* Support */,
-				CC28B0672AABB487003390DE /* NetworkLayer */,
 				CC5A81B62AABB1E500586168 /* Rahal */,
 				CC5A81B52AABB1E500586168 /* Products */,
 			);
@@ -222,12 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC28B0722AABB487003390DE /* EndPoint.swift in Sources */,
-				CC28B0702AABB487003390DE /* HTTPMethods.swift in Sources */,
-				CC28B0712AABB487003390DE /* RequestError.swift in Sources */,
 				CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
-				CC28B06F2AABB487003390DE /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
