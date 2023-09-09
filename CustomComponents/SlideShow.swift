@@ -37,7 +37,6 @@ struct SlideShow: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: UIScreen.main.bounds.width - 20, height: 192)
                     .cornerRadius(16)
-                    .buttonStyle(PlainButtonStyle())
                 
                 Text("Abu Simble Temple")
                     .fontWeight(.heavy)
@@ -70,7 +69,8 @@ struct SlideShow: View {
             .tag(2)
             
             
-        } //TabView
+        }
+        //TabView
         .tabViewStyle(.page)
         .animation(.spring())
         .frame(width: UIScreen.main.bounds.width - 20, height: 192)
@@ -81,7 +81,7 @@ struct SlideShow: View {
             print("change currentIndex:\(index)")
         }
     }
-    }
+}
 
 
 struct SlideShow_Previews: PreviewProvider {

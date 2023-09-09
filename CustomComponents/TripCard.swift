@@ -14,7 +14,7 @@ struct TripCard: View {
     let rating: Double
     let location: String
     let duration: String
-    
+    let action: () -> Void
     
     var body: some View {
         ZStack {
@@ -22,20 +22,22 @@ struct TripCard: View {
                 Image(imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 222, height: 142)
-                    .cornerRadius(16)
-                    .buttonStyle(PlainButtonStyle())
-
+                    .frame(width: 224, height: 144)
+                    .cornerRadius(8)
                 VStack {
                     HStack {
-                        Text(tripName).bold()
+                        Text(tripName)
+                            .bold()
                         Spacer()
                         Image(systemName: "star.fill")
                             .padding(.leading)
                             .foregroundColor(.yellow)
-                        Text("\(rating,specifier: "%.1f")").foregroundColor(.secondary).bold().font(.footnote)
+                        Text("\(rating, specifier: "%.1f")")
+                            .foregroundColor(.secondary)
+                            .bold()
+                            .font(.footnote)
                     }
-
+                    
                     HStack {
                         Image(systemName: "mappin.and.ellipse")
                             .foregroundColor(Color("CustomDarkGreenColor"))
@@ -50,8 +52,10 @@ struct TripCard: View {
                                     .stroke(Color("CustomDarkGreenColor").opacity(0.7), lineWidth: 2)
                             )
                     }
-
-                    Button(action: {}) {
+                    
+                    Button(action: {
+                        action()
+                    }) {
                         Text("View More")
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -60,24 +64,25 @@ struct TripCard: View {
                             .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
                     }
                     .background(Color("CustomDarkGreenColor").opacity(0.7))
-                    .cornerRadius(10)
-                    .padding(.top, 6)
+                    .cornerRadius(8)
+                    .padding(.vertical, 8)
                 }
+                .padding(.horizontal, 4)
             }
-            .frame(width: 204 ,height: 248)
-            .padding(16)
+            .frame(minWidth: 200, maxWidth: 224)
+            .padding(4)
             .background(.white)
-            .cornerRadius(20)
+            .cornerRadius(10)
             .shadow(color: Color.black.opacity(0.2), radius: 5, x: 2, y: 2)
         }
     }
-    }
+}
 
 
 struct TripCard_Previews: PreviewProvider {
     static var previews: some View {
-        TripCard(imageName: "pyramids", tripName: "Giza Plateau", rating: 4.5, location: "Giza Plateau", duration: "1 Day")
-
-
+        TripCard(imageName: "pyramids", tripName: "Giza Plateau", rating: 4.5, location: "Giza Plateau", duration: "1 Day") {
+            print("Coming soon")
+        }
     }
 }

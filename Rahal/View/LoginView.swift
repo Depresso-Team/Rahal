@@ -24,7 +24,8 @@ struct LoginView: View {
                 VStack (alignment: .leading, spacing: 18) {
                     Text("Login").font(.title).fontWeight(.bold).foregroundColor(Color("CustomDarkGreenColor"))
                     CurvedTextField(text: $email, placeholder: "",title: "Email Address").textInputAutocapitalization(.none)
-                    CurvedTextField(text: $password, placeholder: "", title: "Password",isSecureField: true)
+                    
+                    CurvedTextField(text: $password, placeholder: "", title: "Password",textFieldType: .password)
                 }.padding(.horizontal)
                     .padding(.top,28)
                 

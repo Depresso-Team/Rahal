@@ -18,13 +18,15 @@ struct SearchBar: View {
                 .fontWeight(.semibold)
                 .padding(.vertical)
             Spacer()
-            Image(systemName: "slider.horizontal.3").padding(.horizontal)
+            Image(systemName: "slider.horizontal.3")
+                .padding()
                 .font(.system(size: 20))
-        }.foregroundColor(Color.secondary.opacity(0.5))
+        }
+        .foregroundColor(Color.secondary.opacity(0.5))
         .background(Color("CustomBgGreenColor").opacity(0.07)).cornerRadius(10)
         .shadow(radius: 1)
         .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
-        .padding()
+        .padding(.horizontal)
     }
 }
 

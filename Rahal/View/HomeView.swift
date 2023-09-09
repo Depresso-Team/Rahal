@@ -11,16 +11,12 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView (.vertical, showsIndicators: false){
-                VStack (alignment: .center){
-                    
+                VStack (alignment: .center){                    
                     // SEARCH BAR
                     SearchBar()
                     
                     // SLIDER SECTION
                     SlideShow()
-                    
-                    
-                    
                     
                     // TOP FIVE TRIPS TITLES SECTION
                     HStack () {
@@ -33,13 +29,16 @@ struct HomeView: View {
                     
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 26) {
-                            TripCard(imageName: "pyramids", tripName: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day")
+                            TripCard(imageName: "pyramids", tripName: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day") {
+                                print("Comming")
+                            }
                             
-                            TripCard(imageName: "nubia", tripName: "Nubia Adventure", rating: 4.2, location: "Nubia, Sudan", duration: "2 Days")
-                        }.padding()
+                            TripCard(imageName: "nubia", tripName: "Nubia Adventure", rating: 4.2, location: "Nubia, Sudan", duration: "2 Days") {
+                                print("Comming")
+                            }
                         }
-                    
-                    
+                        .padding()
+                    }
                 }
             }
         }
