@@ -68,7 +68,7 @@ struct TripCard: View {
             .padding(16)
             .background(.white)
             .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.3), radius: 6, x: 2, y: 2)
+            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 2, y: 2)
         }
     }
     }

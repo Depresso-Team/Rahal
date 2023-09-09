@@ -11,12 +11,16 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView (.vertical, showsIndicators: false){
-                VStack (alignment: .leading){
+                VStack (alignment: .center){
                     
                     // SEARCH BAR
                     SearchBar()
                     
                     // SLIDER SECTION
+                    SlideShow()
+                    
+                    
+                    
                     
                     // TOP FIVE TRIPS TITLES SECTION
                     HStack () {
