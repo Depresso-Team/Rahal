@@ -17,6 +17,7 @@
 		C1CA34EC2AACD98900045417 /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34EB2AACD98900045417 /* LoginServices.swift */; };
 		C1CA34EF2AACD9CC00045417 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34EE2AACD9CC00045417 /* RegisterModel.swift */; };
 		C1CA34F32AACDA9300045417 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34F22AACDA9300045417 /* LoginModel.swift */; };
+		C1CA34F62AACDB2D00045417 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34F52AACDB2D00045417 /* HomeModel.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -42,6 +43,7 @@
 		C1CA34EB2AACD98900045417 /* LoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
 		C1CA34EE2AACD9CC00045417 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		C1CA34F22AACDA9300045417 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		C1CA34F52AACDB2D00045417 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 				C1CA34F22AACDA9300045417 /* LoginModel.swift */,
 			);
 			path = LoginModle;
+			sourceTree = "<group>";
+		};
+		C1CA34F42AACDB1C00045417 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA34F52AACDB2D00045417 /* HomeModel.swift */,
+			);
+			path = HomeModel;
 			sourceTree = "<group>";
 		};
 		CC28B0732AABB579003390DE /* TFValidation */ = {
@@ -208,6 +218,7 @@
 		CC5A81C82AABB31600586168 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C1CA34F42AACDB1C00045417 /* HomeModel */,
 				C1CA34F12AACDA8A00045417 /* LoginModle */,
 				C1CA34F02AACDA5100045417 /* RegisterModel */,
 			);
@@ -312,6 +323,7 @@
 				CC28B08E2AAC4348003390DE /* SlideShow.swift in Sources */,
 				CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */,
 				C1CA34E22AACD6C600045417 /* HTTPMethod.swift in Sources */,
+				C1CA34F62AACDB2D00045417 /* HomeModel.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
 				C1CA34EA2AACD8B800045417 /* HomeEndPoint.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
