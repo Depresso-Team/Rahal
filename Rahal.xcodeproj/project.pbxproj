@@ -11,6 +11,9 @@
 		C1CA34E02AACD6A400045417 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34DF2AACD6A400045417 /* HTTPClient.swift */; };
 		C1CA34E22AACD6C600045417 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34E12AACD6C600045417 /* HTTPMethod.swift */; };
 		C1CA34E42AACD6E600045417 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34E32AACD6E600045417 /* RequestError.swift */; };
+		C1CA34E62AACD76A00045417 /* RegisterEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34E52AACD76A00045417 /* RegisterEndPoint.swift */; };
+		C1CA34E82AACD7B600045417 /* LoginEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34E72AACD7B600045417 /* LoginEndPoint.swift */; };
+		C1CA34EA2AACD8B800045417 /* HomeEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34E92AACD8B800045417 /* HomeEndPoint.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -30,6 +33,9 @@
 		C1CA34DF2AACD6A400045417 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		C1CA34E12AACD6C600045417 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		C1CA34E32AACD6E600045417 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		C1CA34E52AACD76A00045417 /* RegisterEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndPoint.swift; sourceTree = "<group>"; };
+		C1CA34E72AACD7B600045417 /* LoginEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndPoint.swift; sourceTree = "<group>"; };
+		C1CA34E92AACD8B800045417 /* HomeEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndPoint.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -80,6 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				C1CA34DD2AACD68200045417 /* EndPoint.swift */,
+				C1CA34E52AACD76A00045417 /* RegisterEndPoint.swift */,
+				C1CA34E72AACD7B600045417 /* LoginEndPoint.swift */,
+				C1CA34E92AACD8B800045417 /* HomeEndPoint.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -263,17 +272,20 @@
 			files = (
 				C1CA34E42AACD6E600045417 /* RequestError.swift in Sources */,
 				CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */,
+				C1CA34E62AACD76A00045417 /* RegisterEndPoint.swift in Sources */,
 				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
 				C1CA34E02AACD6A400045417 /* HTTPClient.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
 				C1CA34DE2AACD68200045417 /* EndPoint.swift in Sources */,
+				C1CA34E82AACD7B600045417 /* LoginEndPoint.swift in Sources */,
 				CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */,
 				CC28B0882AAC2D5D003390DE /* SearchBar.swift in Sources */,
 				CC28B08E2AAC4348003390DE /* SlideShow.swift in Sources */,
 				CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */,
 				C1CA34E22AACD6C600045417 /* HTTPMethod.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
+				C1CA34EA2AACD8B800045417 /* HomeEndPoint.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
