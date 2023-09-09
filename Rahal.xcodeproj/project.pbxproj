@@ -20,6 +20,9 @@
 		C1CA34F62AACDB2D00045417 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34F52AACDB2D00045417 /* HomeModel.swift */; };
 		C1CA34F82AACDCAA00045417 /* RegisterServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34F72AACDCAA00045417 /* RegisterServices.swift */; };
 		C1CA34FA2AACDE8F00045417 /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34F92AACDE8F00045417 /* HomeServices.swift */; };
+		C1CA34FC2AACDFDE00045417 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34FB2AACDFDE00045417 /* LoginViewModel.swift */; };
+		C1CA34FE2AACE03400045417 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34FD2AACE03400045417 /* RegisterViewModel.swift */; };
+		C1CA35002AACE0D000045417 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34FF2AACE0D000045417 /* HomeViewModel.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -48,6 +51,9 @@
 		C1CA34F52AACDB2D00045417 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		C1CA34F72AACDCAA00045417 /* RegisterServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServices.swift; sourceTree = "<group>"; };
 		C1CA34F92AACDE8F00045417 /* HomeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
+		C1CA34FB2AACDFDE00045417 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = NetworkLayer/Services/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C1CA34FD2AACE03400045417 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = NetworkLayer/Services/RegisterViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C1CA34FF2AACE0D000045417 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = NetworkLayer/Services/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -217,6 +223,9 @@
 		CC5A81C72AABB30F00586168 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C1CA34FB2AACDFDE00045417 /* LoginViewModel.swift */,
+				C1CA34FD2AACE03400045417 /* RegisterViewModel.swift */,
+				C1CA34FF2AACE0D000045417 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -313,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CA34E42AACD6E600045417 /* RequestError.swift in Sources */,
+				C1CA34FE2AACE03400045417 /* RegisterViewModel.swift in Sources */,
 				CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */,
 				C1CA34E62AACD76A00045417 /* RegisterEndPoint.swift in Sources */,
 				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
@@ -332,6 +342,8 @@
 				C1CA34F62AACDB2D00045417 /* HomeModel.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
 				C1CA34EA2AACD8B800045417 /* HomeEndPoint.swift in Sources */,
+				C1CA35002AACE0D000045417 /* HomeViewModel.swift in Sources */,
+				C1CA34FC2AACDFDE00045417 /* LoginViewModel.swift in Sources */,
 				C1CA34F82AACDCAA00045417 /* RegisterServices.swift in Sources */,
 				C1CA34FA2AACDE8F00045417 /* HomeServices.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
