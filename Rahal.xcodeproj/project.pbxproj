@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1CA34DE2AACD68200045417 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34DD2AACD68200045417 /* EndPoint.swift */; };
+		C1CA34E02AACD6A400045417 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34DF2AACD6A400045417 /* HTTPClient.swift */; };
+		C1CA34E22AACD6C600045417 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34E12AACD6C600045417 /* HTTPMethod.swift */; };
+		C1CA34E42AACD6E600045417 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA34E32AACD6E600045417 /* RequestError.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C1CA34DD2AACD68200045417 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		C1CA34DF2AACD6A400045417 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		C1CA34E12AACD6C600045417 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		C1CA34E32AACD6E600045417 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -48,6 +56,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1CA34D92AACD5C100045417 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA34DA2AACD60400045417 /* Base */,
+				C1CA34DB2AACD61100045417 /* EndPoints */,
+				C1CA34DC2AACD61D00045417 /* Services */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		C1CA34DA2AACD60400045417 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA34DF2AACD6A400045417 /* HTTPClient.swift */,
+				C1CA34E12AACD6C600045417 /* HTTPMethod.swift */,
+				C1CA34E32AACD6E600045417 /* RequestError.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C1CA34DB2AACD61100045417 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA34DD2AACD68200045417 /* EndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		C1CA34DC2AACD61D00045417 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CC28B0732AABB579003390DE /* TFValidation */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +113,7 @@
 		CC5A81AB2AABB1E500586168 = {
 			isa = PBXGroup;
 			children = (
+				C1CA34D92AACD5C100045417 /* NetworkLayer */,
 				CC5A81C52AABB27F00586168 /* Support */,
 				CC28B0732AABB579003390DE /* TFValidation */,
 				CC28B0762AABB5C7003390DE /* CustomComponents */,
@@ -217,14 +261,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CA34E42AACD6E600045417 /* RequestError.swift in Sources */,
 				CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */,
 				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
+				C1CA34E02AACD6A400045417 /* HTTPClient.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
+				C1CA34DE2AACD68200045417 /* EndPoint.swift in Sources */,
 				CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */,
 				CC28B0882AAC2D5D003390DE /* SearchBar.swift in Sources */,
 				CC28B08E2AAC4348003390DE /* SlideShow.swift in Sources */,
 				CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */,
+				C1CA34E22AACD6C600045417 /* HTTPMethod.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
 			);
