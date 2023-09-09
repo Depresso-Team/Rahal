@@ -23,8 +23,8 @@ struct LoginView: View {
                 // FORM FIELDS
                 VStack (alignment: .leading, spacing: 18) {
                     Text("Login").font(.title).fontWeight(.bold).foregroundColor(Color("CustomDarkGreenColor"))
-                    CurvedTextField(text: $email, placeholder: "abdo@depresso.com",title: "Email Address").textInputAutocapitalization(.none)
-                    CurvedTextField(text: $password, placeholder: "Enter your password", title: "Password",isSecureField: true)
+                    CurvedTextField(text: $email, placeholder: "",title: "Email Address").textInputAutocapitalization(.none)
+                    CurvedTextField(text: $password, placeholder: "", title: "Password",isSecureField: true)
                 }.padding(.horizontal)
                     .padding(.top,28)
                 
@@ -47,35 +47,29 @@ struct LoginView: View {
                     
                     
                 }
-
-
-                // SIGN IN BUTTON
                 
+                // SIGN IN BUTTON
                 Button{
                     
                 }label: {
                     Text("Login").fontWeight(.bold).foregroundColor(.white)
-                        .frame(width: UIScreen.main.bounds.width - 50,height: 52).font(.system(size: 24))
+                        .frame(width: UIScreen.main.bounds.width - 100,height: 52).font(.system(size: 24))
                         
                     
                 }.background(Color("CustomDarkGreenColor")).cornerRadius(5)
+                    .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
                 
                 
                 // SIGN UP BUTTON
+                HStack (spacing: 2){
+                    Text("Don’t have any account yet ?").foregroundColor(.black)
                 NavigationLink{
-                    
+                    RegistrationView()
                 }label: {
-                    HStack (spacing: 2){
-                        Text("Don’t have any account yet ?").foregroundColor(.black)
-                        Button{
-                        }label: {
-                            Text("Sign up").fontWeight(.heavy).foregroundColor(Color("CustomDarkGreenColor")).font(.system(size: 18))
-                        }
-                    }.padding(.top,16)
-                }
-                
-                
-                
+                        Text("Sign up").fontWeight(.heavy).foregroundColor(Color("CustomDarkGreenColor")).font(.system(size: 18))
+}
+                }.padding(.top,16)
+
                 Spacer()
                 
             }
