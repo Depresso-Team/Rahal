@@ -11,6 +11,9 @@
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
 		CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0812AAC0066003390DE /* RegistrationView.swift */; };
+		CC28B0862AAC2811003390DE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0852AAC2811003390DE /* HomeView.swift */; };
+		CC28B0882AAC2D5D003390DE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0872AAC2D5D003390DE /* SearchBar.swift */; };
+		CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B08B2AAC3BE9003390DE /* TripCard.swift */; };
 		CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A81B72AABB1E500586168 /* RahalApp.swift */; };
 		CC5A81BC2AABB1E600586168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5A81BB2AABB1E600586168 /* Assets.xcassets */; };
 		CC5A81BF2AABB1E600586168 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5A81BE2AABB1E600586168 /* Preview Assets.xcassets */; };
@@ -22,6 +25,9 @@
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CC28B0812AAC0066003390DE /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		CC28B0852AAC2811003390DE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CC28B0872AAC2D5D003390DE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CC28B08B2AAC3BE9003390DE /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
 		CC5A81B42AABB1E500586168 /* Rahal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rahal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5A81B72AABB1E500586168 /* RahalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RahalApp.swift; sourceTree = "<group>"; };
 		CC5A81BB2AABB1E600586168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				CC28B0772AABB638003390DE /* GFTextField.swift */,
+				CC28B0872AAC2D5D003390DE /* SearchBar.swift */,
+				CC28B08B2AAC3BE9003390DE /* TripCard.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 				CC5A81CB2AABB37C00586168 /* SplashView.swift */,
 				CC28B07B2AABC361003390DE /* LoginView.swift */,
 				CC28B0812AAC0066003390DE /* RegistrationView.swift */,
+				CC28B0852AAC2811003390DE /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,9 +215,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */,
+				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
 				CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */,
+				CC28B0882AAC2D5D003390DE /* SearchBar.swift in Sources */,
+				CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
 			);

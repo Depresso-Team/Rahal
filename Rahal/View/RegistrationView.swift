@@ -23,7 +23,7 @@ struct RegistrationView: View {
     @State private var addressLabel: String = ""
     
     var body: some View {
-        ScrollView {
+        ScrollView (.vertical, showsIndicators: false) {
             VStack{
                 // LOGO
                 Image("rahal-logo").resizable().scaledToFill().frame(width: 100,height: 152).padding(.top,48)
