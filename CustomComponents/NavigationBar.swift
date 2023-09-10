@@ -51,7 +51,7 @@ struct NavigationBar: View {
             }
         }
         .frame(height: 66)
-        .padding(64)
+        .padding(52)
     }
 }
 

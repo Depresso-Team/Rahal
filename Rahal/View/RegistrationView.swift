@@ -80,7 +80,6 @@ struct RegistrationView: View {
                 
             }
         }
-        Spacer()
     }
     
 }

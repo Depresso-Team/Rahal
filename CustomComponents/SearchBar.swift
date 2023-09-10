@@ -21,7 +21,7 @@ struct SearchBar: View {
             Image(systemName: "slider.horizontal.3").padding(.horizontal)
                 .font(.system(size: 20))
         }.foregroundColor(Color.secondary.opacity(0.5))
-        .background(Color("CustomBgGreenColor").opacity(0.07)).cornerRadius(10)
+        .background(Color("CustomBgGreenColor").opacity(0.07)).cornerRadius(30)
         .shadow(radius: 1)
         .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
         .padding()

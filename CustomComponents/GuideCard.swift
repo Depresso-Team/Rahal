@@ -15,37 +15,43 @@ struct GuideCard: View {
     let location: String
     
     var body: some View {
-        ZStack {
-            VStack(alignment: .center) {
-                Image(imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 90, height: 90)
-                    .cornerRadius(45)
-                    .buttonStyle(PlainButtonStyle())
-                Text(guideName).bold().padding(2)
-                Text(location)
-                    .foregroundColor(.secondary)
-                    .font(.footnote)
-                    .fontWeight(.semibold)
-                
-                HStack {
-                    ForEach(0..<5) { index in
-                        Image(systemName: index < Int(rating) ? "star.fill" :
-                                (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
-                            .foregroundColor(.yellow)
-                            .font(.system(size: 20))
-                    }.padding(.vertical,4)
+            ZStack {
+                VStack(alignment: .center) {
+                    Image(imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 85, height: 85)
+                        .cornerRadius(45)
+                        .buttonStyle(PlainButtonStyle())
+                    Text(guideName).bold()
+                    Text(location)
+                        .foregroundColor(.secondary)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                    
+                    HStack {
+                        ForEach(0..<5) { index in
+                            Image(systemName: index < Int(rating) ? "star.fill" :
+                                    (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
+                                .foregroundColor(.yellow)
+                                .font(.system(size: 14))
+                        }.padding(.vertical,2)
+                    }
                 }
+                .frame(width: 132 ,height: 182)
+                .padding(14)
+                .background(.white)
+                .cornerRadius(30)
+                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 2, y: 2)
                 
+                    Image(systemName: "bookmark")
+                        .foregroundColor(Color("CustomDarkGreenColor"))
+                        .font(.system(size: 24))
+                        .offset(x: 54, y: -92)
+                
+                    Spacer()
             }
-            .frame(width: 156 ,height: 196)
-            .padding(16)
-            .background(.white)
-            .cornerRadius(30)
-            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 2, y: 2)
         }
-    }
     
     
     struct GuideCard_Previews: PreviewProvider {
