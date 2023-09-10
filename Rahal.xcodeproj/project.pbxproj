@@ -16,6 +16,7 @@
 		CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B08B2AAC3BE9003390DE /* TripCard.swift */; };
 		CC28B08E2AAC4348003390DE /* SlideShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B08D2AAC4348003390DE /* SlideShow.swift */; };
 		CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B08F2AACBFF7003390DE /* GuideCard.swift */; };
+		CC28B0922AAD50DE003390DE /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0912AAD50DE003390DE /* NavigationBar.swift */; };
 		CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A81B72AABB1E500586168 /* RahalApp.swift */; };
 		CC5A81BC2AABB1E600586168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5A81BB2AABB1E600586168 /* Assets.xcassets */; };
 		CC5A81BF2AABB1E600586168 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5A81BE2AABB1E600586168 /* Preview Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		CC28B08B2AAC3BE9003390DE /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
 		CC28B08D2AAC4348003390DE /* SlideShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShow.swift; sourceTree = "<group>"; };
 		CC28B08F2AACBFF7003390DE /* GuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCard.swift; sourceTree = "<group>"; };
+		CC28B0912AAD50DE003390DE /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		CC5A81B42AABB1E500586168 /* Rahal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rahal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5A81B72AABB1E500586168 /* RahalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RahalApp.swift; sourceTree = "<group>"; };
 		CC5A81BB2AABB1E600586168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				CC28B08B2AAC3BE9003390DE /* TripCard.swift */,
 				CC28B08D2AAC4348003390DE /* SlideShow.swift */,
 				CC28B08F2AACBFF7003390DE /* GuideCard.swift */,
+				CC28B0912AAD50DE003390DE /* NavigationBar.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
+				CC28B0922AAD50DE003390DE /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
