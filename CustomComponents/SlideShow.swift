@@ -2,89 +2,47 @@
 //  SlideShow.swift
 //  Rahal
 //
-//  Created by Abdelrahman Esmail on 09/09/2023.
+//  Created by Abdelrahman Esmail on 11/09/2023.
 //
 
 import SwiftUI
 
 struct SlideShow: View {
-    private let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    // MARK: - PROPERTIES
     @State private var currentIndex = 0
-    @State private var totalIndex = 3
+    let coverImages: [String] = ["alAzharMosque","abuSimbleTemple","sphinx"]
+    let coverText: [String] = ["Al Azhar Mosque","Abu Simble Temple","Sphinx"]
     
+    // MARK: - BODY
     var body: some View {
-        TabView(selection: $currentIndex) {
-            ZStack {
-                Image("alAzharMosque")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: UIScreen.main.bounds.width - 20, height: 192)
-                    .cornerRadius(16)
-                    .buttonStyle(PlainButtonStyle())
-                
-                Text("Al Azhar Mousque")
-                    .fontWeight(.heavy)
-                    .font(.system(size: 22))
-                    .foregroundColor(.white)
-                    .padding(8)
-                    .offset(x: -60, y: 70)
-            }
-            .tag(0)
-            
-            ZStack {
-                Image("abuSimbleTemple")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: UIScreen.main.bounds.width - 20, height: 192)
-                    .cornerRadius(16)
-                    .buttonStyle(PlainButtonStyle())
-                
-                Text("Abu Simble Temple")
-                    .fontWeight(.heavy)
-                    .font(.system(size: 22))
-                    .foregroundColor(.white)
-                    .padding(8)
-                    .offset(x: -60, y: 70)
-            }
-            .tag(1)
-            
-            ZStack {
-                VStack(alignment: .leading) {
-                    ZStack {
-                        Image("sphinx")
+
+        TabView {
+                ForEach(coverImages, id: \.self) { imageName in
+                    ZStack (alignment: .leading) {
+                        Image(imageName)
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: UIScreen.main.bounds.width - 20, height: 192)
-                            .cornerRadius(16)
-                            .buttonStyle(PlainButtonStyle())
-                        
-                        Text("Sphinx")
-                            .fontWeight(.heavy)
-                            .font(.system(size: 22))
+                            .scaledToFill()
+                        VStack (alignment: .leading) {
+                            Spacer()
+                            Text("Al Azhar Mosque")
+                                .fontWeight(.heavy)
                             .foregroundColor(.white)
-                            .padding(8)
-                            .offset(x: -130, y: 70)
+                            
+                        }.padding(34)
                     }
+
                 }
-            }
-            .tag(2)
-            
-            
-        } //TabView
-        .tabViewStyle(.page)
-        .animation(.spring())
-        .frame(width: UIScreen.main.bounds.width - 20, height: 192)
-        .onReceive(self.timer) { _ in
-            self.currentIndex = (self.currentIndex + 1) % self.totalIndex
         }
-        .onChange(of: self.currentIndex) { index in
-            print("change currentIndex:\(index)")
-        }
-    }
+        .cornerRadius(10)
+        .frame(width: UIScreen.main.bounds.width - 30, height: 226)
+        .tabViewStyle(PageTabViewStyle())
+        
+        
+      }
+
     }
 
-
-struct SlideShow_Previews: PreviewProvider {
+struct SlideShowV2_Previews: PreviewProvider {
     static var previews: some View {
         SlideShow()
     }

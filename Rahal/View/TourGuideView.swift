@@ -1,5 +1,5 @@
 //
-//  GuideView.swift
+//  TourGuideView.swift
 //  Rahal
 //
 //  Created by Abdelrahman Esmail on 10/09/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GuideView: View {
+struct TourGuideView: View {
     var body: some View {
         ScrollView (.vertical, showsIndicators: false) {
             VStack {
@@ -40,8 +40,8 @@ struct GuideView: View {
     }
 }
 
-struct GuideView_Previews: PreviewProvider {
+struct TourGuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView()
+        TourGuideView()
     }
 }

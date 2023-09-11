@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct TripCard: View {
+struct TourCard: View {
     // MARK: - PROPERTIES
     let imageName: String
-    let tripName: String
+    let tourName: String
     let rating: Double
     let location: String
     let duration: String
@@ -28,7 +28,7 @@ struct TripCard: View {
 
                 VStack {
                     HStack {
-                        Text(tripName).bold()
+                        Text(tourName).bold()
                         Spacer()
                         Image(systemName: "star.fill")
                             .padding(.leading)
@@ -76,7 +76,7 @@ struct TripCard: View {
 
 struct TripCard_Previews: PreviewProvider {
     static var previews: some View {
-        TripCard(imageName: "pyramids", tripName: "Giza Plateau", rating: 4.5, location: "Giza Plateau", duration: "1 Day")
+        TourCard(imageName: "pyramids", tourName: "Giza Plateau", rating: 4.5, location: "Giza Plateau", duration: "1 Day")
 
 
     }

@@ -23,7 +23,7 @@ struct GuideCard: View {
                         .frame(width: 85, height: 85)
                         .cornerRadius(45)
                         .buttonStyle(PlainButtonStyle())
-                    Text(guideName).bold()
+                    Text(guideName)
                     Text(location)
                         .foregroundColor(.secondary)
                         .font(.footnote)
@@ -47,7 +47,8 @@ struct GuideCard: View {
                     Image(systemName: "bookmark")
                         .foregroundColor(Color("CustomDarkGreenColor"))
                         .font(.system(size: 24))
-                        .offset(x: 54, y: -92)
+                        .fontWeight(.light)
+                        .offset(x: 60, y: -92)
                 
                     Spacer()
             }

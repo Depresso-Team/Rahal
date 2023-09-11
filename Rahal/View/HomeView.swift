@@ -19,9 +19,6 @@ struct HomeView: View {
                     // SLIDER SECTION
                     SlideShow()
                     
-                    
-                    
-                    
                     // TOP FIVE TRIPS TITLES SECTION
                     HStack () {
                         Text("Top Five Trips").bold().font(.system(size: 20))
@@ -32,12 +29,30 @@ struct HomeView: View {
                     // TOP FIVE TRIPS CARDS SECTION
                     
                     ScrollView (.horizontal, showsIndicators: false) {
-                        HStack (spacing: 26) {
-                            TripCard(imageName: "pyramids", tripName: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day")
+                        HStack (spacing: 20) {
+                            TourCard(imageName: "pyramids", tourName: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day")
                             
-                            TripCard(imageName: "nubia", tripName: "Nubia Adventure", rating: 4.2, location: "Nubia, Sudan", duration: "2 Days")
+                            TourCard(imageName: "nubia", tourName: "Nubia Adventure", rating: 4.2, location: "Nubia, Sudan", duration: "2 Days")
                         }.padding()
                         }
+                    
+                    
+                    // TOP FIVE GUIDES TITLES SECTION
+                    HStack () {
+                        Text("Top Five Guides").bold().font(.system(size: 20))
+                        Spacer()
+                        Text("See All").foregroundColor(.secondary)
+                    }.padding()
+                    
+                    ScrollView (.horizontal, showsIndicators: false) {
+                        HStack (spacing: 10) {
+                            GuideCard(imageName: "user", guideName: "Abdelrahman", rating: 4.5, location: "Mansoura")
+                            GuideCard(imageName: "user2", guideName: "Zeyad", rating: 3.5, location: "New Damietta")
+                            GuideCard(imageName: "user2", guideName: "Ahmed", rating: 3.5, location: "user")
+                        }.padding()
+                        }
+                    
+                    
                     
                     
                 }

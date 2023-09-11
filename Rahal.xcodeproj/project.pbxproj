@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC0A1C922AAE5DD600CF678D /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1C912AAE5DD600CF678D /* GuideView.swift */; };
+		CC0A1C922AAE5DD600CF678D /* TourGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1C912AAE5DD600CF678D /* TourGuideView.swift */; };
+		CC0A1C9C2AAE695700CF678D /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C942AAE695600CF678D /* Cairo-Regular.ttf */; };
+		CC0A1C9D2AAE695700CF678D /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C952AAE695600CF678D /* Cairo-SemiBold.ttf */; };
+		CC0A1C9E2AAE695700CF678D /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C962AAE695600CF678D /* Cairo-Medium.ttf */; };
+		CC0A1C9F2AAE695700CF678D /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C972AAE695600CF678D /* Cairo-Black.ttf */; };
+		CC0A1CA02AAE695700CF678D /* Cairo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C982AAE695600CF678D /* Cairo-ExtraBold.ttf */; };
+		CC0A1CA12AAE695700CF678D /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C992AAE695700CF678D /* Cairo-ExtraLight.ttf */; };
+		CC0A1CA22AAE695700CF678D /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C9A2AAE695700CF678D /* Cairo-Bold.ttf */; };
+		CC0A1CA32AAE695700CF678D /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C9B2AAE695700CF678D /* Cairo-Light.ttf */; };
+		CC0A1CA52AAE699F00CF678D /* NotoSansEgyptianHieroglyphs-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1CA42AAE699F00CF678D /* NotoSansEgyptianHieroglyphs-Regular.ttf */; };
+		CC0A1CAA2AAEBA5000CF678D /* ToursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CA92AAEBA5000CF678D /* ToursView.swift */; };
+		CC0A1CAC2AAEBBC500CF678D /* SlideShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CAB2AAEBBC500CF678D /* SlideShow.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
 		CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0812AAC0066003390DE /* RegistrationView.swift */; };
 		CC28B0862AAC2811003390DE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0852AAC2811003390DE /* HomeView.swift */; };
 		CC28B0882AAC2D5D003390DE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0872AAC2D5D003390DE /* SearchBar.swift */; };
-		CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B08B2AAC3BE9003390DE /* TripCard.swift */; };
-		CC28B08E2AAC4348003390DE /* SlideShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B08D2AAC4348003390DE /* SlideShow.swift */; };
+		CC28B08C2AAC3BE9003390DE /* TourCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B08B2AAC3BE9003390DE /* TourCard.swift */; };
 		CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B08F2AACBFF7003390DE /* GuideCard.swift */; };
 		CC28B0922AAD50DE003390DE /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0912AAD50DE003390DE /* NavigationBar.swift */; };
 		CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A81B72AABB1E500586168 /* RahalApp.swift */; };
@@ -25,15 +35,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC0A1C912AAE5DD600CF678D /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		CC0A1C912AAE5DD600CF678D /* TourGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideView.swift; sourceTree = "<group>"; };
+		CC0A1C942AAE695600CF678D /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		CC0A1C952AAE695600CF678D /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		CC0A1C962AAE695600CF678D /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
+		CC0A1C972AAE695600CF678D /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		CC0A1C982AAE695600CF678D /* Cairo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CC0A1C992AAE695700CF678D /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CC0A1C9A2AAE695700CF678D /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		CC0A1C9B2AAE695700CF678D /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		CC0A1CA42AAE699F00CF678D /* NotoSansEgyptianHieroglyphs-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansEgyptianHieroglyphs-Regular.ttf"; sourceTree = "<group>"; };
+		CC0A1CA62AAE6AD400CF678D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CC0A1CA92AAEBA5000CF678D /* ToursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursView.swift; sourceTree = "<group>"; };
+		CC0A1CAB2AAEBBC500CF678D /* SlideShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShow.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CC28B0812AAC0066003390DE /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CC28B0852AAC2811003390DE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CC28B0872AAC2D5D003390DE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		CC28B08B2AAC3BE9003390DE /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
-		CC28B08D2AAC4348003390DE /* SlideShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShow.swift; sourceTree = "<group>"; };
+		CC28B08B2AAC3BE9003390DE /* TourCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourCard.swift; sourceTree = "<group>"; };
 		CC28B08F2AACBFF7003390DE /* GuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCard.swift; sourceTree = "<group>"; };
 		CC28B0912AAD50DE003390DE /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		CC5A81B42AABB1E500586168 /* Rahal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rahal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC0A1C932AAE68ED00CF678D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A1CA42AAE699F00CF678D /* NotoSansEgyptianHieroglyphs-Regular.ttf */,
+				CC0A1C972AAE695600CF678D /* Cairo-Black.ttf */,
+				CC0A1C9A2AAE695700CF678D /* Cairo-Bold.ttf */,
+				CC0A1C982AAE695600CF678D /* Cairo-ExtraBold.ttf */,
+				CC0A1C992AAE695700CF678D /* Cairo-ExtraLight.ttf */,
+				CC0A1C9B2AAE695700CF678D /* Cairo-Light.ttf */,
+				CC0A1C962AAE695600CF678D /* Cairo-Medium.ttf */,
+				CC0A1C942AAE695600CF678D /* Cairo-Regular.ttf */,
+				CC0A1C952AAE695600CF678D /* Cairo-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		CC28B0732AABB579003390DE /* TFValidation */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,10 +104,10 @@
 			children = (
 				CC28B0772AABB638003390DE /* GFTextField.swift */,
 				CC28B0872AAC2D5D003390DE /* SearchBar.swift */,
-				CC28B08B2AAC3BE9003390DE /* TripCard.swift */,
-				CC28B08D2AAC4348003390DE /* SlideShow.swift */,
+				CC28B08B2AAC3BE9003390DE /* TourCard.swift */,
 				CC28B08F2AACBFF7003390DE /* GuideCard.swift */,
 				CC28B0912AAD50DE003390DE /* NavigationBar.swift */,
+				CC0A1CAB2AAEBBC500CF678D /* SlideShow.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -97,6 +134,7 @@
 		CC5A81B62AABB1E500586168 /* Rahal */ = {
 			isa = PBXGroup;
 			children = (
+				CC0A1CA62AAE6AD400CF678D /* Info.plist */,
 				CC5A81C62AABB30900586168 /* Root */,
 				CC5A81C92AABB31A00586168 /* View */,
 				CC5A81C82AABB31600586168 /* Model */,
@@ -117,6 +155,7 @@
 		CC5A81C52AABB27F00586168 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				CC0A1C932AAE68ED00CF678D /* Font */,
 				CC5A81BB2AABB1E600586168 /* Assets.xcassets */,
 			);
 			path = Support;
@@ -151,7 +190,8 @@
 				CC28B07B2AABC361003390DE /* LoginView.swift */,
 				CC28B0812AAC0066003390DE /* RegistrationView.swift */,
 				CC28B0852AAC2811003390DE /* HomeView.swift */,
-				CC0A1C912AAE5DD600CF678D /* GuideView.swift */,
+				CC0A1C912AAE5DD600CF678D /* TourGuideView.swift */,
+				CC0A1CA92AAEBA5000CF678D /* ToursView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,8 +254,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0A1CA32AAE695700CF678D /* Cairo-Light.ttf in Resources */,
+				CC0A1C9D2AAE695700CF678D /* Cairo-SemiBold.ttf in Resources */,
+				CC0A1C9F2AAE695700CF678D /* Cairo-Black.ttf in Resources */,
+				CC0A1CA52AAE699F00CF678D /* NotoSansEgyptianHieroglyphs-Regular.ttf in Resources */,
+				CC0A1CA02AAE695700CF678D /* Cairo-ExtraBold.ttf in Resources */,
+				CC0A1C9C2AAE695700CF678D /* Cairo-Regular.ttf in Resources */,
 				CC5A81BF2AABB1E600586168 /* Preview Assets.xcassets in Resources */,
 				CC5A81BC2AABB1E600586168 /* Assets.xcassets in Resources */,
+				CC0A1C9E2AAE695700CF678D /* Cairo-Medium.ttf in Resources */,
+				CC0A1CA22AAE695700CF678D /* Cairo-Bold.ttf in Resources */,
+				CC0A1CA12AAE695700CF678D /* Cairo-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,11 +280,12 @@
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
 				CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */,
-				CC0A1C922AAE5DD600CF678D /* GuideView.swift in Sources */,
+				CC0A1C922AAE5DD600CF678D /* TourGuideView.swift in Sources */,
+				CC0A1CAA2AAEBA5000CF678D /* ToursView.swift in Sources */,
 				CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */,
 				CC28B0882AAC2D5D003390DE /* SearchBar.swift in Sources */,
-				CC28B08E2AAC4348003390DE /* SlideShow.swift in Sources */,
-				CC28B08C2AAC3BE9003390DE /* TripCard.swift in Sources */,
+				CC28B08C2AAC3BE9003390DE /* TourCard.swift in Sources */,
+				CC0A1CAC2AAEBBC500CF678D /* SlideShow.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
 				CC28B0922AAD50DE003390DE /* NavigationBar.swift in Sources */,
@@ -370,6 +420,7 @@
 				DEVELOPMENT_TEAM = 7HVX2YCMN6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rahal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -399,6 +450,7 @@
 				DEVELOPMENT_TEAM = 7HVX2YCMN6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rahal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
