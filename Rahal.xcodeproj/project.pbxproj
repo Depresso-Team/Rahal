@@ -33,11 +33,8 @@
 		CC0A1CD82AAFB41900CF678D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CCA2AAFB41900CF678D /* HTTPClient.swift */; };
 		CC0A1CD92AAFB41900CF678D /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CCB2AAFB41900CF678D /* RequestError.swift */; };
 		CC0A1CDA2AAFB41900CF678D /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CCD2AAFB41900CF678D /* HomeServices.swift */; };
-		CC0A1CDB2AAFB41900CF678D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CCE2AAFB41900CF678D /* LoginViewModel.swift */; };
 		CC0A1CDC2AAFB41900CF678D /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CCF2AAFB41900CF678D /* LoginServices.swift */; };
-		CC0A1CDD2AAFB41900CF678D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CD02AAFB41900CF678D /* HomeViewModel.swift */; };
 		CC0A1CDE2AAFB41900CF678D /* RegisterServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */; };
-		CC0A1CDF2AAFB41900CF678D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CD22AAFB41900CF678D /* RegisterViewModel.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -81,11 +78,8 @@
 		CC0A1CCA2AAFB41900CF678D /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		CC0A1CCB2AAFB41900CF678D /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		CC0A1CCD2AAFB41900CF678D /* HomeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
-		CC0A1CCE2AAFB41900CF678D /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CC0A1CCF2AAFB41900CF678D /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
-		CC0A1CD02AAFB41900CF678D /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterServices.swift; sourceTree = "<group>"; };
-		CC0A1CD22AAFB41900CF678D /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -198,11 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				CC0A1CCD2AAFB41900CF678D /* HomeServices.swift */,
-				CC0A1CCE2AAFB41900CF678D /* LoginViewModel.swift */,
 				CC0A1CCF2AAFB41900CF678D /* LoginServices.swift */,
-				CC0A1CD02AAFB41900CF678D /* HomeViewModel.swift */,
 				CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */,
-				CC0A1CD22AAFB41900CF678D /* RegisterViewModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -392,7 +383,6 @@
 				CC0A1CB92AAFB2F200CF678D /* HomeViewModel.swift in Sources */,
 				CC0A1CD82AAFB41900CF678D /* HTTPClient.swift in Sources */,
 				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
-				CC0A1CDF2AAFB41900CF678D /* RegisterViewModel.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC0A1CD52AAFB41900CF678D /* HomeEndPoint.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
@@ -410,7 +400,6 @@
 				CC28B08C2AAC3BE9003390DE /* TourCard.swift in Sources */,
 				CC0A1CAC2AAEBBC500CF678D /* SlideShow.swift in Sources */,
 				CC0A1CB62AAFB15400CF678D /* RegisterModel.swift in Sources */,
-				CC0A1CDB2AAFB41900CF678D /* LoginViewModel.swift in Sources */,
 				CC0A1CD42AAFB41900CF678D /* LoginEndPoint.swift in Sources */,
 				CC0A1CD62AAFB41900CF678D /* EndPoint.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
@@ -419,7 +408,6 @@
 				CC0A1CBC2AAFB32200CF678D /* LoginViewModel.swift in Sources */,
 				CC28B0922AAD50DE003390DE /* NavigationBar.swift in Sources */,
 				CC0A1CD32AAFB41900CF678D /* RegisterEndPoint.swift in Sources */,
-				CC0A1CDD2AAFB41900CF678D /* HomeViewModel.swift in Sources */,
 				CC0A1CDC2AAFB41900CF678D /* LoginServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
