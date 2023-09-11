@@ -19,6 +19,9 @@
 		CC0A1CA52AAE699F00CF678D /* NotoSansEgyptianHieroglyphs-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1CA42AAE699F00CF678D /* NotoSansEgyptianHieroglyphs-Regular.ttf */; };
 		CC0A1CAA2AAEBA5000CF678D /* ToursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CA92AAEBA5000CF678D /* ToursView.swift */; };
 		CC0A1CAC2AAEBBC500CF678D /* SlideShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CAB2AAEBBC500CF678D /* SlideShow.swift */; };
+		CC0A1CB22AAFB11300CF678D /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CB12AAFB11300CF678D /* HomeModel.swift */; };
+		CC0A1CB42AAFB13100CF678D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CB32AAFB13100CF678D /* LoginModel.swift */; };
+		CC0A1CB62AAFB15400CF678D /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CB52AAFB15400CF678D /* RegisterModel.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -48,6 +51,9 @@
 		CC0A1CA62AAE6AD400CF678D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CC0A1CA92AAEBA5000CF678D /* ToursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursView.swift; sourceTree = "<group>"; };
 		CC0A1CAB2AAEBBC500CF678D /* SlideShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShow.swift; sourceTree = "<group>"; };
+		CC0A1CB12AAFB11300CF678D /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		CC0A1CB32AAFB13100CF678D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		CC0A1CB52AAFB15400CF678D /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -89,6 +95,30 @@
 				CC0A1C952AAE695600CF678D /* Cairo-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		CC0A1CAD2AAFB0D700CF678D /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A1CB12AAFB11300CF678D /* HomeModel.swift */,
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
+		CC0A1CAE2AAFB0E600CF678D /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A1CB32AAFB13100CF678D /* LoginModel.swift */,
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		CC0A1CAF2AAFB0F000CF678D /* RegisterModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A1CB52AAFB15400CF678D /* RegisterModel.swift */,
+			);
+			path = RegisterModel;
 			sourceTree = "<group>";
 		};
 		CC28B0732AABB579003390DE /* TFValidation */ = {
@@ -179,6 +209,9 @@
 		CC5A81C82AABB31600586168 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC0A1CAF2AAFB0F000CF678D /* RegisterModel */,
+				CC0A1CAE2AAFB0E600CF678D /* LoginModel */,
+				CC0A1CAD2AAFB0D700CF678D /* HomeModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,12 +313,15 @@
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
 				CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */,
+				CC0A1CB42AAFB13100CF678D /* LoginModel.swift in Sources */,
 				CC0A1C922AAE5DD600CF678D /* TourGuideView.swift in Sources */,
 				CC0A1CAA2AAEBA5000CF678D /* ToursView.swift in Sources */,
 				CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */,
+				CC0A1CB22AAFB11300CF678D /* HomeModel.swift in Sources */,
 				CC28B0882AAC2D5D003390DE /* SearchBar.swift in Sources */,
 				CC28B08C2AAC3BE9003390DE /* TourCard.swift in Sources */,
 				CC0A1CAC2AAEBBC500CF678D /* SlideShow.swift in Sources */,
+				CC0A1CB62AAFB15400CF678D /* RegisterModel.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
 				CC28B0922AAD50DE003390DE /* NavigationBar.swift in Sources */,
