@@ -22,6 +22,9 @@
 		CC0A1CB22AAFB11300CF678D /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CB12AAFB11300CF678D /* HomeModel.swift */; };
 		CC0A1CB42AAFB13100CF678D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CB32AAFB13100CF678D /* LoginModel.swift */; };
 		CC0A1CB62AAFB15400CF678D /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CB52AAFB15400CF678D /* RegisterModel.swift */; };
+		CC0A1CB92AAFB2F200CF678D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CB82AAFB2F200CF678D /* HomeViewModel.swift */; };
+		CC0A1CBC2AAFB32200CF678D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CBB2AAFB32200CF678D /* LoginViewModel.swift */; };
+		CC0A1CBF2AAFB33400CF678D /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CBE2AAFB33400CF678D /* SignupViewModel.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -54,6 +57,9 @@
 		CC0A1CB12AAFB11300CF678D /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		CC0A1CB32AAFB13100CF678D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		CC0A1CB52AAFB15400CF678D /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		CC0A1CB82AAFB2F200CF678D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = Rahal/ViewModel/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		CC0A1CBB2AAFB32200CF678D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CC0A1CBE2AAFB33400CF678D /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -121,6 +127,16 @@
 			path = RegisterModel;
 			sourceTree = "<group>";
 		};
+		CC0A1CBA2AAFB2FC00CF678D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A1CB82AAFB2F200CF678D /* HomeViewModel.swift */,
+				CC0A1CBB2AAFB32200CF678D /* LoginViewModel.swift */,
+				CC0A1CBE2AAFB33400CF678D /* SignupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CC28B0732AABB579003390DE /* TFValidation */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,11 +180,11 @@
 		CC5A81B62AABB1E500586168 /* Rahal */ = {
 			isa = PBXGroup;
 			children = (
+				CC0A1CBA2AAFB2FC00CF678D /* ViewModel */,
 				CC0A1CA62AAE6AD400CF678D /* Info.plist */,
 				CC5A81C62AABB30900586168 /* Root */,
 				CC5A81C92AABB31A00586168 /* View */,
 				CC5A81C82AABB31600586168 /* Model */,
-				CC5A81C72AABB30F00586168 /* ViewModel */,
 				CC5A81BD2AABB1E600586168 /* Preview Content */,
 			);
 			path = Rahal;
@@ -197,13 +213,6 @@
 				CC5A81B72AABB1E500586168 /* RahalApp.swift */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		CC5A81C72AABB30F00586168 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CC5A81C82AABB31600586168 /* Model */ = {
@@ -309,10 +318,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */,
+				CC0A1CB92AAFB2F200CF678D /* HomeViewModel.swift in Sources */,
 				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
 				CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */,
+				CC0A1CBF2AAFB33400CF678D /* SignupViewModel.swift in Sources */,
 				CC0A1CB42AAFB13100CF678D /* LoginModel.swift in Sources */,
 				CC0A1C922AAE5DD600CF678D /* TourGuideView.swift in Sources */,
 				CC0A1CAA2AAEBA5000CF678D /* ToursView.swift in Sources */,
@@ -324,6 +335,7 @@
 				CC0A1CB62AAFB15400CF678D /* RegisterModel.swift in Sources */,
 				CC28B07C2AABC361003390DE /* LoginView.swift in Sources */,
 				CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */,
+				CC0A1CBC2AAFB32200CF678D /* LoginViewModel.swift in Sources */,
 				CC28B0922AAD50DE003390DE /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
