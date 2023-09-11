@@ -25,6 +25,7 @@ struct SlideShow: View {
                         VStack (alignment: .leading) {
                             Spacer()
                             Text("Al Azhar Mosque")
+                                .font(.system(size: 24))
                                 .fontWeight(.heavy)
                             .foregroundColor(.white)
                             
