@@ -10,7 +10,7 @@ import SwiftUI
 struct ToursView: View {
     var body: some View {
         ScrollView (.vertical, showsIndicators: false) {
-            VStack (spacing: 20){
+            VStack{
                 SearchBar()
                 
                 HStack {
@@ -21,11 +21,12 @@ struct ToursView: View {
                         .padding(.horizontal)
                     Spacer()
                 }
+
+                TourCardExtended(imageName: "pyramids", tourName: "Pyramids", rating: 4.5, location: "Giza Plateau", duration: "1 Day")
+                TourCardExtended(imageName: "nubia", tourName: "Nubia", rating: 4.5, location: "Aswan", duration: "1 Day")
+                TourCardExtended(imageName: "sphinx", tourName: "Giza Plateau", rating: 4.5, location: "Giza Plateau", duration: "1 Day")
+                TourCardExtended(imageName: "nubia", tourName: "Nubia", rating: 4.5, location: "Aswan", duration: "1 Day")
                 
-                TourCard(imageName: "pyramids", tourName: "Giza Plateau", rating: 4.5, location: "Giza Plateau", duration: "1 Day")
-                
-                TourCard(imageName: "nubia", tourName: "Nubia", rating: 4.5, location: "Aswan", duration: "1 Day")
-                TourCard(imageName: "sphinx", tourName: "Giza Plateau", rating: 4.5, location: "Giza Plateau", duration: "1 Day")
             }
         }
     }

@@ -35,6 +35,7 @@
 		CC0A1CDA2AAFB41900CF678D /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CCD2AAFB41900CF678D /* HomeServices.swift */; };
 		CC0A1CDC2AAFB41900CF678D /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CCF2AAFB41900CF678D /* LoginServices.swift */; };
 		CC0A1CDE2AAFB41900CF678D /* RegisterServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */; };
+		CC0A1CE12AB04E8C00CF678D /* TourCardExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CE02AB04E8C00CF678D /* TourCardExtended.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -80,6 +81,7 @@
 		CC0A1CCD2AAFB41900CF678D /* HomeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
 		CC0A1CCF2AAFB41900CF678D /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
 		CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterServices.swift; sourceTree = "<group>"; };
+		CC0A1CE02AB04E8C00CF678D /* TourCardExtended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourCardExtended.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				CC28B08F2AACBFF7003390DE /* GuideCard.swift */,
 				CC28B0912AAD50DE003390DE /* NavigationBar.swift */,
 				CC0A1CAB2AAEBBC500CF678D /* SlideShow.swift */,
+				CC0A1CE02AB04E8C00CF678D /* TourCardExtended.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -242,8 +245,8 @@
 		CC5A81B62AABB1E500586168 /* Rahal */ = {
 			isa = PBXGroup;
 			children = (
-				CC0A1CBA2AAFB2FC00CF678D /* ViewModel */,
 				CC0A1CA62AAE6AD400CF678D /* Info.plist */,
+				CC0A1CBA2AAFB2FC00CF678D /* ViewModel */,
 				CC5A81C62AABB30900586168 /* Root */,
 				CC5A81C92AABB31A00586168 /* View */,
 				CC5A81C82AABB31600586168 /* Model */,
@@ -385,6 +388,7 @@
 				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC0A1CD52AAFB41900CF678D /* HomeEndPoint.swift in Sources */,
+				CC0A1CE12AB04E8C00CF678D /* TourCardExtended.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
 				CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */,
 				CC0A1CD92AAFB41900CF678D /* RequestError.swift in Sources */,
