@@ -17,15 +17,13 @@ struct TourCardExtended: View {
     let location: String
     let duration: Int
     
-    
-    
     var body: some View {
         ZStack {
             HStack(alignment: .center, spacing: 12) {
                 Image(imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 162, height: 136)
+                    .frame(width: 142, height: 116)
                     .cornerRadius(16)
                     .buttonStyle(PlainButtonStyle())
                 
@@ -57,7 +55,7 @@ struct TourCardExtended: View {
                     .font(.footnote)
                     .padding(.vertical,1)
                     HStack{
-                        Text("\(price,specifier: "%.1f") EG").bold()
+                        Text("\(price,specifier: "%.1f")USD").bold()
                         Text("/ \(duration) Day").bold()
                             .foregroundColor(.secondary)
                             .font(.footnote)

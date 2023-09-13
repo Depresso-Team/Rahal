@@ -24,11 +24,11 @@ struct ToursView: View {
                 
                 TourCardExtended(imageName: "pyramids", tourName: "Giza Pyramids" ,price: 360, desc: "In the shadow of the Giza  Pyramids..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
                 
-                TourCardExtended(imageName: "nubia", tourName: "Nubia" ,price: 360, desc: "In the shadow of the Giza  nubia..." ,rating: 4.5,location:"Aswan", duration: 1)
+                TourCardExtended(imageName: "nubia", tourName: "Nubia" ,price: 160, desc: "In the shadow of the Giza  nubia..." ,rating: 4.5,location:"Aswan", duration: 1)
                 
-                TourCardExtended(imageName: "sphinx", tourName: "Giza Plateau" ,price: 360, desc: "In the shadow of the Giza sphinx..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
+                TourCardExtended(imageName: "sphinx", tourName: "Giza Plateau" ,price: 160, desc: "In the shadow of the Giza sphinx..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
 
-                TourCardExtended(imageName: "nubia", tourName: "Nubia" ,price: 360, desc: "In the shadow of the Giza  nubia..." ,rating: 4.5,location:"Aswan", duration: 1)
+                TourCardExtended(imageName: "nubia", tourName: "Nubia" ,price: 160, desc: "In the shadow of the Giza  nubia..." ,rating: 4.5,location:"Aswan", duration: 1)
                 
             }
         }
