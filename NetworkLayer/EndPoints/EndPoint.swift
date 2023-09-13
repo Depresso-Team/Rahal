@@ -23,6 +23,6 @@ extension EndPoint {
     }
     
     var host: String {
-        return "depresso.com"
+        return "rahal-app-efe3e7eff0b7.herokuapp.com"
     }
 }

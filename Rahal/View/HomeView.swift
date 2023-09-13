@@ -13,54 +13,46 @@ struct HomeView: View {
             ScrollView (.vertical, showsIndicators: false){
                 VStack (alignment: .center){
                     // HEADER
-                    
-                    HStack(spacing: 10) {
-                      // TITLE
+                    HStack(spacing: 8) {
+                        // TITLE
                         VStack (alignment: .leading) {
                             Text("Welcome")
-                            .font(.system(.largeTitle, design: .rounded))
-                            .foregroundColor(.black)
-                            .fontWeight(.heavy)
-                    // LOCATION
+                                .font(.system(.largeTitle, design: .rounded))
+                                .foregroundColor(.black)
+                                .fontWeight(.heavy)
+                            // LOCATION
                             Text("To Egypt")
                                 .font(.system(.title3))
-                              .foregroundColor(.secondary)
-                              .fontWeight(.semibold)
-                              
+                                .foregroundColor(.secondary)
+                                .fontWeight(.semibold)
+                            
                         }.padding(.leading, 4)
                         
+                        Spacer()
                         
-                        
-                      
-                      Spacer()
-                      
-                    // SEARCH BUTTON
-                    Image(systemName: "magnifyingglass")
+                        // SEARCH BUTTON
+                        Image(systemName: "magnifyingglass")
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
-                        .padding(6)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
-                                .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
-                        )
-                    // NOTIFICATION BUTTON
-                        Image(systemName: "bell")
-                                .font(.system(size: 18))
-                                .fontWeight(.semibold)
-                        
                             .padding(6)
- 
                             .background(
                                 RoundedRectangle(cornerRadius: 12)
                                     .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
                                     .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
-                                
+                            )
+                        // NOTIFICATION BUTTON
+                        Image(systemName: "bell")
+                            .font(.system(size: 18))
+                            .fontWeight(.semibold)
+                        
+                            .padding(6)
+                        
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
+                                    .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
                             )
                         
-                        
-                        
-                      
                     } //: HSTACK
                     .padding()
                     
@@ -83,10 +75,11 @@ struct HomeView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 20) {
                             TourCard(imageName: "pyramids", tourName: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day")
-                            
                             TourCard(imageName: "nubia", tourName: "Nubia Adventure", rating: 4.2, location: "Nubia, Sudan", duration: "2 Days")
-                        }.padding()
+                            TourCard(imageName: "nubia", tourName: "Nubia Adventure", rating: 4.2, location: "Nubia, Sudan", duration: "2 Days")
                         }
+                        .padding()
+                    }
                     
                     
                     // TOP FIVE GUIDES TITLES SECTION
@@ -106,11 +99,7 @@ struct HomeView: View {
                             GuideCard(imageName: "user2", guideName: "Zeyad", rating: 3.5, location: "New Damietta")
                             GuideCard(imageName: "user2", guideName: "Ahmed", rating: 3.5, location: "user")
                         }.padding()
-                        }
-                    
-                    
-                    
-                    
+                    }
                 }
             }
         }

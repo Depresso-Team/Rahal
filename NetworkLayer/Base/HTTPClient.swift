@@ -96,6 +96,10 @@ extension NetworkServices {
             /// Start session
             let (data, response) = try await session.data(for: request)
             
+            if let jsonString = String(data: data, encoding: .utf8) {
+               print(jsonString)
+            }
+
             // Check connection, response, and response type
             guard let response = response as? HTTPURLResponse else { throw RequestError.noResponse }
             let statusCode = response.statusCode
@@ -105,7 +109,7 @@ extension NetworkServices {
             case 200...299:
                 return data
             case 401:
-                throw RequestError.unknown
+                throw RequestError.unknown                
             default:
                 throw RequestError.unknown
             }

@@ -13,7 +13,7 @@ enum RegisterEndPoint {
 
 extension RegisterEndPoint: EndPoint {
     var path: String {
-        return "/api/register"
+        return "/users/register2/"
     }
     
     var method: HTTPMethod {

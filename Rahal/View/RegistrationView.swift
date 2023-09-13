@@ -10,6 +10,8 @@ import SwiftUI
 struct RegistrationView: View {
     
     // MARK: - PROPERTIES
+    var viewModel = SignupViewModel.shared
+
     @State private var fullName: String = ""
     @State private var email: String = ""
     @State private var phoneNumber: String = ""
@@ -23,12 +25,13 @@ struct RegistrationView: View {
     @State private var addressLabel: String = ""
     
     var body: some View {
-        ScrollView (.vertical, showsIndicators: false) {
-            VStack{
-                // LOGO
-                Image("rahal-logo").resizable().scaledToFill().frame(width: 100,height: 152).padding(.top,48)
-                
-                // FORM FIELDS
+        NavigationStack {
+            ScrollView (.vertical, showsIndicators: false) {
+                VStack{
+                    // LOGO
+                    Image("rahal-logo").resizable().scaledToFill().frame(width: 100,height: 152).padding(.top,48)
+                    
+                    // FORM FIELDS
                     VStack (alignment: .leading, spacing: 18) {
                         Text("Sign up").font(.title).fontWeight(.bold).foregroundColor(Color("CustomDarkGreenColor"))
                         
@@ -45,39 +48,50 @@ struct RegistrationView: View {
                         
                     }.padding(.horizontal)
                         .padding(.top,28)
-                
-                VStack (alignment: .leading, spacing: 10){
-                    Text("Address").padding(.leading,5).font(.system(size: 18)).fontWeight(.semibold)
-                    CurvedTextField(text: $countryCity, placeholder: "",title: "Country / City")
-                    CurvedTextField(text: $streetNumber, placeholder: "",title: "Street Number")
-                    CurvedTextField(text: $area, placeholder: "",title: "Area")
-                    CurvedTextField(text: $addressLabel, placeholder: "",title: "Address Label")
                     
-                }.padding(.horizontal)
+                    VStack (alignment: .leading, spacing: 10){
+                        Text("Address").padding(.leading,5).font(.system(size: 18)).fontWeight(.semibold)
+                        CurvedTextField(text: $countryCity, placeholder: "",title: "Country / City")
+                        CurvedTextField(text: $streetNumber, placeholder: "",title: "Street Number")
+                        CurvedTextField(text: $area, placeholder: "",title: "Area")
+                        CurvedTextField(text: $addressLabel, placeholder: "",title: "Address Label")
+                    }
+                    .padding(.horizontal)
                     .padding(.top,28)
-                
-                // SIGN UP BUTTON
-                Button{
                     
-                }label: {
-                    Text("Sign up").fontWeight(.bold).foregroundColor(.white)
-                        .frame(width: UIScreen.main.bounds.width - 100,height: 52).font(.system(size: 24))
-                        .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
+                    // SIGN UP BUTTON
+                    Button{
+                        viewModel.register(parms: RegisterParms(username: "AbdalazemSahh", email: "Abdkbda@gmail.com", password: "Test1001", phone: 1042690299, address: "Cai", country_code: 1, photo_url: "", languages: "en", is_guide: false))
+                        viewModel.responseHandler = { result in
+                            switch result {
+                            case .success(let message):
+                                // TODO: Go to home screen
+                                print(message)
+                            case .failure(let error):
+                                // TODO: Show alert message
+                                print(error.localizedDescription)
+                            }
+                        }
+                    }label: {
+                        Text("Sign up").fontWeight(.bold).foregroundColor(.white)
+                            .frame(width: UIScreen.main.bounds.width - 100,height: 52).font(.system(size: 24))
+                            .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
                         
+                        
+                    }.background(Color("CustomDarkGreenColor")).cornerRadius(5).padding(.top,24)
                     
-                }.background(Color("CustomDarkGreenColor")).cornerRadius(5).padding(.top,24)
-                
-                
-                // LOGIN BUTTON
-                HStack (spacing: 2){
-                    Text("Do you have an account ?").foregroundColor(.black)
-                NavigationLink{
-                    LoginView().navigationBarBackButtonHidden(true)
-                }label: {
-                        Text("Login").fontWeight(.heavy).foregroundColor(Color("CustomDarkGreenColor")).font(.system(size: 18))
-}
-                }.padding(.top,16)
-                
+                    
+                    // LOGIN BUTTON
+                    HStack (spacing: 2){
+                        Text("Do you have an account ?").foregroundColor(.black)
+                        NavigationLink{
+                            LoginView().navigationBarBackButtonHidden(true)
+                        }label: {
+                            Text("Login").fontWeight(.heavy).foregroundColor(Color("CustomDarkGreenColor")).font(.system(size: 18))
+                        }
+                    }.padding(.top,16)
+                    
+                }
             }
         }
     }

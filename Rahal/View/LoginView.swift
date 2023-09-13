@@ -30,7 +30,6 @@ struct LoginView: View {
                 
                 
                 // Forget Password
-                
                 HStack{
                     Spacer()
                     Button {
@@ -42,10 +41,7 @@ struct LoginView: View {
                             .padding(.top, 5)
                             .padding(.bottom, 20)
                             .padding(.trailing,22)
-                            
                     }
-                    
-                    
                 }
                 
                 // SIGN IN BUTTON
@@ -54,7 +50,7 @@ struct LoginView: View {
                 }label: {
                     Text("Login").fontWeight(.bold).foregroundColor(.white)
                         .frame(width: UIScreen.main.bounds.width - 100,height: 52).font(.system(size: 24))
-                        
+                    
                     
                 }.background(Color("CustomDarkGreenColor")).cornerRadius(5)
                     .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
@@ -63,24 +59,19 @@ struct LoginView: View {
                 // SIGN UP BUTTON
                 HStack (spacing: 2){
                     Text("Don’t have any account yet ?").foregroundColor(.black)
-                NavigationLink{
-                    RegistrationView()
-                        .navigationBarBackButtonHidden(true)
-                }label: {
+                    NavigationLink{
+                        RegistrationView()
+                            .navigationBarBackButtonHidden(true)
+                    }label: {
                         Text("Sign up").fontWeight(.heavy).foregroundColor(Color("CustomDarkGreenColor")).font(.system(size: 18))
-}
+                    }
                 }.padding(.top,16)
-
+                
                 Spacer()
                 
             }
         }
-        
-        
     }
-    
-    
-
 }
 
 

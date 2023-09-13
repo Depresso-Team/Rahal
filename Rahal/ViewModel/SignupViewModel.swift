@@ -11,7 +11,7 @@ class SignupViewModel {
     static let shared = SignupViewModel()
     private var services: RegisterServices!
     
-    var responseHandler: ((_ error: Bool) -> Void)?
+    var responseHandler: ((_ error: Result<String, Error>) -> Void)?
 
     private init() {
         services = RegisterServices()
@@ -20,21 +20,24 @@ class SignupViewModel {
     @MainActor
     func register(parms: RegisterParms) {
         Task {
-            let parms = [
-                "name": parms.fullName,
+            let body = [
+                "username": parms.username,
                 "email": parms.email,
-                "phone": parms.phoneNumber,
-                "coutnry": parms.country,
                 "password": parms.password,
-                "language": parms.language,
-                "address": parms.address
-            ]
+                "phone": parms.phone,
+                "address": parms.address,
+                "country_code": parms.country_code,
+                "photo_url": "https://pbs.twimg.com/profile_images/881713129285185536/wzBq1O-8_400x400.jpg",
+                "languages": "en",
+                "is_guide": parms.is_guide,
+                "session_message": ""
+            ] as [String : Any]
             
             do {
-                let _ = try await services.register(parms: parms)
-                responseHandler?(true)
+                let user = try await services.register(parms: body)
+                responseHandler?(.success("User creat successfuly"))
             } catch {
-                responseHandler?(false)
+                responseHandler?(.failure(error))
             }
         }
     }
