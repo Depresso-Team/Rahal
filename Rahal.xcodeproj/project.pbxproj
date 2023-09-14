@@ -10,6 +10,14 @@
 		C1CA35022AB2EA7F00045417 /* HomeSliderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35012AB2EA7F00045417 /* HomeSliderModel.swift */; };
 		C1CA35042AB2EC7E00045417 /* TopTripsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35032AB2EC7E00045417 /* TopTripsModel.swift */; };
 		C1CA35062AB2ED8400045417 /* TopGuidesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35052AB2ED8400045417 /* TopGuidesModel.swift */; };
+		C1CA35092AB2FF4300045417 /* TripDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35082AB2FF4300045417 /* TripDetailsEndPoint.swift */; };
+		C1CA350B2AB2FF5300045417 /* TourGuideDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA350A2AB2FF5300045417 /* TourGuideDetailsEndPoint.swift */; };
+		C1CA350E2AB300EC00045417 /* TripDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA350D2AB300EC00045417 /* TripDetailsModel.swift */; };
+		C1CA35102AB3010300045417 /* TourGuideDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA350F2AB3010300045417 /* TourGuideDetailsModel.swift */; };
+		C1CA35132AB3019300045417 /* TripDetailsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35122AB3019300045417 /* TripDetailsServices.swift */; };
+		C1CA35152AB301B600045417 /* TourGuideDetailsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35142AB301B600045417 /* TourGuideDetailsServices.swift */; };
+		C1CA35182AB3023100045417 /* TripDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35172AB3023100045417 /* TripDetailsViewModel.swift */; };
+		C1CA351A2AB3026300045417 /* TourGuideDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35192AB3026300045417 /* TourGuideDetailsViewModel.swift */; };
 		CC0A1C922AAE5DD600CF678D /* TourGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1C912AAE5DD600CF678D /* TourGuideView.swift */; };
 		CC0A1C9C2AAE695700CF678D /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C942AAE695600CF678D /* Cairo-Regular.ttf */; };
 		CC0A1C9D2AAE695700CF678D /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C952AAE695600CF678D /* Cairo-SemiBold.ttf */; };
@@ -61,6 +69,14 @@
 		C1CA35012AB2EA7F00045417 /* HomeSliderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSliderModel.swift; sourceTree = "<group>"; };
 		C1CA35032AB2EC7E00045417 /* TopTripsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTripsModel.swift; sourceTree = "<group>"; };
 		C1CA35052AB2ED8400045417 /* TopGuidesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGuidesModel.swift; sourceTree = "<group>"; };
+		C1CA35082AB2FF4300045417 /* TripDetailsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsEndPoint.swift; sourceTree = "<group>"; };
+		C1CA350A2AB2FF5300045417 /* TourGuideDetailsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideDetailsEndPoint.swift; sourceTree = "<group>"; };
+		C1CA350D2AB300EC00045417 /* TripDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsModel.swift; sourceTree = "<group>"; };
+		C1CA350F2AB3010300045417 /* TourGuideDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideDetailsModel.swift; sourceTree = "<group>"; };
+		C1CA35122AB3019300045417 /* TripDetailsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsServices.swift; sourceTree = "<group>"; };
+		C1CA35142AB301B600045417 /* TourGuideDetailsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideDetailsServices.swift; sourceTree = "<group>"; };
+		C1CA35172AB3023100045417 /* TripDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsViewModel.swift; sourceTree = "<group>"; };
+		C1CA35192AB3026300045417 /* TourGuideDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideDetailsViewModel.swift; sourceTree = "<group>"; };
 		CC0A1C912AAE5DD600CF678D /* TourGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideView.swift; sourceTree = "<group>"; };
 		CC0A1C942AAE695600CF678D /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		CC0A1C952AAE695600CF678D /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -121,6 +137,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1CA35072AB2FF2D00045417 /* DetailsEndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA35082AB2FF4300045417 /* TripDetailsEndPoint.swift */,
+				C1CA350A2AB2FF5300045417 /* TourGuideDetailsEndPoint.swift */,
+			);
+			path = DetailsEndPoints;
+			sourceTree = "<group>";
+		};
+		C1CA350C2AB300C500045417 /* DetailsModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA350D2AB300EC00045417 /* TripDetailsModel.swift */,
+				C1CA350F2AB3010300045417 /* TourGuideDetailsModel.swift */,
+			);
+			path = DetailsModel;
+			sourceTree = "<group>";
+		};
+		C1CA35112AB3017C00045417 /* DetailsServices */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA35122AB3019300045417 /* TripDetailsServices.swift */,
+				C1CA35142AB301B600045417 /* TourGuideDetailsServices.swift */,
+			);
+			path = DetailsServices;
+			sourceTree = "<group>";
+		};
+		C1CA35162AB301E000045417 /* DetailsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA35172AB3023100045417 /* TripDetailsViewModel.swift */,
+				C1CA35192AB3026300045417 /* TourGuideDetailsViewModel.swift */,
+			);
+			path = DetailsViewModel;
+			sourceTree = "<group>";
+		};
 		CC0A1C932AAE68ED00CF678D /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +219,7 @@
 		CC0A1CBA2AAFB2FC00CF678D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C1CA35162AB301E000045417 /* DetailsViewModel */,
 				CC0A1CB82AAFB2F200CF678D /* HomeViewModel.swift */,
 				CC0A1CBB2AAFB32200CF678D /* LoginViewModel.swift */,
 				CC0A1CBE2AAFB33400CF678D /* SignupViewModel.swift */,
@@ -187,6 +240,7 @@
 		CC0A1CC32AAFB41900CF678D /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
+				C1CA35072AB2FF2D00045417 /* DetailsEndPoints */,
 				CC0A1CC42AAFB41900CF678D /* RegisterEndPoint.swift */,
 				CC0A1CC52AAFB41900CF678D /* LoginEndPoint.swift */,
 				CC0A1CC62AAFB41900CF678D /* HomeEndPoint.swift */,
@@ -208,6 +262,7 @@
 		CC0A1CCC2AAFB41900CF678D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C1CA35112AB3017C00045417 /* DetailsServices */,
 				CC0A1CCD2AAFB41900CF678D /* HomeServices.swift */,
 				CC0A1CCF2AAFB41900CF678D /* LoginServices.swift */,
 				CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */,
@@ -298,6 +353,7 @@
 		CC5A81C82AABB31600586168 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C1CA350C2AB300C500045417 /* DetailsModel */,
 				CC0A1CAF2AAFB0F000CF678D /* RegisterModel */,
 				CC0A1CAE2AAFB0E600CF678D /* LoginModel */,
 				CC0A1CAD2AAFB0D700CF678D /* HomeModel */,
@@ -407,19 +463,27 @@
 				C1CA35042AB2EC7E00045417 /* TopTripsModel.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC0A1CD52AAFB41900CF678D /* HomeEndPoint.swift in Sources */,
+				C1CA350E2AB300EC00045417 /* TripDetailsModel.swift in Sources */,
 				CC0A1CE12AB04E8C00CF678D /* TourCardExtended.swift in Sources */,
 				C1CA35062AB2ED8400045417 /* TopGuidesModel.swift in Sources */,
+				C1CA35102AB3010300045417 /* TourGuideDetailsModel.swift in Sources */,
 				CCD065D72AB2A21D008DEABE /* UserProfileView.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
+				C1CA350B2AB2FF5300045417 /* TourGuideDetailsEndPoint.swift in Sources */,
+				C1CA35152AB301B600045417 /* TourGuideDetailsServices.swift in Sources */,
 				CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */,
+				C1CA35092AB2FF4300045417 /* TripDetailsEndPoint.swift in Sources */,
 				CC0A1CD92AAFB41900CF678D /* RequestError.swift in Sources */,
+				C1CA35132AB3019300045417 /* TripDetailsServices.swift in Sources */,
 				CCD065D52AB2A1EB008DEABE /* SearchView.swift in Sources */,
 				CC0A1CBF2AAFB33400CF678D /* SignupViewModel.swift in Sources */,
+				C1CA351A2AB3026300045417 /* TourGuideDetailsViewModel.swift in Sources */,
 				CC0A1CDA2AAFB41900CF678D /* HomeServices.swift in Sources */,
 				CC0A1CD72AAFB41900CF678D /* HTTPMethod.swift in Sources */,
 				CC0A1CB42AAFB13100CF678D /* LoginModel.swift in Sources */,
 				CC0A1C922AAE5DD600CF678D /* TourGuideView.swift in Sources */,
 				CCD065D92AB2B4FB008DEABE /* TourDetailsView.swift in Sources */,
+				C1CA35182AB3023100045417 /* TripDetailsViewModel.swift in Sources */,
 				CC0A1CAA2AAEBA5000CF678D /* ToursView.swift in Sources */,
 				CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */,
 				C1CA35022AB2EA7F00045417 /* HomeSliderModel.swift in Sources */,

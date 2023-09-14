@@ -11,6 +11,7 @@ struct TopGuidesModel: Codable {
     let username: String
     let personal_photo: String
     let background_URL: String
+    let rating : Int // the backend is working on it 
 }
 
 /*
