@@ -9,9 +9,10 @@ import SwiftUI
 
 struct LoginView: View {
     
-    // MARK: - PROPERTIES
-    @State private var email: String = ""
-    @State private var password: String = ""
+
+    //MARK: - Variables
+    @ObservedObject var vm = LoginViewModel.shared
+
     
     var body: some View {
         NavigationStack {
@@ -23,8 +24,10 @@ struct LoginView: View {
                 // FORM FIELDS
                 VStack (alignment: .leading, spacing: 18) {
                     Text("Login").font(.title).fontWeight(.bold).foregroundColor(Color("CustomDarkGreenColor"))
-                    CurvedTextField(text: $email, placeholder: "",title: "Email Address").textInputAutocapitalization(.none)
-                    CurvedTextField(text: $password, placeholder: "", title: "Password",isSecureField: true)
+                    CurvedTextField(text: $vm.username, placeholder: "", title: "Username",isSecureField: true)
+
+                    CurvedTextField(text: $vm.email, placeholder: "",title: "Email Address").textInputAutocapitalization(.none)
+                    CurvedTextField(text: $vm.password, placeholder: "", title: "Password",isSecureField: true)
                 }.padding(.horizontal)
                     .padding(.top,28)
                 
@@ -46,6 +49,16 @@ struct LoginView: View {
                 
                 // SIGN IN BUTTON
                 Button{
+                    vm.login()
+                    vm.responseHandler = {result in
+                        switch result {
+                        case.success(let msg):
+                            print(msg)
+                        case.failure(let error):
+                            print(error)
+                        }
+                        
+                    }
                     
                 }label: {
                     Text("Login").fontWeight(.bold).foregroundColor(.white)

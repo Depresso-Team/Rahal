@@ -13,7 +13,7 @@ enum LoginEndPoint {
 
 extension LoginEndPoint: EndPoint {
     var path: String {
-        return "/api/login"
+        return "/users/login/"
     }
     var method: HTTPMethod {
         return .post

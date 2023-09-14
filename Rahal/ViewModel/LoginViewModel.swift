@@ -6,30 +6,36 @@
 //
 
 import Foundation
+import Combine
 
-class LoginViewModel {
+class LoginViewModel: ObservableObject {
     static let shared = LoginViewModel()
     private var services: LoginServicable!
     
-    var responseHandler: ((_ error: Bool) -> Void)?
+    var responseHandler: ((_ error: Result<String, Error>) -> Void)?
+
+    @Published var username: String = ""
+    @Published var email: String = ""
+    @Published var password: String = ""
+    
+
     
     private init() {
         services = LoginServices()
     }
     
-    @MainActor
-    func login (parms:LoginParms) {
+    func login() {
+        
         Task {
-            
-            let parms = ["email" : parms.email,
-                         "password" : parms.password]
-            do{
+            let parms = ["email": email, "password": password , "username": username]
+            do {
                 let _ = try await services.login(parms: parms)
-                return responseHandler?(true)
-            }catch{
-                responseHandler?(false)
+                
+                responseHandler?(.success("Login successfully "))
+
+            } catch {
+                responseHandler?(.failure(error))
             }
         }
     }
- 
 }
