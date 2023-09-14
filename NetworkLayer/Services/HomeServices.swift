@@ -7,16 +7,39 @@
 
 import Foundation
 
+
 protocol HomeServicable {
-    func fetchHomePageData() async throws -> UserModel
+    func fetchHomeSliderData() async throws -> HomeSliderModel
+    func fetchTopTripsData() async throws -> TopTripsModel
+    func fetchTopGuidesData() async throws -> TopGuidesModel
 }
 
 struct HomeServices: HomeServicable, NetworkServices {
-    func fetchHomePageData() async throws -> UserModel {
-        let data = try await request(endPoint: HomeEndpoint.fetchData, imagesData: nil)
+    func fetchHomeSliderData() async throws -> HomeSliderModel {
+        let data = try await request(endPoint: HomeEndpoint.fetchHomeSlider, imagesData: nil)
         do {
-            let homePageData = try JSONDecoder().decode(UserModel.self, from: data)
-            return homePageData
+            let homeSliderData = try JSONDecoder().decode(HomeSliderModel.self, from: data)
+            return homeSliderData
+        } catch {
+            throw error
+        }
+    }
+
+    func fetchTopTripsData() async throws -> TopTripsModel {
+        let data = try await request(endPoint: HomeEndpoint.fetchTopTrips, imagesData: nil)
+        do {
+            let topTripsData = try JSONDecoder().decode(TopTripsModel.self, from: data)
+            return topTripsData
+        } catch {
+            throw error
+        }
+    }
+
+    func fetchTopGuidesData() async throws -> TopGuidesModel {
+        let data = try await request(endPoint: HomeEndpoint.fetchTopGuides, imagesData: nil)
+        do {
+            let topGuidesData = try JSONDecoder().decode(TopGuidesModel.self, from: data)
+            return topGuidesData
         } catch {
             throw error
         }

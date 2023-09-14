@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1CA35022AB2EA7F00045417 /* HomeSliderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35012AB2EA7F00045417 /* HomeSliderModel.swift */; };
+		C1CA35042AB2EC7E00045417 /* TopTripsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35032AB2EC7E00045417 /* TopTripsModel.swift */; };
+		C1CA35062AB2ED8400045417 /* TopGuidesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35052AB2ED8400045417 /* TopGuidesModel.swift */; };
 		CC0A1C922AAE5DD600CF678D /* TourGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1C912AAE5DD600CF678D /* TourGuideView.swift */; };
 		CC0A1C9C2AAE695700CF678D /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C942AAE695600CF678D /* Cairo-Regular.ttf */; };
 		CC0A1C9D2AAE695700CF678D /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC0A1C952AAE695600CF678D /* Cairo-SemiBold.ttf */; };
@@ -55,6 +58,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C1CA35012AB2EA7F00045417 /* HomeSliderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSliderModel.swift; sourceTree = "<group>"; };
+		C1CA35032AB2EC7E00045417 /* TopTripsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTripsModel.swift; sourceTree = "<group>"; };
+		C1CA35052AB2ED8400045417 /* TopGuidesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGuidesModel.swift; sourceTree = "<group>"; };
 		CC0A1C912AAE5DD600CF678D /* TourGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideView.swift; sourceTree = "<group>"; };
 		CC0A1C942AAE695600CF678D /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		CC0A1C952AAE695600CF678D /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				CC0A1CB12AAFB11300CF678D /* HomeModel.swift */,
+				C1CA35012AB2EA7F00045417 /* HomeSliderModel.swift */,
+				C1CA35032AB2EC7E00045417 /* TopTripsModel.swift */,
+				C1CA35052AB2ED8400045417 /* TopGuidesModel.swift */,
 			);
 			path = HomeModel;
 			sourceTree = "<group>";
@@ -395,9 +404,11 @@
 				CC0A1CB92AAFB2F200CF678D /* HomeViewModel.swift in Sources */,
 				CC0A1CD82AAFB41900CF678D /* HTTPClient.swift in Sources */,
 				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
+				C1CA35042AB2EC7E00045417 /* TopTripsModel.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC0A1CD52AAFB41900CF678D /* HomeEndPoint.swift in Sources */,
 				CC0A1CE12AB04E8C00CF678D /* TourCardExtended.swift in Sources */,
+				C1CA35062AB2ED8400045417 /* TopGuidesModel.swift in Sources */,
 				CCD065D72AB2A21D008DEABE /* UserProfileView.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
 				CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */,
@@ -411,6 +422,7 @@
 				CCD065D92AB2B4FB008DEABE /* TourDetailsView.swift in Sources */,
 				CC0A1CAA2AAEBA5000CF678D /* ToursView.swift in Sources */,
 				CC28B0822AAC0066003390DE /* RegistrationView.swift in Sources */,
+				C1CA35022AB2EA7F00045417 /* HomeSliderModel.swift in Sources */,
 				CC0A1CB22AAFB11300CF678D /* HomeModel.swift in Sources */,
 				CC28B0882AAC2D5D003390DE /* SearchBar.swift in Sources */,
 				CC28B08C2AAC3BE9003390DE /* TourCard.swift in Sources */,
