@@ -17,8 +17,7 @@ struct GuideCard: View {
     var body: some View {
             ZStack {
                 VStack(alignment: .center) {
-                    Image(imageName)
-                        .resizable()
+                    AsyncImage(url: URL(string: imageName))
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
                         .cornerRadius(45)

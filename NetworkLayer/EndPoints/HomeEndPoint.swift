@@ -5,22 +5,22 @@
 //  Created by ElAmir Mansour on 09/09/2023.
 //
 
-enum HomeSection {
-    case homeSlider
-    case topTrips
-    case topGuides
-    
-    var endpoint: HomeEndpoint {
-        switch self {
-        case .homeSlider:
-            return .fetchHomeSlider
-        case .topTrips:
-            return .fetchTopTrips
-        case .topGuides:
-            return .fetchTopGuides
-        }
-    }
-}
+//enum HomeSection {
+//    case homeSlider
+//    case topTrips
+//    case topGuides
+//
+//    var endpoint: HomeEndpoint {
+//        switch self {
+//        case .homeSlider:
+//            return .fetchHomeSlider
+//        case .topTrips:
+//            return .fetchTopTrips
+//        case .topGuides:
+//            return .fetchTopGuides
+//        }
+//    }
+//}
 
 enum HomeEndpoint {
     case fetchHomeSlider
@@ -34,10 +34,9 @@ extension HomeEndpoint: EndPoint {
         case .fetchHomeSlider:
             return "/home/"
         case .fetchTopTrips:
-            return "/tours/{id}/"
+            return "/best_tours/"
         case .fetchTopGuides:
-            return "/users/guides/"
-            
+            return "/users/highest_rated_guide/"
         }
     }
     
@@ -46,7 +45,7 @@ extension HomeEndpoint: EndPoint {
     }
     
     var header: [String : String]? {
-        return [:]
+        return nil
     }
     
     var body: [String: Any]? {

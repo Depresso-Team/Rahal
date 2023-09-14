@@ -15,7 +15,6 @@ struct SlideShow: View {
     
     // MARK: - BODY
     var body: some View {
-
         TabView {
                 ForEach(coverImages, id: \.self) { imageName in
                     ZStack (alignment: .leading) {
@@ -37,10 +36,7 @@ struct SlideShow: View {
         .cornerRadius(10)
         .frame(width: UIScreen.main.bounds.width - 30, height: 226)
         .tabViewStyle(PageTabViewStyle())
-        
-        
       }
-
     }
 
 struct SlideShowV2_Previews: PreviewProvider {

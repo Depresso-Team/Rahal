@@ -7,10 +7,27 @@
 
 import SwiftUI
 
+struct TripModel: Identifiable, Hashable, Codable {
+    let id: String
+    let imageName: String
+    let tourNam: String
+    let rating: Double
+    let location: String
+    let duration: String
+}
+
 struct HomeView: View {
+    
+    @StateObject private var vm = HomeViewModel.shared
+    
+//    @State private var trips: [TripModel] = [
+//        .init(id: NSUUID().uuidString, imageName: "pyramids", tourNam: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day"),
+//        .init(id: NSUUID().uuidString, imageName: "pyramids", tourNam: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day")
+//    ]
+    
     var body: some View {
         NavigationView {
-            ScrollView (.vertical, showsIndicators: false){
+            ScrollView (.vertical, showsIndicators: false) {
                 VStack (alignment: .center){
                     // HEADER
                     HStack(spacing: 8) {
@@ -68,15 +85,15 @@ struct HomeView: View {
                         Text("See All")
                             .underline()
                             .foregroundColor(.secondary)
-                    }.padding()
+                    }
+                    .padding()
                     
                     // TOP FIVE TRIPS CARDS SECTION
-                    
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 20) {
-                            TourCard(imageName: "pyramids", tourName: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day")
-                            TourCard(imageName: "nubia", tourName: "Nubia Adventure", rating: 4.2, location: "Nubia, Sudan", duration: "2 Days")
-                            TourCard(imageName: "nubia", tourName: "Nubia Adventure", rating: 4.2, location: "Nubia, Sudan", duration: "2 Days")
+                            ForEach(vm.trips) { trip in
+                                TourCard(imageName: "pyramids", tourName: trip.name, rating: Double(trip.highest_rate), location: trip.highest_location, duration: "3 days")
+                            }
                         }
                         .padding()
                     }
@@ -94,11 +111,12 @@ struct HomeView: View {
                     }.padding()
                     
                     ScrollView (.horizontal, showsIndicators: false) {
-                        HStack (spacing: 10) {
-                            GuideCard(imageName: "user", guideName: "Abdelrahman", rating: 4.5, location: "Mansoura")
-                            GuideCard(imageName: "user2", guideName: "Zeyad", rating: 3.5, location: "New Damietta")
-                            GuideCard(imageName: "user2", guideName: "Ahmed", rating: 3.5, location: "user")
-                        }.padding()
+                        HStack (spacing: 20) {
+                            ForEach(vm.guides) { guide in
+                                GuideCard(imageName: guide.personal_photo, guideName: guide.username, rating: Double(guide.rate), location: "Location")
+                            }
+                        }
+                        .padding()
                     }
                 }
             }

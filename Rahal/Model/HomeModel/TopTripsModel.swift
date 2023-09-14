@@ -6,24 +6,19 @@
 //
 
 import Foundation
-struct TopTripsModel: Codable {
-    
-    let id: Int
-    let name: String
-    let location: String
-    let company_name: String
-    let state_id: String
-    let rate: Int
- 
+
+struct TripsModel: Codable {
+    let status: Bool
+    let message: String
+    let guides: [Trip]
 }
 
-/*
- {
-   "id": 0,
-   "name": "string",
-   "location": "string",
-   "company_name": "string",
-   "state_id": "1",
-   "rate": 0
- }
- */
+struct Trip: Identifiable, Hashable, Codable {
+    var id: Int
+    let name: String
+    let company_name: String
+    let state_name: String
+    let highest_location: String
+    let highest_rate: Double
+    let state_id: String
+}

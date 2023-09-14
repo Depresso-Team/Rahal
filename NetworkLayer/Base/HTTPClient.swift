@@ -13,20 +13,20 @@ protocol NetworkServices {
 
 extension NetworkServices {
     func request(endPoint: EndPoint, imagesData: [String: Any]?) async throws -> Data {
-        /// URL Components
+        // URL Components
         var urlComponents = URLComponents()
         urlComponents.scheme = endPoint.scheme
         urlComponents.host = endPoint.host
         urlComponents.path = endPoint.path
         guard let url = urlComponents.url else { throw RequestError.invalidURL }
-
+        
         do {
-            /// Request
+            // Request
             var request = URLRequest(url: url)
             request.timeoutInterval = 30
             request.httpMethod = endPoint.method.method
             
-            /// Create the boundary for the multipart/form-data request wich is values add on header to allow to upload data like docs, images, etc.
+            // Create the boundary for the multipart/form-data request
             let boundary = "Boundary-\(UUID().uuidString)"
             request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
             request.setValue("application/json", forHTTPHeaderField: "Accept")
@@ -34,7 +34,7 @@ extension NetworkServices {
             // Create the request body as a Data object
             var requestBody = Data()
             
-            /// To make one network layer dynamic with all requests i pass optional images array and in here whe check if images is empty skip else whe loop on images dict with but key and value
+            // About images
             if let imagesData = imagesData {
                 for (key, value) in imagesData {
                     if let singleImageData = value as? Data {
@@ -56,8 +56,7 @@ extension NetworkServices {
                     }
                 }
             }
-
-            /// this is body like passing username, password, etc
+            
             if let parms = endPoint.body {
                 for (key, value) in parms {
                     if let arrayValue = value as? [String] {
@@ -75,25 +74,26 @@ extension NetworkServices {
                 }
             }
 
-            /// Add the final boundary to indicate the end of the request body
+            // Add the final boundary to indicate the end of the request body
             requestBody.append("--\(boundary)--\r\n".data(using: .utf8)!)
 
-            /// Set the request body
-            request.httpBody = requestBody
-
-            /// Check if there is any header like api token
+            // Set the request body
+            if (endPoint.body) != nil {
+                request.httpBody = requestBody
+            }
+            
             if let header = endPoint.header {
                 request.allHTTPHeaderFields = header
             }
 
-            /// Create a custom URLSessionConfiguration with a timeout interval of 10 seconds
+            // Create a custom URLSessionConfiguration with a timeout interval of 10 seconds
             let configuration = URLSessionConfiguration.default
-            configuration.timeoutIntervalForResource = 15
+            configuration.timeoutIntervalForResource = 60
             
-            /// Create the URLSession with the custom configuration
+            // Create the URLSession with the custom configuration
             let session = URLSession(configuration: configuration)
             
-            /// Start session
+            // Start session
             let (data, response) = try await session.data(for: request)
             
             if let jsonString = String(data: data, encoding: .utf8) {
@@ -103,13 +103,12 @@ extension NetworkServices {
             // Check connection, response, and response type
             guard let response = response as? HTTPURLResponse else { throw RequestError.noResponse }
             let statusCode = response.statusCode
-            
-            /// In statuse code we will change this base on back-end response
+            print(statusCode)
             switch statusCode {
             case 200...299:
                 return data
             case 401:
-                throw RequestError.unknown                
+                throw RequestError.unauthorized
             default:
                 throw RequestError.unknown
             }
