@@ -5,7 +5,7 @@
 [![Xcode](https://img.shields.io/badge/Xcode-13.0-purple.svg)](https://developer.apple.com/xcode/)
 [![CoreData](https://img.shields.io/badge/CoreData-5.0-red.svg)](https://developer.apple.com/documentation/coredata)
 [![Networking](https://img.shields.io/badge/Networking-HTTP-lightgrey.svg)](https://developer.apple.com/documentation/foundation/url_loading_system)
-# Ra7al - Tourist Guide iOS App
+# Rahal - Tourist Guide iOS App
 
 ![App Logo](https://sevenquality.com/wp-content/uploads/2023/09/playstore-e1694134482705.png)
 
@@ -47,11 +47,10 @@ This iOS app is built following the MVVM (Model-View-ViewModel) architecture and
 ## Tech Stack
 
 - **Programming Language:** Swift
-- **User Interface:** UIKit with XIB files
+- **User Interface:** SwiftUI & UIKIT XIB Files
 - **Architecture:** MVVM (Model-View-ViewModel)
 - **Networking:** URLSession for API requests
 - **Database:** CoreData (for local storage of user data)
-- **Third-party Libraries:** [Alamofire](https://github.com/Alamofire/Alamofire) for network requests
 
 ## Getting Started
 
@@ -63,16 +62,8 @@ To run this app locally, follow these steps:
 
 Make sure you have the necessary dependencies installed, and the Xcode environment is properly set up for Swift development.
 
-## Contributions
-
-Contributions to this project are welcome! If you'd like to contribute, please fork this repository and submit a pull request with your changes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
-If you have any questions or suggestions, feel free to reach out to us at [contact@depresso.com](mailto:contact@depresso.com).
+If you have any questions or suggestions, feel free to reach out to us at [contact@depresso.com](mailto:pro.abdelrahmanismail@gmail.com).
 
 We hope you find this Ra7al - Tourist Guide iOS app valuable for your travel adventures in Egypt! Happy exploring! 🌍✈️🗺️
