@@ -11,7 +11,7 @@ class TripDetailsViewModel {
     static let shared = TripDetailsViewModel()
     private var services: TripDetailsServices!
     
-    var responseHandler: ((_ error: Bool) -> Void)?
+    var responseHandler: ((_ result: Result<[TripDetailsModel], Error>) -> Void)?
     
     private init() {
         services = TripDetailsServices()
@@ -21,9 +21,9 @@ class TripDetailsViewModel {
         Task {
             do {
                 let _ = try await services.fetchTripDetails(tripID: tripID)
-                responseHandler?(true)
+//                responseHandler?(true)
             } catch {
-                responseHandler?(false)
+//                responseHandler?(false)
             }
         }
     }

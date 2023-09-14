@@ -8,61 +8,53 @@
 import SwiftUI
 
 struct RegistrationView: View {
-    
     // MARK: - PROPERTIES
-    var viewModel = SignupViewModel.shared
-
-    @State private var fullName: String = ""
-    @State private var email: String = ""
-    @State private var phoneNumber: String = ""
-    @State private var country: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
-    @State private var language: String = ""
-    @State private var countryCity: String = ""
-    @State private var area: String = ""
-    @State private var streetNumber: String = ""
-    @State private var addressLabel: String = ""
+    @StateObject var vm = SignupViewModel.shared
     
     var body: some View {
         NavigationStack {
             ScrollView (.vertical, showsIndicators: false) {
                 VStack{
                     // LOGO
-                    Image("rahal-logo").resizable().scaledToFill().frame(width: 100,height: 152).padding(.top,48)
+                    Image("rahal-logo")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100,height: 152)
+                        .padding(.top,48)
                     
                     // FORM FIELDS
                     VStack (alignment: .leading, spacing: 18) {
                         Text("Sign up").font(.title).fontWeight(.bold).foregroundColor(Color("CustomDarkGreenColor"))
                         
-                        CurvedTextField(text: $fullName, placeholder: "",title: "Full name")
-                        CurvedTextField(text: $email, placeholder: "",title: "Email Address").textInputAutocapitalization(.none)
+                        CurvedTextField(text: $vm.fullName, placeholder: "",title: "Full name")
+                        CurvedTextField(text: $vm.email, placeholder: "",title: "Email Address").textInputAutocapitalization(.none)
                         
-                        CurvedTextField(text: $phoneNumber, placeholder: "",title: "Phone Number")
-                        CurvedTextField(text: $country, placeholder: "",title: "Country")
+                        CurvedTextField(text: $vm.phoneNumber, placeholder: "",title: "Phone Number")
+                        CurvedTextField(text: $vm.country, placeholder: "",title: "Country")
                         
-                        CurvedTextField(text: $password, placeholder: "", title: "Password",isSecureField: true)
-                        CurvedTextField(text: $confirmPassword, placeholder: "", title: "Confirm Password",isSecureField: true)
+                        CurvedTextField(text: $vm.password, placeholder: "", title: "Password",isSecureField: true)
+                        CurvedTextField(text: $vm.confirmPassword, placeholder: "", title: "Confirm Password",isSecureField: true)
                         
-                        CurvedTextField(text: $language, placeholder: "",title: "Language")
+                        CurvedTextField(text: $vm.language, placeholder: "",title: "Language")
                         
-                    }.padding(.horizontal)
-                        .padding(.top,28)
+                    }
+                    .padding(.horizontal)
+                    .padding(.top,28)
                     
                     VStack (alignment: .leading, spacing: 10){
                         Text("Address").padding(.leading,5).font(.system(size: 18)).fontWeight(.semibold)
-                        CurvedTextField(text: $countryCity, placeholder: "",title: "Country / City")
-                        CurvedTextField(text: $streetNumber, placeholder: "",title: "Street Number")
-                        CurvedTextField(text: $area, placeholder: "",title: "Area")
-                        CurvedTextField(text: $addressLabel, placeholder: "",title: "Address Label")
+                        CurvedTextField(text: $vm.countryCity, placeholder: "",title: "Country / City")
+                        CurvedTextField(text: $vm.streetNumber, placeholder: "",title: "Street Number")
+                        CurvedTextField(text: $vm.area, placeholder: "",title: "Area")
+                        CurvedTextField(text: $vm.addressLabel, placeholder: "",title: "Address Label")
                     }
                     .padding(.horizontal)
                     .padding(.top,28)
                     
                     // SIGN UP BUTTON
                     Button{
-                        viewModel.register(parms: RegisterParms(username: "AbdalazemSahh", email: "Abdkbda@gmail.com", password: "Test1001", phone: 1042690299, address: "Cai", country_code: 1, photo_url: "", languages: "en", is_guide: false))
-                        viewModel.responseHandler = { result in
+                        vm.register()
+                        vm.responseHandler = { result in
                             switch result {
                             case .success(let message):
                                 // TODO: Go to home screen

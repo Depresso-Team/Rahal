@@ -51,9 +51,8 @@ struct TourDetailsView: View {
                     
                 Spacer()
                 }
-            }.padding()
-            
-            
+            }
+            .padding()
             Spacer()
         }
     }
