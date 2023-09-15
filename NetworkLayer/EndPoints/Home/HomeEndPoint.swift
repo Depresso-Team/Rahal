@@ -32,7 +32,7 @@ extension HomeEndpoint: EndPoint {
     var path: String {
         switch self {
         case .fetchHomeSlider:
-            return "/home/"
+            return "/home/banner/"
         case .fetchTopTrips:
             return "/best_tours/"
         case .fetchTopGuides:

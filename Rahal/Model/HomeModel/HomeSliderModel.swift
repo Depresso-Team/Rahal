@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct HomeSliderModel: Codable {
+struct SliderModel: Identifiable, Codable {
     let id: Int
     let title: String
-    let photo_url: String
+    let bannar_url: String
 }

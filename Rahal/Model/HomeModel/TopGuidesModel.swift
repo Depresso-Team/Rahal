@@ -17,6 +17,5 @@ struct Guide: Identifiable, Hashable, Codable {
     let id: Int
     let username: String
     let personal_photo: String
-    let background_URL: String
     let rate: Double
 }

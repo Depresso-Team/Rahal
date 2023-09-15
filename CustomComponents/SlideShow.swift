@@ -10,37 +10,41 @@ import SwiftUI
 struct SlideShow: View {
     // MARK: - PROPERTIES
     @State private var currentIndex = 0
-    let coverImages: [String] = ["alAzharMosque","abuSimbleTemple","sphinx"]
-    let coverText: [String] = ["Al Azhar Mosque","Abu Simble Temple","Sphinx"]
+    @Binding var slides: [SliderModel]
     
     // MARK: - BODY
     var body: some View {
         TabView {
-                ForEach(coverImages, id: \.self) { imageName in
-                    ZStack (alignment: .leading) {
-                        Image(imageName)
+            ForEach(slides) { slide in
+                ZStack (alignment: .leading) {
+                    AsyncImage(url: URL(string: slide.bannar_url)) { error in
+                        Image("alAzharMosque")
                             .resizable()
                             .scaledToFill()
-                        VStack (alignment: .leading) {
-                            Spacer()
-                            Text("Al Azhar Mosque")
-                                .font(.system(size: 24))
-                                .fontWeight(.heavy)
-                            .foregroundColor(.white)
-                            
-                        }.padding(34)
                     }
-
+                    .scaledToFill()
+                    VStack (alignment: .leading) {
+                        Spacer()
+                        Text(slide.title)
+                            .font(.system(size: 24))
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                        
+                    }.padding(34)
                 }
+            }
         }
         .cornerRadius(10)
         .frame(width: UIScreen.main.bounds.width - 30, height: 226)
         .tabViewStyle(PageTabViewStyle())
-      }
     }
+}
 
-struct SlideShowV2_Previews: PreviewProvider {
+struct SlideShow_Previews: PreviewProvider {
     static var previews: some View {
-        SlideShow()
+        let slides: Binding<[SliderModel]> = .constant([
+            SliderModel(id: 1, title: "Dahab", bannar_url: "https://rahal-app-efe3e7eff0b7.herokuapp.com/banners/pngwing.com.png")
+        ])
+        return SlideShow(slides: slides)
     }
 }

@@ -17,14 +17,8 @@ struct TripModel: Identifiable, Hashable, Codable {
 }
 
 struct HomeView: View {
-    
     @StateObject private var vm = HomeViewModel.shared
-    
-//    @State private var trips: [TripModel] = [
-//        .init(id: NSUUID().uuidString, imageName: "pyramids", tourNam: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day"),
-//        .init(id: NSUUID().uuidString, imageName: "pyramids", tourNam: "Giza Plateau", rating: 4.5, location: "Giza, Egypt", duration: "1 Day")
-//    ]
-    
+        
     var body: some View {
         NavigationView {
             ScrollView (.vertical, showsIndicators: false) {
@@ -74,8 +68,8 @@ struct HomeView: View {
                     .padding()
                     
                     // SLIDER SECTION
-                    SlideShow()
-                    
+                    SlideShow(slides: $vm.slides)
+
                     // TOP FIVE TRIPS TITLES SECTION
                     HStack () {
                         Text("Top Five Trips")

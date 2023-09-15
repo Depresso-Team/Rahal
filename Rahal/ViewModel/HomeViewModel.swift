@@ -4,9 +4,8 @@ class HomeViewModel: ObservableObject {
     
     static let shared = HomeViewModel()
     private var services: HomeServices!
-    
-    var homeSliderData: HomeSliderModel?
-    
+        
+    @Published var slides = [SliderModel]()
     @Published var trips = [Trip]()
     @Published var guides = [Guide]()
     
@@ -15,20 +14,20 @@ class HomeViewModel: ObservableObject {
     private init() {
         services = HomeServices()
         Task {
+            try await fetchHomeSliderData()
             try await fetchTopTripsData()
             try await fetchTopGuidesData()
         }
     }
     
     @MainActor
-    func fetchHomeSliderData() {
-        Task {
-            do {
-                homeSliderData = try await services.fetchHomeSliderData()
-                responseHandler?(true)
-            } catch {
-                responseHandler?(false)
-            }
+    func fetchHomeSliderData() async throws {
+        do {
+            let slides = try await services.fetchHomeSliderData()
+            self.slides = slides
+        } catch {
+            print(error.localizedDescription)
+            responseHandler?(false)
         }
     }
     
@@ -49,6 +48,7 @@ class HomeViewModel: ObservableObject {
             let guides = try await services.fetchTopGuidesData()
             self.guides = guides.guides
         } catch {
+            print(error.localizedDescription)
             responseHandler?(false)
         }
     }

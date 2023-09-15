@@ -9,16 +9,16 @@ import Foundation
 
 
 protocol HomeServicable {
-    func fetchHomeSliderData() async throws -> HomeSliderModel
+    func fetchHomeSliderData() async throws -> [SliderModel]
     func fetchTopTripsData() async throws -> TripsModel
     func fetchTopGuidesData() async throws -> GuidesModel
 }
 
 struct HomeServices: HomeServicable, NetworkServices {
-    func fetchHomeSliderData() async throws -> HomeSliderModel {
+    func fetchHomeSliderData() async throws -> [SliderModel] {
         let data = try await request(endPoint: HomeEndpoint.fetchHomeSlider, imagesData: nil)
         do {
-            let homeSliderData = try JSONDecoder().decode(HomeSliderModel.self, from: data)
+            let homeSliderData = try JSONDecoder().decode([SliderModel].self, from: data)
             return homeSliderData
         } catch {
             throw error
