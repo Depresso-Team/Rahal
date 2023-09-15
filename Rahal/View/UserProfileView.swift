@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    // MARK: - BODY
     var body: some View {
         ZStack (alignment: .top) {
             VStack{
                 Spacer()
                 VStack{
                     VStack (alignment: .center) {
+                    // PAGES LIST
                         VStack (alignment: .leading){
                             HStack{
                                 Image(systemName: "person").foregroundColor(Color("CustomDarkGreenColor"))
@@ -43,9 +45,7 @@ struct UserProfileView: View {
                                 Image(systemName: "arrow.right").foregroundColor(.secondary)
                             }.padding(6)
                         }
-                        
                         Divider()
-                        
                         VStack (alignment: .leading){
                             HStack{
                                 Image(systemName: "megaphone.fill").foregroundColor(Color("CustomDarkGreenColor"))
@@ -75,7 +75,7 @@ struct UserProfileView: View {
                             }.padding(6)
                             Divider()
                         }
-                        
+                        // LOGOUT BUTTON
                         HStack{
                             Spacer()
                             Image(systemName: "rectangle.portrait.and.arrow.right")
@@ -85,18 +85,16 @@ struct UserProfileView: View {
                         .font(.system(size: 16))
                         .padding(8)
                     }
-                    .frame(width: UIScreen.main.bounds.width - 20,height: UIScreen.main.bounds.height * 0.6)
+                    .frame(width: UIScreen.main.bounds.width - 80,height: UIScreen.main.bounds.height * 0.45)
                     .padding(.horizontal)
                     .padding(.vertical,20)
                     .background(.secondary.opacity(0.1))
                     .cornerRadius(50)
-                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 2, y: 2)
+                    .cornerRadius(40)
                 }
-                .background(.white)
-            .cornerRadius(40)
             }
 
-            
+            // PROFILE IMAGE
             VStack (alignment: .center){
                 Image("user")
                     .resizable()
@@ -107,8 +105,11 @@ struct UserProfileView: View {
                 Text("Abdelrahman Esmail").bold().font(.system(size: 20))
                     .padding(.top,5)
                     .padding(.bottom,20)
+                
             }
             .offset(x:0,y: 110)
+            
+            
         }
     }
     }
