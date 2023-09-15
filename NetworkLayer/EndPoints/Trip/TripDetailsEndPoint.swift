@@ -6,8 +6,9 @@
 //
 
 import Foundation
+
 enum TripDetailsEndpoint {
-    case fetchTripDetails(id: Int) // You can add any required parameters if needed
+    case fetchTripDetails(id: Int)
 }
 
 extension TripDetailsEndpoint: EndPoint {
@@ -23,7 +24,7 @@ extension TripDetailsEndpoint: EndPoint {
     }
     
     var header: [String : String]? {
-        return [:]
+        return nil
     }
     
     var body: [String: Any]? {

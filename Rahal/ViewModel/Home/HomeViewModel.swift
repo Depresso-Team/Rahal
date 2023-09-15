@@ -8,8 +8,9 @@ class HomeViewModel: ObservableObject {
     @Published var slides = [SliderModel]()
     @Published var trips = [Trip]()
     @Published var guides = [Guide]()
-    
-    var responseHandler: ((_ error: Bool) -> Void)?
+        
+    @Published var showAlert = false
+    @Published var alertMessage = ""
     
     private init() {
         services = HomeServices()
@@ -26,8 +27,7 @@ class HomeViewModel: ObservableObject {
             let slides = try await services.fetchHomeSliderData()
             self.slides = slides
         } catch {
-            print(error.localizedDescription)
-            responseHandler?(false)
+            showErrorAlert(error: error)
         }
     }
     
@@ -37,8 +37,7 @@ class HomeViewModel: ObservableObject {
             let trips = try await services.fetchTopTripsData()
             self.trips = trips.guides
         } catch {
-            print(error.localizedDescription)
-            responseHandler?(false)
+            showErrorAlert(error: error)
         }
     }
     
@@ -48,8 +47,12 @@ class HomeViewModel: ObservableObject {
             let guides = try await services.fetchTopGuidesData()
             self.guides = guides.guides
         } catch {
-            print(error.localizedDescription)
-            responseHandler?(false)
+            showErrorAlert(error: error)
         }
+    }
+    
+    private func showErrorAlert(error: Error) {
+        alertMessage = error.localizedDescription
+        showAlert = true
     }
 }

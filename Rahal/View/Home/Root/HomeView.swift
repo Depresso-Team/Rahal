@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TripModel: Identifiable, Hashable, Codable {
     let id: String
@@ -17,12 +18,12 @@ struct TripModel: Identifiable, Hashable, Codable {
 }
 
 struct HomeView: View {
-    @StateObject private var vm = HomeViewModel.shared
-        
+    @StateObject var vm = HomeViewModel.shared
+    
     var body: some View {
         NavigationView {
             ScrollView (.vertical, showsIndicators: false) {
-                VStack (alignment: .center){
+                VStack (alignment: .center) {
                     // HEADER
                     HStack(spacing: 8) {
                         // TITLE
@@ -69,16 +70,20 @@ struct HomeView: View {
                     
                     // SLIDER SECTION
                     SlideShow(slides: $vm.slides)
-
                     // TOP FIVE TRIPS TITLES SECTION
                     HStack () {
                         Text("Top Five Trips")
                             .bold()
                             .font(.system(size: 20))
                         Spacer()
-                        Text("See All")
-                            .underline()
-                            .foregroundColor(.secondary)
+                        
+                        NavigationLink() {
+                            ToursView()
+                        } label: {
+                            Text("See All")
+                                .underline()
+                                .foregroundColor(.secondary)
+                        }
                     }
                     .padding()
                     
@@ -114,6 +119,18 @@ struct HomeView: View {
                     }
                 }
             }
+        }
+        .alert(isPresented: Binding(
+            get: { vm.showAlert },
+            set: { newValue in vm.showAlert = newValue }
+        )) {
+            Alert(
+                title: Text("Error"),
+                message: Text(vm.alertMessage),
+                dismissButton: .default(Text("OK")) {
+                    // Handle the alert dismissal if needed
+                }
+            )
         }
     }
 }
