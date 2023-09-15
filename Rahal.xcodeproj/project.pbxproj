@@ -66,6 +66,8 @@
 		CC9797E12AB4FABB0051E616 /* AboutSegmentContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9797E02AB4FABB0051E616 /* AboutSegmentContent.swift */; };
 		CC9797E32AB5001A0051E616 /* ReviewsSegmentContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9797E22AB5001A0051E616 /* ReviewsSegmentContent.swift */; };
 		CC9797E62AB51F3D0051E616 /* TourGuideProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9797E52AB51F3D0051E616 /* TourGuideProfileView.swift */; };
+		CC9797E82AB522DF0051E616 /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9797E72AB522DF0051E616 /* NotificationCard.swift */; };
+		CC9797EA2AB5248B0051E616 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9797E92AB5248B0051E616 /* NotificationView.swift */; };
 		CCD065D52AB2A1EB008DEABE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD065D42AB2A1EB008DEABE /* SearchView.swift */; };
 		CCD065D72AB2A21D008DEABE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD065D62AB2A21D008DEABE /* UserProfileView.swift */; };
 		CCD065D92AB2B4FB008DEABE /* TourDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD065D82AB2B4FB008DEABE /* TourDetailsView.swift */; };
@@ -133,6 +135,8 @@
 		CC9797E02AB4FABB0051E616 /* AboutSegmentContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSegmentContent.swift; sourceTree = "<group>"; };
 		CC9797E22AB5001A0051E616 /* ReviewsSegmentContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsSegmentContent.swift; sourceTree = "<group>"; };
 		CC9797E52AB51F3D0051E616 /* TourGuideProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideProfileView.swift; sourceTree = "<group>"; };
+		CC9797E72AB522DF0051E616 /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
+		CC9797E92AB5248B0051E616 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		CCD065D42AB2A1EB008DEABE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		CCD065D62AB2A21D008DEABE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		CCD065D82AB2B4FB008DEABE /* TourDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailsView.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				CC9797E42AB51F230051E616 /* Guide */,
 				7F14921C2AB4E8FB00D98565 /* Root */,
 				7F14921D2AB4E90500D98565 /* Tour */,
+				CC9797E92AB5248B0051E616 /* NotificationView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				CC0A1CE02AB04E8C00CF678D /* TourCardExtended.swift */,
 				CC9797E02AB4FABB0051E616 /* AboutSegmentContent.swift */,
 				CC9797E22AB5001A0051E616 /* ReviewsSegmentContent.swift */,
+				CC9797E72AB522DF0051E616 /* NotificationCard.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -568,7 +574,9 @@
 				C1CA35102AB3010300045417 /* TourGuideDetailsModel.swift in Sources */,
 				7F1492272AB4EB8500D98565 /* TripEndPoint.swift in Sources */,
 				CCD065D72AB2A21D008DEABE /* UserProfileView.swift in Sources */,
+				CC9797E82AB522DF0051E616 /* NotificationCard.swift in Sources */,
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
+				CC9797EA2AB5248B0051E616 /* NotificationView.swift in Sources */,
 				C1CA350B2AB2FF5300045417 /* TourGuideDetailsEndPoint.swift in Sources */,
 				CC9797E62AB51F3D0051E616 /* TourGuideProfileView.swift in Sources */,
 				C1CA35152AB301B600045417 /* TourGuideDetailsServices.swift in Sources */,
