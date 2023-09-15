@@ -9,9 +9,9 @@ import SwiftUI
 
 struct TourCardExtended: View {
     // MARK: - PROPERTIES
-    let imageName: String
+    let image: String
     let tourName: String
-    let price: Double
+    let price: Int
     let desc: String
     let rating: Double
     let location: String
@@ -20,13 +20,10 @@ struct TourCardExtended: View {
     var body: some View {
         ZStack {
             HStack(alignment: .center, spacing: 12) {
-                Image(imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                AsyncImage(url: URL(string: image))
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 142, height: 116)
                     .cornerRadius(16)
-                    .buttonStyle(PlainButtonStyle())
-                
                 
                 VStack (alignment: .leading) {
                     HStack{
@@ -36,9 +33,7 @@ struct TourCardExtended: View {
                         Image(systemName: "bookmark.fill")
                             .foregroundColor(Color("CustomDarkGreenColor"))
                             .font(.system(size: 22))
-                        
                     }
-                    
                     
                     Text(desc)
                         .font(.system(size: 10))
@@ -55,7 +50,7 @@ struct TourCardExtended: View {
                     .font(.footnote)
                     .padding(.vertical,1)
                     HStack{
-                        Text("\(price,specifier: "%.1f")USD").bold()
+                        Text("\(price)USD").bold()
                         Text("/ \(duration) Day").bold()
                             .foregroundColor(.secondary)
                             .font(.footnote)
@@ -84,7 +79,7 @@ struct TourCardExtended: View {
 
 struct TourCardExtended_Previews: PreviewProvider {
     static var previews: some View {
-        TourCardExtended(imageName: "pyramids", tourName: "Giza Pyramids" ,price: 360, desc: "In the shadow of the Giza  Pyramids..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
+        TourCardExtended(image: "pyramids", tourName: "Giza Pyramids" ,price: 360, desc: "In the shadow of the Giza  Pyramids..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
 
 
     }

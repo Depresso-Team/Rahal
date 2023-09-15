@@ -11,19 +11,24 @@ class TourGuideDetailsViewModel {
     static let shared = TourGuideDetailsViewModel()
     private var services: TourGuideDetailsServices!
     
-    var responseHandler: ((_ error: Bool) -> Void)?
+    @Published var tourGuideDetails: TourGuideDetailsModel?
+    
+    var responseHandler: ((_ result: Result<TourGuideDetailsModel, Error>) -> Void)?
     
     private init() {
         services = TourGuideDetailsServices()
     }
+    
     @MainActor
     func fetchTourGuideDetails(userID: Int) {
         Task {
             do {
-                let _ = try await services.fetchTourGuideDetails(userID: userID)
-                responseHandler?(true)
+                let tourGuideDetailsData = try await services.fetchTourGuideDetails(userID: userID)
+                tourGuideDetails = tourGuideDetailsData
+                responseHandler?(.success(tourGuideDetailsData))
             } catch {
-                responseHandler?(false)
+                tourGuideDetails = nil
+                responseHandler?(.failure(error))
             }
         }
     }
