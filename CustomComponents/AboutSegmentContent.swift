@@ -53,6 +53,6 @@ struct AboutSegmentContent: View {
 
 struct AboutSegmentContent_Previews: PreviewProvider {
     static var previews: some View {
-        AboutSegmentContent(imageName: "user", guideName: "Abdelrahman", rating: 4.5)
+        ReviewsSegmentContent(imageName: "user", guideName: "Abdelrahman", rating: 4.5)
     }
 }

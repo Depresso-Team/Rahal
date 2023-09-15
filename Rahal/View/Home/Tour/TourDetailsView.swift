@@ -107,11 +107,6 @@ struct TourDetailsView: View {
                         
                     }.background(Color("CustomDarkGreenColor")).cornerRadius(10)
                         .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
-                    
-
-                        
-                    
-                    
                 }
                 .padding()
                 
@@ -141,7 +136,7 @@ struct ContentOfSegment: View {
     var body: some View {
         switch selectedSide {
         case .about: AboutSegmentContent(imageName: "user", guideName: "Abdelrahman", rating: 4.5)
-        case .reviews: Text("Abdo")
+        case .reviews: Text("Textttt")
         }
     }
 }
