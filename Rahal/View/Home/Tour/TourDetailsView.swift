@@ -94,7 +94,7 @@ struct TourDetailsView: View {
                         }
    
                     }
-                    // SIGN IN BUTTON
+                    // BOOK BUTTON
                     Button{
                         
                         }

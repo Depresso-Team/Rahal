@@ -78,6 +78,10 @@ struct AboutSegmentView: View {
                         HStack {
                             Text(profileData[index].title)
                                 .font(.headline)
+                                .frame(width: 100, alignment: .leading)
+                            HStack {
+                              Divider()
+                            }
                             Spacer()
                             Text(profileData[index].value)
                                 .font(.body)

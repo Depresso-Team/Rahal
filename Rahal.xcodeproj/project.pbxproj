@@ -50,6 +50,9 @@
 		CC0A1CDC2AAFB41900CF678D /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CCF2AAFB41900CF678D /* LoginServices.swift */; };
 		CC0A1CDE2AAFB41900CF678D /* RegisterServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */; };
 		CC0A1CE12AB04E8C00CF678D /* TourCardExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CE02AB04E8C00CF678D /* TourCardExtended.swift */; };
+		CC1FDA442AB57E0800080334 /* OnBoardingOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FDA432AB57E0800080334 /* OnBoardingOneView.swift */; };
+		CC1FDA462AB57E1600080334 /* OnBoardingSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FDA452AB57E1600080334 /* OnBoardingSecondView.swift */; };
+		CC1FDA482AB5856400080334 /* OnBoardingThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FDA472AB5856400080334 /* OnBoardingThreeView.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -118,6 +121,9 @@
 		CC0A1CCF2AAFB41900CF678D /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
 		CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterServices.swift; sourceTree = "<group>"; };
 		CC0A1CE02AB04E8C00CF678D /* TourCardExtended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourCardExtended.swift; sourceTree = "<group>"; };
+		CC1FDA432AB57E0800080334 /* OnBoardingOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingOneView.swift; sourceTree = "<group>"; };
+		CC1FDA452AB57E1600080334 /* OnBoardingSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSecondView.swift; sourceTree = "<group>"; };
+		CC1FDA472AB5856400080334 /* OnBoardingThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingThreeView.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -367,6 +373,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		CC1FDA422AB57DD800080334 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				CC1FDA432AB57E0800080334 /* OnBoardingOneView.swift */,
+				CC1FDA452AB57E1600080334 /* OnBoardingSecondView.swift */,
+				CC1FDA472AB5856400080334 /* OnBoardingThreeView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		CC28B0732AABB579003390DE /* TFValidation */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +479,7 @@
 		CC5A81C92AABB31A00586168 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC1FDA422AB57DD800080334 /* OnBoarding */,
 				CC5A81C62AABB30900586168 /* Root */,
 				7FF1132D2AB3889000BB4BDA /* Auth */,
 				7FF1132E2AB3889D00BB4BDA /* Home */,
@@ -562,9 +579,11 @@
 			files = (
 				7F14922A2AB4EC0300D98565 /* TripServices.swift in Sources */,
 				CC5A81B82AABB1E500586168 /* RahalApp.swift in Sources */,
+				CC1FDA482AB5856400080334 /* OnBoardingThreeView.swift in Sources */,
 				CC0A1CB92AAFB2F200CF678D /* HomeViewModel.swift in Sources */,
 				CC0A1CD82AAFB41900CF678D /* HTTPClient.swift in Sources */,
 				CC28B0862AAC2811003390DE /* HomeView.swift in Sources */,
+				CC1FDA462AB57E1600080334 /* OnBoardingSecondView.swift in Sources */,
 				C1CA35042AB2EC7E00045417 /* TopTripsModel.swift in Sources */,
 				CC5A81CC2AABB37C00586168 /* SplashView.swift in Sources */,
 				CC0A1CD52AAFB41900CF678D /* HomeEndPoint.swift in Sources */,
@@ -578,6 +597,7 @@
 				CC28B0782AABB638003390DE /* GFTextField.swift in Sources */,
 				CC9797EA2AB5248B0051E616 /* NotificationView.swift in Sources */,
 				C1CA350B2AB2FF5300045417 /* TourGuideDetailsEndPoint.swift in Sources */,
+				CC1FDA442AB57E0800080334 /* OnBoardingOneView.swift in Sources */,
 				CC9797E62AB51F3D0051E616 /* TourGuideProfileView.swift in Sources */,
 				C1CA35152AB301B600045417 /* TourGuideDetailsServices.swift in Sources */,
 				CC28B0902AACBFF7003390DE /* GuideCard.swift in Sources */,
