@@ -57,6 +57,7 @@
 		CC0A1CDE2AAFB41900CF678D /* RegisterServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */; };
 		CC0A1CE12AB04E8C00CF678D /* TourCardExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A1CE02AB04E8C00CF678D /* TourCardExtended.swift */; };
 		CC1FDA442AB57E0800080334 /* OnBoardingOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FDA432AB57E0800080334 /* OnBoardingOneView.swift */; };
+		CC1FDA4A2AB6005600080334 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FDA492AB6005600080334 /* SavedView.swift */; };
 		CC28B0752AABB585003390DE /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0742AABB585003390DE /* TextFieldValidation.swift */; };
 		CC28B0782AABB638003390DE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B0772AABB638003390DE /* GFTextField.swift */; };
 		CC28B07C2AABC361003390DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28B07B2AABC361003390DE /* LoginView.swift */; };
@@ -131,6 +132,7 @@
 		CC0A1CD12AAFB41900CF678D /* RegisterServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterServices.swift; sourceTree = "<group>"; };
 		CC0A1CE02AB04E8C00CF678D /* TourCardExtended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourCardExtended.swift; sourceTree = "<group>"; };
 		CC1FDA432AB57E0800080334 /* OnBoardingOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingOneView.swift; sourceTree = "<group>"; };
+		CC1FDA492AB6005600080334 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		CC28B0742AABB585003390DE /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		CC28B0772AABB638003390DE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		CC28B07B2AABC361003390DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -422,6 +424,22 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		CC1FDA4B2AB6010E00080334 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				CCD065D62AB2A21D008DEABE /* UserProfileView.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		CC1FDA4C2AB6011C00080334 /* Saved */ = {
+			isa = PBXGroup;
+			children = (
+				CC1FDA492AB6005600080334 /* SavedView.swift */,
+			);
+			path = Saved;
+			sourceTree = "<group>";
+		};
 		CC28B0732AABB579003390DE /* TFValidation */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,7 +543,8 @@
 				7FF1132D2AB3889000BB4BDA /* Auth */,
 				7F14922D2AB5AF0800D98565 /* TabBar */,
 				7FF1132E2AB3889D00BB4BDA /* Home */,
-				CCD065D62AB2A21D008DEABE /* UserProfileView.swift */,
+				CC1FDA4B2AB6010E00080334 /* UserProfile */,
+				CC1FDA4C2AB6011C00080334 /* Saved */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,6 +693,7 @@
 				CC0A1CBC2AAFB32200CF678D /* LoginViewModel.swift in Sources */,
 				7F1492382AB5B88D00D98565 /* TourGuideViewModel.swift in Sources */,
 				CC28B0922AAD50DE003390DE /* NavigationBar.swift in Sources */,
+				CC1FDA4A2AB6005600080334 /* SavedView.swift in Sources */,
 				7F1492312AB5B61200D98565 /* GuidesListEndPoint.swift in Sources */,
 				CC0A1CD32AAFB41900CF678D /* RegisterEndPoint.swift in Sources */,
 				CC0A1CDC2AAFB41900CF678D /* LoginServices.swift in Sources */,

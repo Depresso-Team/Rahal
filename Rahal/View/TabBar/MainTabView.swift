@@ -28,7 +28,7 @@ struct MainTabView: View {
                     Image(systemName: "magnifyingglass")
                 }.tag(1)
             
-            TourGuideView()
+            SavedView()
                 .onAppear {
                     selectedIndex = 2
                 }

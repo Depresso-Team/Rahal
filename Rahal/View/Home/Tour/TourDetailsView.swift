@@ -28,7 +28,7 @@ struct TourDetailsView: View {
                                 .scaledToFill()
                         }
                 }
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.45)
+                .frame(height: UIScreen.main.bounds.height*0.4)
                 .tabViewStyle(PageTabViewStyle())
                 
                 
