@@ -15,7 +15,7 @@ struct TourGuideView: View {
     let grids: [GridItem] = [
         .init(.flexible()),
         .init(.flexible())
-    ]    
+    ]
     // MARK: - BODY
     var body: some View {
         NavigationView {
@@ -23,10 +23,14 @@ struct TourGuideView: View {
                 VStack {
                     LazyVGrid(columns: grids, spacing: 14) {
                         ForEach(vm.guides) { guide in
-                            GuideCard(image: guide.personal_photo,
-                                      guideName: "Abdalarhamn",
-                                      rating: guide.rate,
-                                      location: guide.address)
+                            NavigationLink {
+                                TourGuideProfileView()
+                            } label: {
+                                GuideCard(image: guide.personal_photo,
+                                          guideName: "Abdalarhamn",
+                                          rating: guide.rate,
+                                          location: guide.address)
+                            }
                         }
                     }
                     .padding()

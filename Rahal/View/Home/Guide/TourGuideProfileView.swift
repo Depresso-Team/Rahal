@@ -9,9 +9,8 @@ import SwiftUI
 
 struct TourGuideProfileView: View {
     // MARK: - PROPERTIES
-    let rating: Double
     @State private var selectedSegment = 0
-
+    
     // MARK: - BODY
     var body: some View {
         ZStack (alignment: .top) {
@@ -25,17 +24,17 @@ struct TourGuideProfileView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 140, height: 140)
                             .cornerRadius(70)
-                            
+                        
                         Text("Abdelrahman Esmail").bold().font(.system(size: 20))
                             .padding(.top,5)
                             .padding(.bottom,10)
-                            
+                        
                         HStack {
                             ForEach(0..<5) { index in
-                                Image(systemName: index < Int(rating) ? "star.fill" :
-                                        (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
-                                    .foregroundColor(.yellow)
-                                    .font(.system(size: 18))
+                                Image(systemName: index < Int(5) ? "star.fill" :
+                                        (index == Int(5) && 5.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
+                                .foregroundColor(.yellow)
+                                .font(.system(size: 18))
                             }.padding(.bottom,2)
                         }.padding(.bottom,10)
                     }
@@ -52,19 +51,19 @@ struct TourGuideProfileView: View {
                     } else if selectedSegment == 1 { // Reviews Segment
                         ReviewsSegmentContent(user: "Ali Osman", desc: "From Egypt, I’m 32 years old, license number 12345,Three years...", rating: 4.5)
                     } else if selectedSegment == 2 { // Trips Segment
-                            TourCardExtended(image: "pyramids", tourName: "Giza Pyramids" ,price: 360, desc: "In the shadow of the Giza  Pyramids..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
+                        TourCardExtended(image: "pyramids", tourName: "Giza Pyramids" ,price: 360, desc: "In the shadow of the Giza  Pyramids..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
                     }
                 }
             }
-
-
+            
+            
         }
     }
 }
 
 struct TourGuideProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        TourGuideProfileView(rating: 4.5)
+        TourGuideProfileView()
     }
 }
 
@@ -74,21 +73,21 @@ let profileData: [(title: String, value: String)] = [("Name", "Ali Kamal"), ("Ag
 struct AboutSegmentView: View {
     var body: some View {
         VStack(alignment: .leading) {
-                    ForEach(profileData.indices, id: \.self) { index in
-                        HStack {
-                            Text(profileData[index].title)
-                                .font(.headline)
-                                .frame(width: 100, alignment: .leading)
-                            HStack {
-                              Divider()
-                            }
-                            Spacer()
-                            Text(profileData[index].value)
-                                .font(.body)
-                        }.padding(.vertical,6)
+            ForEach(profileData.indices, id: \.self) { index in
+                HStack {
+                    Text(profileData[index].title)
+                        .font(.headline)
+                        .frame(width: 100, alignment: .leading)
+                    HStack {
                         Divider()
                     }
-                }
-                .padding()
+                    Spacer()
+                    Text(profileData[index].value)
+                        .font(.body)
+                }.padding(.vertical,6)
+                Divider()
+            }
+        }
+        .padding()
     }
 }
