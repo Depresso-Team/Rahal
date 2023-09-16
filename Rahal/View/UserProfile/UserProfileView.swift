@@ -14,6 +14,10 @@ struct ProfileItems: Identifiable {
 }
 
 struct UserProfileView: View {
+    
+    @State private var showLogoutAction: Bool = false
+    @State private var showDeleteAccount: Bool = false
+    
     private let profileData: [ProfileItems] = [
         .init(id: 1, image: Image(systemName: "person"), title: "View profile"),
         .init(id: 2, image: Image(systemName: "slider.horizontal.3"), title: "Settings"),
@@ -27,16 +31,21 @@ struct UserProfileView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Image("profile")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 240)
+                    .ignoresSafeArea()
                 VStack{
                     // USER PROFILE IMAGE
                     VStack{
-                        
-                        Image("user")
+                        Image(systemName: "person.crop.circle.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 140, height: 140)
-                            .cornerRadius(70)
-    
+                            .foregroundColor(Color("CustomDarkGreenColor"))
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                        
                         Text("Abdelrahman Esmail").bold().font(.system(size: 24))
                             .padding(.top,5)
                             .padding(.bottom,20)
@@ -47,113 +56,50 @@ struct UserProfileView: View {
                             NavigationLink {
                                 ViewProfileSubView()
                             } label: {
-                                HStack {
-                                    row.image
-                                        .foregroundColor(Color("CustomDarkGreenColor"))
-                                        .font(.system(size: 20))
-                                        .padding(6)
-                                    Text(row.title)
-                                        .fontWeight(.semibold)
-                                        .font(.system(size: 16))
-                                        .foregroundColor(.black)
-                                    Spacer()
-                                    Image(systemName: "arrow.right").foregroundColor(.secondary)
-                                }
+                                RowItem(image: row.image, title: row.title)
                             }
                             Divider()
                         }
-                        HStack{
-                            Spacer()
-                            Image(systemName: "rectangle.portrait.and.arrow.right")
-                            Text("Logout")
-                        }.foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .font(.system(size: 16))
-                            .padding(8)
-                    }   .frame(width: UIScreen.main.bounds.width - 80,height: UIScreen.main.bounds.height * 0.44)
-                        .padding(.horizontal)
-                        .padding(.vertical,20)
-                        .background(.secondary.opacity(0.1))
-                        .cornerRadius(50)
-                        .cornerRadius(40)
+                            Button {
+                                showLogoutAction = true
+                            } label: {
+                                HStack {
+                                    Spacer()
+                                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                                    Text("Logout")
+                                }
+                            }
+                        .foregroundColor(.secondary)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 16))
+                        .padding(8)
+                    }
+                    .frame(width: UIScreen.main.bounds.width - 80)
+                    .padding(.vertical, 32)
+                    .padding(.horizontal)
+                    .background(.secondary.opacity(0.1))
+                    .cornerRadius(48)
                 }
-
-                
-                //            VStack{
-                //                Spacer()
-                //                VStack{
-                //                    VStack (alignment: .center) {
-                //                        // PAGES LIST
-                //                        VStack (alignment: .leading){
-                //                            HStack{
-                //                                Image(systemName: "person").foregroundColor(Color("CustomDarkGreenColor"))
-                //                                    .font(.system(size: 20))
-                //                                Text("View profile")
-                //                                    .fontWeight(.semibold)
-                //                                    .font(.system(size: 16))
-                //                                Spacer()
-                //                                Image(systemName: "arrow.right").foregroundColor(.secondary)
-                //                            }.padding(6)
-                //                            Divider()
-                //                            HStack{
-                //                                Image(systemName: "person.wave.2.fill").foregroundColor(Color("CustomDarkGreenColor"))
-                //                                Text("Settings")
-                //                                    .fontWeight(.semibold)
-                //                                    .font(.system(size: 16))
-                //                                Spacer()
-                //                                Image(systemName: "arrow.right").foregroundColor(.secondary)
-                //                            }.padding(6)
-                //                            Divider()
-                //                            HStack{
-                //                                Image(systemName: "lock.fill").foregroundColor(Color("CustomDarkGreenColor"))
-                //                                Text("Privacy Policy")
-                //                                    .fontWeight(.semibold)
-                //                                    .font(.system(size: 16))
-                //                                Spacer()
-                //                                Image(systemName: "arrow.right").foregroundColor(.secondary)
-                //                            }.padding(6)
-                //                        }
-                //                        Divider()
-                //                        VStack (alignment: .leading){
-                //                            HStack{
-                //                                Image(systemName: "megaphone.fill").foregroundColor(Color("CustomDarkGreenColor"))
-                //                                Text("Contact US")
-                //                                    .fontWeight(.semibold)
-                //                                    .font(.system(size: 16))
-                //                                Spacer()
-                //                                Image(systemName: "arrow.right").foregroundColor(.secondary)
-                //                            }.padding(6)
-                //                            Divider()
-                //                            HStack{
-                //                                Image(systemName: "star.fill").foregroundColor(Color("CustomDarkGreenColor"))
-                //                                Text("Rate US")
-                //                                    .fontWeight(.semibold)
-                //                                    .font(.system(size: 16))
-                //                                Spacer()
-                //                                Image(systemName: "arrow.right").foregroundColor(.secondary)
-                //                            }.padding(6)
-                //                            Divider()
-                //                            HStack{
-                //                                Image(systemName: "trash.fill").foregroundColor(Color("CustomDarkGreenColor"))
-                //                                Text("View profile")
-                //                                    .fontWeight(.semibold)
-                //                                    .font(.system(size: 16))
-                //                                Spacer()
-                //                                Image(systemName: "arrow.right").foregroundColor(.secondary)
-                //                            }.padding(6)
-                //                            Divider()
-                //                        }
-                                        // LOGOUT BUTTON
-
-//                                    }
-//                                    .frame(width: UIScreen.main.bounds.width - 80,height: UIScreen.main.bounds.height * 0.45)
-//                                    .padding(.horizontal)
-//                                    .padding(.vertical,20)
-//                                    .background(.secondary.opacity(0.1))
-//                                    .cornerRadius(50)
-//                                    .cornerRadius(40)
-                //                }
-                //            }
+                .offset(y: -50)
+                .padding(.bottom, 48)
+            }
+            .actionSheet(isPresented: $showLogoutAction) {
+                ActionSheet(title: Text("Woops"), message: Text("Are you sure you want logout?"), buttons: [
+                    .destructive(Text("Logout"),
+                                 action: {
+                        print("Logout")
+                    }),
+                    .cancel(Text("Cancel"))
+                ])
+            }
+            .actionSheet(isPresented: $showLogoutAction) {
+                ActionSheet(title: Text("Woops"), message: Text("Are you sure you want logout?"), buttons: [
+                    .destructive(Text("Logout"),
+                                 action: {
+                        print("Logout")
+                    }),
+                    .cancel(Text("Cancel"))
+                ])
             }
         }
     }
@@ -163,5 +109,26 @@ struct UserProfileView: View {
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileView()
+    }
+}
+
+
+struct RowItem: View {
+    var image: Image
+    var title: String
+    
+    var body: some View {
+        HStack {
+            image
+                .foregroundColor(Color("CustomDarkGreenColor"))
+                .font(.system(size: 20))
+                .padding(6)
+            Text(title)
+                .fontWeight(.semibold)
+                .font(.system(size: 16))
+                .foregroundColor(.black)
+            Spacer()
+            Image(systemName: "arrow.right").foregroundColor(.secondary)
+        }
     }
 }
