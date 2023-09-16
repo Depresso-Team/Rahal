@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GuideCard: View {
     // MARK: - PROPERTIES
-    let imageName: String
+    let image: String
     let guideName: String
     let rating: Double
     let location: String
@@ -18,11 +18,22 @@ struct GuideCard: View {
     var body: some View {
             ZStack {
                 VStack(alignment: .center) {
-                    AsyncImage(url: URL(string: imageName))
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 85, height: 85)
-                        .cornerRadius(45)
-                        .buttonStyle(PlainButtonStyle())
+                    AsyncImage(url: URL(string: image)) { image in
+                              image
+                                  .resizable()
+                          } placeholder: {
+                              Image("user")
+                                  .resizable()
+                          }
+                          .aspectRatio(contentMode: .fill)
+                          .frame(width: 85, height: 85)
+                          .cornerRadius(45)
+                    
+//                    AsyncImage(url: URL(string: "https://rahal-app-efe3e7eff0b7.herokuapp.com/media/guides/user.png")) { image in
+//                        image
+//                            .rs
+//                    }
+                    
                     Text(guideName)
                     Text(location)
                         .foregroundColor(.secondary)
@@ -57,7 +68,7 @@ struct GuideCard: View {
     
     struct GuideCard_Previews: PreviewProvider {
         static var previews: some View {
-            GuideCard(imageName: "user", guideName: "Abdelrahman", rating: 4.5, location: "Mansoura")
+            GuideCard(image: "user", guideName: "Abdelrahman", rating: 4.5, location: "Mansoura")
         }
     }
 }

@@ -71,7 +71,7 @@ struct LoginView: View {
                 HStack (spacing: 2){
                     Text("Don’t have any account yet ?").foregroundColor(.black)
                     NavigationLink{
-                        RegistrationView()
+                        GetStartedView()
                             .navigationBarBackButtonHidden(true)
                     }label: {
                         Text("Sign up").fontWeight(.heavy).foregroundColor(Color("CustomDarkGreenColor")).font(.system(size: 18))

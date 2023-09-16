@@ -117,7 +117,7 @@ struct HomeView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 20) {
                             ForEach(vm.guides) { guide in
-                                GuideCard(imageName: guide.personal_photo, guideName: guide.username, rating: Double(guide.rate), location: "Location")
+                                GuideCard(image: guide.personal_photo, guideName: guide.username, rating: Double(guide.rate), location: "Location")
                             }
                         }
                         .padding()

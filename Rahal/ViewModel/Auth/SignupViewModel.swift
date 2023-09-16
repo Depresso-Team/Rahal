@@ -32,7 +32,7 @@ class SignupViewModel: ObservableObject {
     }
     
     @MainActor
-    func register() {
+    func register(isGuide: Bool) {
         Task {
             let body = [
                 "username": fullName,
@@ -43,12 +43,13 @@ class SignupViewModel: ObservableObject {
                 "country_code": 1,
                 "photo_url": "https://pbs.twimg.com/profile_images/881713129285185536/wzBq1O-8_400x400.jpg",
                 "languages": "en",
-                "is_guide": false,
+                "is_guide": isGuide,
                 "session_message": ""
             ] as [String : Any]
 
             do {
-                let user = try await services.register(parms: body)
+                let _ = try await services.register(parms: body)
+                //TODO: Save user to user defults
                 responseHandler?(.success("User creat successfuly"))
             } catch {
                 responseHandler?(.failure(error))

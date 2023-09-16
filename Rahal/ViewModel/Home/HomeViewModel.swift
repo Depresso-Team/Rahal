@@ -35,7 +35,7 @@ class HomeViewModel: ObservableObject {
     func fetchTopTripsData() async throws {
         do {
             let trips = try await services.fetchTopTripsData()
-            self.trips = trips.guides
+            self.trips = trips.tours
         } catch {
             showErrorAlert(error: error)
         }

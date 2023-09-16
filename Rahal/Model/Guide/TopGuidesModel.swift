@@ -19,3 +19,14 @@ struct Guide: Identifiable, Hashable, Codable {
     let personal_photo: String
     let rate: Double
 }
+
+struct GuidesListModel: Identifiable, Codable {
+    let id: Int
+    let age: Int
+    let license: Int
+    let address: String
+    let rate: Double
+    let reviews: String
+    let personal_photo: String
+    let Identity: String
+}

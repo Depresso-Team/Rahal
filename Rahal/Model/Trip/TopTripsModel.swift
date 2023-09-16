@@ -10,7 +10,7 @@ import Foundation
 struct TripsModel: Codable {
     let status: Bool
     let message: String
-    let guides: [Trip]
+    let tours: [Trip]
 }
 
 struct Trip: Identifiable, Hashable, Codable {

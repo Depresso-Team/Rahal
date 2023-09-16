@@ -10,6 +10,7 @@ import SwiftUI
 struct RegistrationView: View {
     // MARK: - PROPERTIES
     @StateObject var vm = SignupViewModel.shared
+    var isGuide: Bool
     
     // MARK: - BODY
     var body: some View {
@@ -54,7 +55,7 @@ struct RegistrationView: View {
                     
                     // SIGN UP BUTTON
                     Button{
-                        vm.register()
+                        vm.register(isGuide: isGuide)
                         vm.responseHandler = { result in
                             switch result {
                             case .success(let message):
@@ -93,6 +94,6 @@ struct RegistrationView: View {
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationView()
+        RegistrationView(isGuide: false)
     }
 }

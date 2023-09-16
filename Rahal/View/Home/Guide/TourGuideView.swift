@@ -7,7 +7,22 @@
 
 import SwiftUI
 
+//struct DumyGrid: Identifiable {
+//    var id: Int
+//    let image: String
+//    let name: String
+//    let rating: Double
+//    let location: String
+//}
+
 struct TourGuideView: View {
+    // MARK: - Variables
+    @StateObject var vm = TourGuideViewModel.shared
+    
+    let grids: [GridItem] = [
+        .init(.flexible()),
+        .init(.flexible())
+    ]    
     // MARK: - BODY
     var body: some View {
         ScrollView (.vertical, showsIndicators: false) {
@@ -22,19 +37,17 @@ struct TourGuideView: View {
                     Spacer()
                 }
                 
-                VStack (spacing: 20) {
-                    HStack  (spacing: 14) {
-                        GuideCard(imageName: "user", guideName: "Abdelrahman", rating: 4.5, location: "Mansoura")
-                        GuideCard(imageName: "user2", guideName: "Zeyad", rating: 3.5, location: "New Damietta")
-                    }
-                    HStack (spacing: 14) {
-                        GuideCard(imageName: "user2", guideName: "Zeyad", rating: 3.5, location: "New Damietta")
-                        GuideCard(imageName: "user", guideName: "Abdelrahman", rating: 4.5, location: "Mansoura")
+                LazyVGrid(columns: grids, spacing: 16) {
+                    ForEach(vm.guides) { guide in
+                        GuideCard(image: guide.personal_photo,
+                                  guideName: "Abdalarhamn",
+                                  rating: guide.rate,
+                                  location: guide.address)
                     }
                 }
+                .padding()
             }
         }
-
     }
 }
 

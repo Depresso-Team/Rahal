@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 enum TourGuideDetailsEndpoint {
     case fetchTourGuideDetails(userID: Int) // You can add any required parameters if needed
 }
