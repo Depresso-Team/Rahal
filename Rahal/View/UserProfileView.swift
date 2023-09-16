@@ -108,8 +108,6 @@ struct UserProfileView: View {
                 
             }
             .offset(x:0,y: 110)
-            
-            
         }
     }
     }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ReviewsSegmentContent: View {
     // MARK: - PROPERTIES
-    let imageName: String
-    let guideName: String
+    let user: String
+    let desc: String
     let rating: Double
     
     // MARK: - BODY
@@ -18,7 +18,7 @@ struct ReviewsSegmentContent: View {
         VStack (spacing: 20) {
             HStack {
                 VStack (alignment: .leading){
-                    Text(guideName).bold()
+                    Text(user).bold()
                     HStack {
                         ForEach(0..<5) { index in
                             Image(systemName: index < Int(rating) ? "star.fill" :
@@ -27,7 +27,7 @@ struct ReviewsSegmentContent: View {
                                 .font(.system(size: 14))
                         }
                     }
-                    Text("From Egypt, I’m 32 years old, license number 12345,Three years...")
+                    Text(desc)
                         .foregroundColor(.secondary)
                         .font(.footnote)
                         .fontWeight(.semibold)
@@ -37,7 +37,7 @@ struct ReviewsSegmentContent: View {
             Divider()
             HStack {
                 VStack (alignment: .leading){
-                    Text(guideName).bold()
+                    Text(user).bold()
                     HStack {
                         ForEach(0..<5) { index in
                             Image(systemName: index < Int(rating) ? "star.fill" :
@@ -46,7 +46,7 @@ struct ReviewsSegmentContent: View {
                                 .font(.system(size: 14))
                         }
                     }
-                    Text("From Egypt, I’m 32 years old, license number 12345,Three years...")
+                    Text(desc)
                         .foregroundColor(.secondary)
                         .font(.footnote)
                         .fontWeight(.semibold)
@@ -56,7 +56,7 @@ struct ReviewsSegmentContent: View {
             Divider()
             HStack {
                 VStack (alignment: .leading){
-                    Text(guideName).bold()
+                    Text(user).bold()
                     HStack {
                         ForEach(0..<5) { index in
                             Image(systemName: index < Int(rating) ? "star.fill" :
@@ -65,7 +65,7 @@ struct ReviewsSegmentContent: View {
                                 .font(.system(size: 14))
                         }
                     }
-                    Text("From Egypt, I’m 32 years old, license number 12345,Three years...")
+                    Text(desc)
                         .foregroundColor(.secondary)
                         .font(.footnote)
                         .fontWeight(.semibold)
@@ -80,6 +80,6 @@ struct ReviewsSegmentContent: View {
 
 struct ReviewsSegmentContent_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewsSegmentContent(imageName: "user", guideName: "Abdelrahman", rating: 4.5)
+        ReviewsSegmentContent(user: "Abdelrahman", desc: "From Egypt, I’m 32 years old, license number 12345,Three years...", rating: 4.5)
     }
 }

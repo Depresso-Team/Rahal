@@ -43,27 +43,32 @@ struct HomeView: View {
                         Spacer()
                         
                         // SEARCH BUTTON
-                        Image(systemName: "magnifyingglass")
-                            .font(.system(size: 18))
-                            .fontWeight(.semibold)
-                            .padding(6)
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
-                                    .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
-                            )
+                        NavigationLink(destination: SearchView(), label: {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.black)
+                                .font(.system(size: 18))
+                                .fontWeight(.semibold)
+                                .padding(6)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
+                                        .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
+                                )
+                        })
                         // NOTIFICATION BUTTON
-                        Image(systemName: "bell")
-                            .font(.system(size: 18))
-                            .fontWeight(.semibold)
-                        
-                            .padding(6)
-                        
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
-                                    .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
-                            )
+                        NavigationLink(destination: NotificationView(), label: {
+                            Image(systemName: "bell")
+                                .font(.system(size: 18))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.black)
+                                .padding(6)
+                            
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
+                                        .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
+                                )
+                        })
                         
                     } //: HSTACK
                     .padding()
