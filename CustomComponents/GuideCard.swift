@@ -22,13 +22,12 @@ struct GuideCard: View {
                               image
                                   .resizable()
                           } placeholder: {
-                              Image("user")
+                              Image(systemName: "person.crop.circle.fill")
                                   .resizable()
                           }
                           .aspectRatio(contentMode: .fill)
                           .frame(width: 85, height: 85)
-                          .cornerRadius(45)
-                    
+                          .clipShape(Circle())
                     
                     Text(guideName)
                     Text(location)

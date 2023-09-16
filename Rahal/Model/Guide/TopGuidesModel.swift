@@ -22,11 +22,9 @@ struct Guide: Identifiable, Hashable, Codable {
 
 struct GuidesListModel: Identifiable, Codable {
     let id: Int
-    let age: Int
-    let license: Int
+    let username: String
     let address: String
+    let license: Int
     let rate: Double
-    let reviews: String
     let personal_photo: String
-    let Identity: String
 }

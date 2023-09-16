@@ -13,7 +13,7 @@ enum GuidesListEndPoint {
 
 extension GuidesListEndPoint: EndPoint {
     var path: String {
-        return "/users/saved-guides/"
+        return "/users/guides/"
     }
     
     var method: HTTPMethod {
