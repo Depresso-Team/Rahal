@@ -17,7 +17,7 @@ struct ReviewsSegmentContent: View {
     var body: some View {
         VStack (spacing: 20) {
             HStack {
-                VStack (alignment: .leading){
+                VStack (alignment: .leading) {
                     Text(user).bold()
                     HStack {
                         ForEach(0..<5) { index in
@@ -31,50 +31,10 @@ struct ReviewsSegmentContent: View {
                         .foregroundColor(.secondary)
                         .font(.footnote)
                         .fontWeight(.semibold)
-
-                }
-            }
-            Divider()
-            HStack {
-                VStack (alignment: .leading){
-                    Text(user).bold()
-                    HStack {
-                        ForEach(0..<5) { index in
-                            Image(systemName: index < Int(rating) ? "star.fill" :
-                                    (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
-                                .foregroundColor(.yellow)
-                                .font(.system(size: 14))
-                        }
-                    }
-                    Text(desc)
-                        .foregroundColor(.secondary)
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-
-                }
-            }
-            Divider()
-            HStack {
-                VStack (alignment: .leading){
-                    Text(user).bold()
-                    HStack {
-                        ForEach(0..<5) { index in
-                            Image(systemName: index < Int(rating) ? "star.fill" :
-                                    (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
-                                .foregroundColor(.yellow)
-                                .font(.system(size: 14))
-                        }
-                    }
-                    Text(desc)
-                        .foregroundColor(.secondary)
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-
+                    Divider()
                 }
             }
         }
-
-        
     }
 }
 

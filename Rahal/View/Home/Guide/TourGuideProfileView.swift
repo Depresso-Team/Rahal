@@ -53,12 +53,21 @@ struct TourGuideProfileView: View {
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
                     
-                    if selectedSegment == 0 { // About Segment
+                    if selectedSegment == 0 {
                         AboutSegmentView(guide: vm.guide ?? GuideDetailsModel(id: 1, username: "", personal_photo: "", age: 1, license: 1, address: "", rate: "", review: [Review(review: "")], tour_list: [GuideToursModel(id: 1, name: "", price: 1, state_id: "", location: "", duration: 1)]))
-                    } else if selectedSegment == 1 { // Reviews Segment
+                    } else if selectedSegment == 1 {
                         ReviewsSegmentContent(user: "Ali Osman", desc: "From Egypt, I’m 32 years old, license number 12345,Three years...", rating: 4.5)
-                    } else if selectedSegment == 2 { // Trips Segment
-                        TourCardExtended(image: "pyramids", tourName: "Giza Pyramids" ,price: 360, desc: "In the shadow of the Giza  Pyramids..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
+                            .padding()
+                    } else if selectedSegment == 2 {
+                        ForEach(vm.guide?.tour_list ?? [GuideToursModel(id: 1, name: "Giza Pyramids", price: 360, state_id: "1", location: "", duration: 1)]) { tour in
+                            TourCardExtended(image: "pyramids",
+                                             tourName: tour.name,
+                                             price: tour.price,
+                                             desc: "In the shadow of the Giza  Pyramids...",
+                                             rating: 4.5,
+                                             location: tour.location,
+                                             duration: tour.duration)
+                        }
                     }
                     Spacer()
                 }
@@ -66,7 +75,6 @@ struct TourGuideProfileView: View {
         }
     }
 }
-
 
 struct TourGuideProfileView_Previews: PreviewProvider {
     static var previews: some View {
