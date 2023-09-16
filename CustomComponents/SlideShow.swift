@@ -17,15 +17,14 @@ struct SlideShow: View {
         TabView {
             ForEach(slides) { slide in
                 ZStack (alignment: .leading) {
-                    AsyncImage(url: URL(string: slide.bannar_url)) { error in
-                        AsyncImage(url: URL(string: slide.bannar_url)){ image in
-                            image.resizable()
-                        } placeholder: {
-                            Image("")
-                                .resizable()
-                        }.scaledToFill()
+                    AsyncImage(url: URL(string: slide.bannar_url)) { image in
+                        image
+                            .resizable()
+                    } placeholder: {
+                        Image("abuSimbleTemple")
+                            .resizable()
                     }
-                    .scaledToFill()
+                    
                     VStack (alignment: .leading) {
                         Spacer()
                         Text(slide.title)

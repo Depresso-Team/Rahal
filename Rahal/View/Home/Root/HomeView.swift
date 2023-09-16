@@ -97,13 +97,12 @@ struct HomeView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 10) {
                             ForEach(vm.trips) { trip in
-                                TourCard(imageName: "pyramids", tourName: trip.name, rating: Double(trip.highest_rate), location: trip.highest_location, duration: "3 days")
+                                TourCard(imageName: "pyramids", tourName: trip.name, rating: Double(trip.rate), location: trip.location, duration: "3 days")
                             }
                         }
                         .padding(.horizontal)
                         .padding(.vertical,10)
                     }
-                    
                     
                     // TOP FIVE GUIDES TITLES SECTION
                     HStack () {

@@ -6,7 +6,7 @@ class HomeViewModel: ObservableObject {
     private var services: HomeServices!
         
     @Published var slides = [SliderModel]()
-    @Published var trips = [Trip]()
+    @Published var trips = [TripsModel]()
     @Published var guides = [Guide]()
         
     @Published var showAlert = false
@@ -35,7 +35,7 @@ class HomeViewModel: ObservableObject {
     func fetchTopTripsData() async throws {
         do {
             let trips = try await services.fetchTopTripsData()
-            self.trips = trips.tours
+            self.trips = trips
         } catch {
             showErrorAlert(error: error)
         }
