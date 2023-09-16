@@ -46,6 +46,7 @@ struct TourGuideProfileView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
+
                     if selectedSegment == 0 { // About Segment
                         AboutSegmentView()
                     } else if selectedSegment == 1 { // Reviews Segment
@@ -53,10 +54,9 @@ struct TourGuideProfileView: View {
                     } else if selectedSegment == 2 { // Trips Segment
                         TourCardExtended(image: "pyramids", tourName: "Giza Pyramids" ,price: 360, desc: "In the shadow of the Giza  Pyramids..." ,rating: 4.5,location:"Giza Plateau", duration: 1)
                     }
+                    Spacer()
                 }
             }
-            
-            
         }
     }
 }
