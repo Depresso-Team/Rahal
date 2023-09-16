@@ -23,7 +23,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView (.vertical, showsIndicators: false) {
-                VStack (alignment: .center) {                    
+                VStack (alignment: .center) {
                     // SLIDER SECTION
                     SlideShow(slides: $vm.slides)
                     // TOP FIVE TRIPS TITLES SECTION
@@ -80,6 +80,7 @@ struct HomeView: View {
                         .padding(.vertical,5)
                     }
                 }
+                .padding(.top, 16)
             }
             .navigationTitle("Welcome")
             .toolbar(content: {
