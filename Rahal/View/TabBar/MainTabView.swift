@@ -20,7 +20,7 @@ struct MainTabView: View {
                     Image(systemName: "house")
                 }.tag(0)
             
-            ToursView()
+            SearchView()
                 .onAppear {
                     selectedIndex = 1
                 }
@@ -33,7 +33,7 @@ struct MainTabView: View {
                     selectedIndex = 2
                 }
                 .tabItem {
-                    Image(systemName: "plus.square")
+                    Image(systemName: "bookmark")
                 }.tag(2)
 
             UserProfileView()
@@ -41,7 +41,7 @@ struct MainTabView: View {
                     selectedIndex = 3
                 }
                 .tabItem {
-                    Image(systemName: "plus.square")
+                    Image(systemName: "person")
                 }.tag(3)
         }
         .accentColor(Color("CustomDarkGreenColor"))

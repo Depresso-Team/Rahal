@@ -21,10 +21,20 @@ struct TourCardExtended: View {
     var body: some View {
         ZStack {
             HStack(alignment: .center, spacing: 12) {
-                AsyncImage(url: URL(string: image))
+                AsyncImage(url: URL(string: image)){ image in
+                    image.resizable()
+                }placeholder: {
+                    Image("Tourplaceholder")
+                        .resizable()
+                }
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 142, height: 116)
+                .cornerRadius(16)
+          
+                    
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 142, height: 116)
-                    .cornerRadius(16)
+                    
+                    
                 
                 VStack (alignment: .leading) {
                     HStack{

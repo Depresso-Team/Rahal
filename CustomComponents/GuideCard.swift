@@ -29,10 +29,6 @@ struct GuideCard: View {
                           .frame(width: 85, height: 85)
                           .cornerRadius(45)
                     
-//                    AsyncImage(url: URL(string: "https://rahal-app-efe3e7eff0b7.herokuapp.com/media/guides/user.png")) { image in
-//                        image
-//                            .rs
-//                    }
                     
                     Text(guideName)
                     Text(location)

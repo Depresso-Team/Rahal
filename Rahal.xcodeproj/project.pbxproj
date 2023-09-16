@@ -294,6 +294,7 @@
 				CC9797E42AB51F230051E616 /* Guide */,
 				7F14921D2AB4E90500D98565 /* Tour */,
 				CC9797E92AB5248B0051E616 /* NotificationView.swift */,
+				CCD065D42AB2A1EB008DEABE /* SearchView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -524,7 +525,6 @@
 				7FF1132D2AB3889000BB4BDA /* Auth */,
 				7F14922D2AB5AF0800D98565 /* TabBar */,
 				7FF1132E2AB3889D00BB4BDA /* Home */,
-				CCD065D42AB2A1EB008DEABE /* SearchView.swift */,
 				CCD065D62AB2A21D008DEABE /* UserProfileView.swift */,
 			);
 			path = View;

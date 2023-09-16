@@ -19,12 +19,17 @@ struct TourCard: View {
     var body: some View {
         ZStack {
             VStack(alignment: .center) {
-                Image(imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 222, height: 142)
-                    .cornerRadius(16)
-                    .buttonStyle(PlainButtonStyle())
+                AsyncImage(url: URL(string: imageName)) { image in
+                          image
+                              .resizable()
+                      } placeholder: {
+                          Image("Tourplaceholder")
+                              .resizable()
+                      }
+                      .aspectRatio(contentMode: .fill)
+                      .frame(width: 222, height: 142)
+                      .cornerRadius(16)
+                      .buttonStyle(PlainButtonStyle())
 
                 VStack {
                     HStack {

@@ -90,16 +90,18 @@ struct HomeView: View {
                                 .foregroundColor(.secondary)
                         }
                     }
-                    .padding()
+                    .padding(.horizontal)
+                    .padding(.vertical,5)
                     
                     // TOP FIVE TRIPS CARDS SECTION
                     ScrollView (.horizontal, showsIndicators: false) {
-                        HStack (spacing: 20) {
+                        HStack (spacing: 10) {
                             ForEach(vm.trips) { trip in
                                 TourCard(imageName: "pyramids", tourName: trip.name, rating: Double(trip.highest_rate), location: trip.highest_location, duration: "3 days")
                             }
                         }
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.vertical,10)
                     }
                     
                     
@@ -109,9 +111,13 @@ struct HomeView: View {
                             .bold()
                             .font(.system(size: 20))
                         Spacer()
-                        Text("See All")
-                            .foregroundColor(.secondary)
-                            .underline()
+                        NavigationLink() {
+                            TourGuideView()
+                        } label: {
+                            Text("See All")
+                                .underline()
+                                .foregroundColor(.secondary)
+                        }
                     }.padding()
                     
                     ScrollView (.horizontal, showsIndicators: false) {
@@ -120,7 +126,8 @@ struct HomeView: View {
                                 GuideCard(image: guide.personal_photo, guideName: guide.username, rating: Double(guide.rate), location: "Location")
                             }
                         }
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.vertical,5)
                     }
                 }
             }

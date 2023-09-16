@@ -18,9 +18,12 @@ struct SlideShow: View {
             ForEach(slides) { slide in
                 ZStack (alignment: .leading) {
                     AsyncImage(url: URL(string: slide.bannar_url)) { error in
-                        Image("alAzharMosque")
-                            .resizable()
-                            .scaledToFill()
+                        AsyncImage(url: URL(string: slide.bannar_url)){ image in
+                            image.resizable()
+                        } placeholder: {
+                            Image("")
+                                .resizable()
+                        }.scaledToFill()
                     }
                     .scaledToFill()
                     VStack (alignment: .leading) {

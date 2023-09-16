@@ -13,11 +13,10 @@ struct ProfileItems: Identifiable {
     let title: String
 }
 
-
 struct UserProfileView: View {
     private let profileData: [ProfileItems] = [
         .init(id: 1, image: Image(systemName: "person"), title: "View profile"),
-        .init(id: 2, image: Image(systemName: "person.wave.2.fill"), title: "Settings"),
+        .init(id: 2, image: Image(systemName: "slider.horizontal.3"), title: "Settings"),
         .init(id: 3, image: Image(systemName: "lock.fill"), title: "Privacy Policy"),
         .init(id: 4, image: Image(systemName: "megaphone.fill"), title: "Contact US"),
         .init(id: 5, image: Image(systemName: "star.fill"), title: "Rate Us"),
@@ -28,7 +27,21 @@ struct UserProfileView: View {
     var body: some View {
         NavigationView {
             VStack {
-                ZStack (alignment: .top) {
+                VStack{
+                    // USER PROFILE IMAGE
+                    VStack{
+                        
+                        Image("user")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 140, height: 140)
+                            .cornerRadius(70)
+    
+                        Text("Abdelrahman Esmail").bold().font(.system(size: 24))
+                            .padding(.top,5)
+                            .padding(.bottom,20)
+                    }
+                    // LIST
                     VStack(spacing: 8) {
                         ForEach(profileData) { row in
                             NavigationLink {
@@ -38,28 +51,33 @@ struct UserProfileView: View {
                                     row.image
                                         .foregroundColor(Color("CustomDarkGreenColor"))
                                         .font(.system(size: 20))
+                                        .padding(6)
                                     Text(row.title)
                                         .fontWeight(.semibold)
                                         .font(.system(size: 16))
+                                        .foregroundColor(.black)
                                     Spacer()
+                                    Image(systemName: "arrow.right").foregroundColor(.secondary)
                                 }
                             }
+                            Divider()
                         }
-                    }
+                        HStack{
+                            Spacer()
+                            Image(systemName: "rectangle.portrait.and.arrow.right")
+                            Text("Logout")
+                        }.foregroundColor(.secondary)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 16))
+                            .padding(8)
+                    }   .frame(width: UIScreen.main.bounds.width - 80,height: UIScreen.main.bounds.height * 0.44)
+                        .padding(.horizontal)
+                        .padding(.vertical,20)
+                        .background(.secondary.opacity(0.1))
+                        .cornerRadius(50)
+                        .cornerRadius(40)
                 }
-                //                VStack (alignment: .center){
-                //                    Image("user")
-                //                        .resizable()
-                //                        .aspectRatio(contentMode: .fill)
-                //                        .frame(width: 140, height: 140)
-                //                        .cornerRadius(70)
-                //
-                //                    Text("Abdelrahman Esmail").bold().font(.system(size: 20))
-                //                        .padding(.top,5)
-                //                        .padding(.bottom,20)
-                //
-                //                }
-                //                .offset(x:0,y: 110)
+
                 
                 //            VStack{
                 //                Spacer()
@@ -125,22 +143,15 @@ struct UserProfileView: View {
                 //                            }.padding(6)
                 //                            Divider()
                 //                        }
-                //                        // LOGOUT BUTTON
-                //                        HStack{
-                //                            Spacer()
-                //                            Image(systemName: "rectangle.portrait.and.arrow.right")
-                //                            Text("Logout")
-                //                        }.foregroundColor(.secondary)
-                //                            .fontWeight(.semibold)
-                //                            .font(.system(size: 16))
-                //                            .padding(8)
-                //                    }
-                //                    .frame(width: UIScreen.main.bounds.width - 80,height: UIScreen.main.bounds.height * 0.45)
-                //                    .padding(.horizontal)
-                //                    .padding(.vertical,20)
-                //                    .background(.secondary.opacity(0.1))
-                //                    .cornerRadius(50)
-                //                    .cornerRadius(40)
+                                        // LOGOUT BUTTON
+
+//                                    }
+//                                    .frame(width: UIScreen.main.bounds.width - 80,height: UIScreen.main.bounds.height * 0.45)
+//                                    .padding(.horizontal)
+//                                    .padding(.vertical,20)
+//                                    .background(.secondary.opacity(0.1))
+//                                    .cornerRadius(50)
+//                                    .cornerRadius(40)
                 //                }
                 //            }
             }

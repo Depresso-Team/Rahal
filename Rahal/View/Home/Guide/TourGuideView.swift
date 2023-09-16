@@ -7,17 +7,10 @@
 
 import SwiftUI
 
-//struct DumyGrid: Identifiable {
-//    var id: Int
-//    let image: String
-//    let name: String
-//    let rating: Double
-//    let location: String
-//}
-
 struct TourGuideView: View {
-    // MARK: - Variables
+    // MARK: - PROPERTIES
     @StateObject var vm = TourGuideViewModel.shared
+    @State private var searchText = ""
     
     let grids: [GridItem] = [
         .init(.flexible()),
@@ -25,28 +18,23 @@ struct TourGuideView: View {
     ]    
     // MARK: - BODY
     var body: some View {
-        ScrollView (.vertical, showsIndicators: false) {
-            VStack {
-                SearchBar()
-                HStack {
-                    Text("Tour Guides")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                        .padding(.horizontal)
-                    Spacer()
-                }
-                
-                LazyVGrid(columns: grids, spacing: 16) {
-                    ForEach(vm.guides) { guide in
-                        GuideCard(image: guide.personal_photo,
-                                  guideName: "Abdalarhamn",
-                                  rating: guide.rate,
-                                  location: guide.address)
+        NavigationView {
+            ScrollView (.vertical, showsIndicators: false) {
+                VStack {
+                    LazyVGrid(columns: grids, spacing: 14) {
+                        ForEach(vm.guides) { guide in
+                            GuideCard(image: guide.personal_photo,
+                                      guideName: "Abdalarhamn",
+                                      rating: guide.rate,
+                                      location: guide.address)
+                        }
                     }
+                    .padding()
                 }
-                .padding()
             }
+            .navigationTitle("Tour Guides")
+            .navigationBarTitleDisplayMode(.automatic)
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
     }
 }
