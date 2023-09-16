@@ -23,56 +23,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView (.vertical, showsIndicators: false) {
-                VStack (alignment: .center) {
-                    // HEADER
-                    HStack(spacing: 8) {
-                        // TITLE
-                        VStack (alignment: .leading) {
-                            Text("Welcome")
-                                .font(.system(.largeTitle, design: .rounded))
-                                .foregroundColor(.black)
-                                .fontWeight(.heavy)
-                            // LOCATION
-                            Text("To Egypt")
-                                .font(.system(.title3))
-                                .foregroundColor(.secondary)
-                                .fontWeight(.semibold)
-                            
-                        }.padding(.leading, 4)
-                        
-                        Spacer()
-                        
-                        // SEARCH BUTTON
-                        NavigationLink(destination: SearchView(), label: {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.black)
-                                .font(.system(size: 18))
-                                .fontWeight(.semibold)
-                                .padding(6)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
-                                        .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
-                                )
-                        })
-                        // NOTIFICATION BUTTON
-                        NavigationLink(destination: NotificationView(), label: {
-                            Image(systemName: "bell")
-                                .font(.system(size: 18))
-                                .fontWeight(.semibold)
-                                .foregroundColor(.black)
-                                .padding(6)
-                            
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
-                                        .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
-                                )
-                        })
-                        
-                    } //: HSTACK
-                    .padding()
-                    
+                VStack (alignment: .center) {                    
                     // SLIDER SECTION
                     SlideShow(slides: $vm.slides)
                     // TOP FIVE TRIPS TITLES SECTION
@@ -130,6 +81,37 @@ struct HomeView: View {
                     }
                 }
             }
+            .navigationTitle("Welcome")
+            .toolbar(content: {
+                // SEARCH BUTTON
+                NavigationLink(destination: SearchView(), label: {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.black)
+                        .font(.system(size: 14))
+                        .fontWeight(.semibold)
+                        .padding(6)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
+                                .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
+                        )
+                })
+                // NOTIFICATION BUTTON
+                NavigationLink(destination: NotificationView(), label: {
+                    Image(systemName: "bell")
+                        .font(.system(size: 14))
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black)
+                        .padding(6)
+                    
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
+                                .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
+                        )
+                })
+            })
+            .navigationBarTitleDisplayMode(.large)
         }
         .alert(isPresented: Binding(
             get: { vm.showAlert },

@@ -29,7 +29,6 @@ class TourGuideDetailsViewModel: ObservableObject {
             print(guide)
         } catch {
             print( error)
-//            guide = nil
         }
     }
 }
