@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct TourGuideView: View {
+    // MARK: - BODY
     var body: some View {
         ScrollView (.vertical, showsIndicators: false) {
             VStack {
                 SearchBar()
-                
                 HStack {
                     Text("Tour Guides")
                         .font(.title)
@@ -22,7 +22,6 @@ struct TourGuideView: View {
                     Spacer()
                 }
                 
-                
                 VStack (spacing: 20) {
                     HStack  (spacing: 14) {
                         GuideCard(imageName: "user", guideName: "Abdelrahman", rating: 4.5, location: "Mansoura")
@@ -31,7 +30,6 @@ struct TourGuideView: View {
                     HStack (spacing: 14) {
                         GuideCard(imageName: "user2", guideName: "Zeyad", rating: 3.5, location: "New Damietta")
                         GuideCard(imageName: "user", guideName: "Abdelrahman", rating: 4.5, location: "Mansoura")
-
                     }
                 }
             }

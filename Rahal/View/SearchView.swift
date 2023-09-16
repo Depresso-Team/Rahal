@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
+    // MARK: - BODY
     var body: some View {
         VStack{
             SearchBar()
@@ -72,9 +73,6 @@ struct SearchView: View {
                 Spacer()
                 
             }.padding(.horizontal,30)
-            
-            
-            
             
             Spacer()
         }

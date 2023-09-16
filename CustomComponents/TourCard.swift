@@ -15,7 +15,7 @@ struct TourCard: View {
     let location: String
     let duration: String
     
-    
+    // MARK: - BODY
     var body: some View {
         ZStack {
             VStack(alignment: .center) {

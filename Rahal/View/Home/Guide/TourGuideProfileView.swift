@@ -48,7 +48,6 @@ struct TourGuideProfileView: View {
                     .padding(.top,5)
                     .padding(.bottom,10)
                     
-                
                 HStack {
                     ForEach(0..<5) { index in
                         Image(systemName: index < Int(rating) ? "star.fill" :
@@ -59,11 +58,6 @@ struct TourGuideProfileView: View {
                 }.padding(.bottom,10)
             }
             .offset(x:0,y: 110)
-            
-            
-            
-            
-            
         }
     }
 }

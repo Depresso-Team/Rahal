@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ReviewsSegmentContent: View {
+    // MARK: - PROPERTIES
     let imageName: String
     let guideName: String
     let rating: Double
+    
+    // MARK: - BODY
     var body: some View {
         VStack (spacing: 20) {
             HStack {

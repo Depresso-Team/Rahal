@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchBar: View {
+    // MARK: - BODY
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")

@@ -17,6 +17,7 @@ struct TourCardExtended: View {
     let location: String
     let duration: Int
     
+    // MARK: - BODY
     var body: some View {
         ZStack {
             HStack(alignment: .center, spacing: 12) {

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ToursView: View {
+    // MARK: - PROPERTIES
     @StateObject private var vm = TripViewModel.shared
     @State private var searchText = ""
 
+    // MARK: - BODY
     var body: some View {
         NavigationView {
             ScrollView (.vertical, showsIndicators: false) {

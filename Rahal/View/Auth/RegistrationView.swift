@@ -11,6 +11,7 @@ struct RegistrationView: View {
     // MARK: - PROPERTIES
     @StateObject var vm = SignupViewModel.shared
     
+    // MARK: - BODY
     var body: some View {
         NavigationStack {
             ScrollView (.vertical, showsIndicators: false) {

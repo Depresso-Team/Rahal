@@ -11,17 +11,15 @@ import SwiftUI
 
 struct NavigationBar: View {
     // MARK: - PROPERTIES
-    //@Binding
     var tabSelection:Int = 1
     @Namespace private var animationNamespace
-    
     let tabBarItems: [(image:String,title:String)] =
     [
         ("bookmark","Bookmark"),
         ("person","Profile"),
     ]
     
-    
+    // MARK: - BODY
     var body: some View {
         HStack {
             HStack{

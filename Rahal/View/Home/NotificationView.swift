@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NotificationView: View {
+    // MARK: - BODY
     var body: some View {
         NavigationView {
             VStack {
@@ -26,7 +27,6 @@ struct NotificationView: View {
             }
             .navigationTitle("Notification")
         }
-
     }
 }
 

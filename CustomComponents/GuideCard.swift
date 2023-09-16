@@ -14,6 +14,7 @@ struct GuideCard: View {
     let rating: Double
     let location: String
     
+    // MARK: - BODY
     var body: some View {
             ZStack {
                 VStack(alignment: .center) {

@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
-    
-
-    //MARK: - Variables
+    //MARK: - PROPERTIES
     @ObservedObject var vm = LoginViewModel.shared
 
-    
+    // MARK: - BODY
     var body: some View {
         NavigationStack {
             VStack {

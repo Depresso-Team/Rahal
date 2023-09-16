@@ -16,7 +16,7 @@ struct TourDetailsView: View {
     let tourImages: [String] = ["abuSimbleTemple","sphinx"]
     @State private var  selectedSide: Sides = .about
 
-    
+    // MARK: - BODY
     var body: some View {
         ScrollView (.vertical, showsIndicators: false) {
             VStack {
@@ -109,7 +109,6 @@ struct TourDetailsView: View {
                         .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
                 }
                 .padding()
-                
             }
         }
         

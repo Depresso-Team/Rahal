@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct CurvedTextField: View {
+    // MARK: - PROPERTIES
     @Binding var text: String
     var placeholder: String
     var title: String
     var isSecureField: Bool = false
     
+    // MARK: - BODY
     var body: some View {
         VStack (alignment: .leading,spacing: 6) {
             Text(title)

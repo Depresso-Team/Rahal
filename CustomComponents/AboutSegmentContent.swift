@@ -10,10 +10,12 @@ import SwiftUI
 
 
 struct AboutSegmentContent: View {
+    // MARK: - PROPERTIES
     let imageName: String
     let guideName: String
     let rating: Double
     
+    // MARK: - BODY
     var body: some View {
 
         
@@ -53,6 +55,6 @@ struct AboutSegmentContent: View {
 
 struct AboutSegmentContent_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewsSegmentContent(imageName: "user", guideName: "Abdelrahman", rating: 4.5)
+        AboutSegmentContent(imageName: "user", guideName: "Abdelrahman", rating: 4.5)
     }
 }
