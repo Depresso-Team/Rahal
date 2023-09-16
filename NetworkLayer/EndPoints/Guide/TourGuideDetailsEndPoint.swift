@@ -8,14 +8,14 @@
 import Foundation
 
 enum TourGuideDetailsEndpoint {
-    case fetchTourGuideDetails(userID: Int) // You can add any required parameters if needed
+    case fetchTourGuideDetails(userID: Int)
 }
 
 extension TourGuideDetailsEndpoint: EndPoint {
     var path: String {
         switch self {
-        case .fetchTourGuideDetails(_):
-            return "waiting backend as wel l"
+        case .fetchTourGuideDetails(let id):
+            return "/users/guides/\(id)/"
         }
     }
     
@@ -24,7 +24,7 @@ extension TourGuideDetailsEndpoint: EndPoint {
     }
     
     var header: [String : String]? {
-        return [:]
+        return nil
     }
     
     var body: [String: Any]? {

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TourGuideProfileView: View {
     // MARK: - PROPERTIES
+    @StateObject private var vm = TourGuideDetailsViewModel.shared
     @State private var selectedSegment = 0
     
     // MARK: - BODY
@@ -18,14 +19,19 @@ struct TourGuideProfileView: View {
                 Spacer()
                 // PROFILE
                 VStack {
-                    VStack (alignment: .center){
-                        Image("user")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 140, height: 140)
-                            .cornerRadius(70)
+                    VStack (alignment: .center) {
+                        AsyncImage(url: URL(string: vm.guide?.personal_photo ?? "")) { image in
+                            image
+                                .resizable()
+                        } placeholder: {
+                            Image(systemName: "person.crop.circle.fill")
+                                .resizable()
+                        }
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
                         
-                        Text("Abdelrahman Esmail").bold().font(.system(size: 20))
+                        Text(vm.guide?.username ?? "").bold().font(.system(size: 20))
                             .padding(.top,5)
                             .padding(.bottom,10)
                         
@@ -46,9 +52,9 @@ struct TourGuideProfileView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
-
+                    
                     if selectedSegment == 0 { // About Segment
-                        AboutSegmentView()
+                        AboutSegmentView(guide: vm.guide ?? GuideDetailsModel(id: 1, username: "", personal_photo: "", age: 1, license: 1, address: "", rate: "", review: [Review(review: "")], tour_list: [GuideToursModel(id: 1, name: "", price: 1, state_id: "", location: "", duration: 1)]))
                     } else if selectedSegment == 1 { // Reviews Segment
                         ReviewsSegmentContent(user: "Ali Osman", desc: "From Egypt, I’m 32 years old, license number 12345,Three years...", rating: 4.5)
                     } else if selectedSegment == 2 { // Trips Segment
@@ -61,33 +67,56 @@ struct TourGuideProfileView: View {
     }
 }
 
+
 struct TourGuideProfileView_Previews: PreviewProvider {
     static var previews: some View {
         TourGuideProfileView()
     }
 }
 
-let profileData: [(title: String, value: String)] = [("Name", "Ali Kamal"), ("Age","32 Years"), ("Location","Mansoura, Dakahlia, Egypt"),("license","12345"),("Rating","92% Good 8% Bad"),("Languages","English, French and Spanish"),("Identity","A tour guide in Egypt is a licensed  expert who offers insights into the country's history, culture.")]
-
 
 struct AboutSegmentView: View {
+    var guide: GuideDetailsModel
+    
     var body: some View {
         VStack(alignment: .leading) {
-            ForEach(profileData.indices, id: \.self) { index in
+            ForEach(Array(dataaa()), id: \.key) { key, value in
                 HStack {
-                    Text(profileData[index].title)
+                    Text(key)
                         .font(.headline)
                         .frame(width: 100, alignment: .leading)
                     HStack {
                         Divider()
                     }
                     Spacer()
-                    Text(profileData[index].value)
-                        .font(.body)
-                }.padding(.vertical,6)
+                    if let stringValue = value as? String {
+                        Text(stringValue)
+                            .font(.body)
+                            .minimumScaleFactor(0.5)
+                    } else {
+                        Text("Invalid Value")
+                            .font(.body)
+                            .foregroundColor(.red)
+                            .minimumScaleFactor(0.5)
+                    }
+                }
+                .padding(.vertical, 6)
                 Divider()
             }
         }
         .padding()
+    }
+    
+    func dataaa() -> [String: Any] {
+        let data =  [
+            "Name": guide.username,
+            "Age": "\(guide.age) Years",
+            "Location": guide.address,
+            "License": "\(guide.license)",
+            "Rating": "\(guide.rate)",
+            "Identity": "A tour guide in Egypt is a licensed  expert who offers insights into the country's history, culture."
+            
+        ] as [String : Any]
+        return data
     }
 }

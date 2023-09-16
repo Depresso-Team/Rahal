@@ -190,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				CC0A1CB82AAFB2F200CF678D /* HomeViewModel.swift */,
-				C1CA35192AB3026300045417 /* TourGuideDetailsViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -270,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				7F1492372AB5B88D00D98565 /* TourGuideViewModel.swift */,
+				C1CA35192AB3026300045417 /* TourGuideDetailsViewModel.swift */,
 			);
 			path = Guide;
 			sourceTree = "<group>";
