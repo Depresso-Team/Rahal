@@ -45,7 +45,7 @@ struct UserProfileView: View {
                     VStack(spacing: 8) {
                         ForEach(profileData) { row in
                             NavigationLink {
-                                
+                                ViewProfileSubView()
                             } label: {
                                 HStack {
                                     row.image
