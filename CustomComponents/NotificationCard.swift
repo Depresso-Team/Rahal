@@ -20,7 +20,7 @@ struct NotificationCard: View {
                 Image("notfy")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 132, height: 104)
+                    .frame(width: 112, height: 92)
                     .cornerRadius(16)
                 
                 VStack (alignment: .leading) {
@@ -36,7 +36,7 @@ struct NotificationCard: View {
                     
                 }
             }
-            .frame(width: UIScreen.main.bounds.width,height: 126)
+            .frame(width: UIScreen.main.bounds.width,height: 106)
         }
     }
     }

@@ -12,9 +12,10 @@ struct NotificationView: View {
         NavigationView {
             VStack {
                 HStack{
-                    Text("New").bold().padding(10)
+                    Text("New").bold().padding(.horizontal,16)
                     Spacer()
-                }
+                    Image(systemName: "line.3.horizontal").foregroundColor(.secondary).font(.title3)
+                }.padding(10)
                 
                 List {
                     NotificationCard(image: "user", notificationName: "Don't Miss it", notificationDetails: "Khan Al-Khalily is back with special offer, 200.LE for one and 300.LE for two, HERY UP!.")
