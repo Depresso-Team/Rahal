@@ -12,106 +12,144 @@ struct TourDetailsView: View {
     let rating: Double
     let price: Double
     let minTime: Int
-    @State private var currentIndex = 0
-    let tourImages: [String] = ["abuSimbleTemple","sphinx"]
-    @State private var  selectedSide: Sides = .about
+    @State private var selectedSegment = 0
+    let tourImages: [String] = ["abuSimbleTemple", "sphinx"]
 
     // MARK: - BODY
     var body: some View {
-        ScrollView (.vertical, showsIndicators: false) {
-            VStack {
-                
-                TabView {
+        VStack {
+            ScrollView (.vertical, showsIndicators: false) {
+                VStack {
+                    
+                    TabView {
                         ForEach(tourImages, id: \.self) { imageName in
                             Image(imageName)
                                 .resizable()
                                 .scaledToFill()
                         }
-                }
-                .frame(height: UIScreen.main.bounds.height*0.4)
-                .tabViewStyle(PageTabViewStyle())
-                
-                
-
-                VStack{
-                    HStack {
-                        Text("Giza Pyramids")
-                            .fontWeight(.heavy)
-                            .font(.system(size: 25))
-                            .padding(.vertical,2)
-                        Spacer()
                     }
+                    .frame(height: 280)
+                    .tabViewStyle(PageTabViewStyle())
                     
-                    HStack {
-                        ForEach(0..<5) { index in
-                            Image(systemName: index < Int(rating) ? "star.fill" :
-                                    (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
+                    VStack {
+                        HStack {
+                            Text("Giza Pyramids")
+                                .fontWeight(.heavy)
+                                .font(.system(size: 25))
+                                .padding(.vertical,2)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            ForEach(0..<5) { index in
+                                Image(systemName: index < Int(rating) ? "star.fill" :
+                                        (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
                                 .foregroundColor(.yellow)
                                 .font(.system(size: 14))
-                        }.padding(.vertical,2)
+                            }.padding(.vertical,2)
+                            
+                            Text("\(rating,specifier: "%.1f")").bold().font(.footnote)
+                            Text("(25000 reviews)")
+                                .font(.footnote)
+                                .foregroundColor(.secondary)
+                            Spacer()
+                        }
                         
-                        Text("\(rating,specifier: "%.1f")").bold().font(.footnote)
-                        Text("(25000 reviews)")
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
-                    Spacer()
-                    }
-                    
-                    // SEGMENT VIEW
-                        VStack{
-                            Picker("About", selection: $selectedSide){
-                                ForEach(Sides.allCases, id: \.self){
-                                    Text($0.rawValue)
-                                }
+                        // SEGMENT VIEW
+                        VStack {
+                            Picker(selection: $selectedSegment, label: Text("Segment")) {
+                                Text("About")
+                                    .tag(0)
+                                Text("Reviews")
+                                    .tag(1)
                             }
                             .pickerStyle(SegmentedPickerStyle())
                             .padding(4)
-                            ContentOfSegment(selectedSide: selectedSide)
                         }
-                    
-                    Divider()
-                    HStack{
-                        VStack{
-                            HStack{
-                                Image(systemName: "clock")
-                                Text("Min. Travel Time")
-                            }.font(.footnote)
-                            .foregroundColor(.secondary)
-                            
-                            Text("\(minTime) Hours")
-                                .bold()
+                        
+                        if selectedSegment == 0 {
+                            VStack (alignment: .leading) {
+                                Text("About Trip").bold()
+                                Text("Visitors to the Giza Pyramids can expect to marvel at the sheer size and precision of\nthese ancient monuments, which were constructed as tombs for pharaohs and served as symbols of their power and divinity.")
+                                
+                                HStack {
+                                    Image("user")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 45, height: 45)
+                                        .padding(.horizontal,6)
+                                        .clipShape(Circle())
+                                    
+                                    VStack (alignment: .leading){
+                                        Text("Abdo").bold()
+                                        HStack {
+                                            ForEach(0..<5) { index in
+                                                Image(systemName: index < Int(rating) ? "star.fill" :
+                                                        (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
+                                                    .foregroundColor(.yellow)
+                                                    .font(.system(size: 14))
+                                            }
+                                        }
+                                        Text("From Egypt, I’m 32 years old, license number 12345,Three years...")
+                                            .foregroundColor(.secondary)
+                                            .font(.footnote)
+                                            .fontWeight(.semibold)
+
+                                    }
+                                }
+                            }
+                            .padding()
+                        } else if selectedSegment == 1{
+                            VStack {
+                                Image(systemName: "eye.slash.fill")
+                                Text("Now reviews to show")
+                            }
+                            .padding()
                         }
-                        Spacer()
-                        VStack{
-                            HStack{
-                                Image(systemName: "dollarsign")
-                                Text("Estimated Coast")
-                            }.font(.footnote)
-                            .foregroundColor(.secondary)
-                            
-                            Text("$ \(price,specifier: "%.1f")")
-                                .bold()
+                        
+                        Divider()
+                        HStack{
+                            VStack{
+                                HStack{
+                                    Image(systemName: "clock")
+                                    Text("Min. Travel Time")
+                                }.font(.footnote)
+                                    .foregroundColor(.secondary)
+
+                                Text("\(minTime) Hours")
+                                    .bold()
+                            }
+                            Spacer()
+                            VStack{
+                                HStack{
+                                    Image(systemName: "dollarsign")
+                                    Text("Estimated Coast")
+                                }.font(.footnote)
+                                    .foregroundColor(.secondary)
+
+                                Text("$ \(price,specifier: "%.1f")")
+                                    .bold()
+                            }
                         }
-   
                     }
-                    // BOOK BUTTON
-                    Button{
-                        
-                        }
-                        
-                    label: {
-                        Text("Book Now").fontWeight(.bold).foregroundColor(.white)
-                            .font(.system(size: 18))
-                            .frame(width: UIScreen.main.bounds.width - 120,height: 42).font(.system(size: 24))
-                        
-                        
-                    }.background(Color("CustomDarkGreenColor")).cornerRadius(10)
-                        .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
+                    .padding()
                 }
-                .padding()
             }
+            .ignoresSafeArea()
+//             BOOK BUTTON
+            Button{
+
+                }
+            label: {
+                Text("Book Now").fontWeight(.bold).foregroundColor(.white)
+                    .font(.system(size: 18))
+                    .frame(width: UIScreen.main.bounds.width - 120,height: 42).font(.system(size: 24))
+
+
+            }
+            .background(Color("CustomDarkGreenColor")).cornerRadius(10)
+            .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
         }
-        
     }
     
 }
@@ -130,12 +168,13 @@ enum Sides : String, CaseIterable{
 
 struct ContentOfSegment: View {
     
-    var selectedSide : Sides
+    @Binding var selectedSide : Sides
     
     var body: some View {
-        switch selectedSide {
-        case .about: AboutSegmentContent(imageName: "user", guideName: "Abdelrahman", rating: 4.5)
-        case .reviews: Text("Textttt")
-        }
+        Text("")
+//        switch selectedSide {
+//        case .about:
+//        case .reviews:
+//        }
     }
 }
