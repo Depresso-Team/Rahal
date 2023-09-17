@@ -25,8 +25,9 @@ struct TourGuideView: View {
                             NavigationLink {
                                 TourGuideProfileView(guideId: guide.id)
                             } label: {
+                                let userName = guide.username.replacingOccurrences(of: "_", with: " ")
                                 GuideCard(image: guide.personal_photo,
-                                          guideName: guide.username,
+                                          guideName: userName,
                                           rating: guide.rate,
                                           location: guide.address)
                             }

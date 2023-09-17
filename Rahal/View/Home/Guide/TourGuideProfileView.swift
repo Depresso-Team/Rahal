@@ -37,6 +37,7 @@ struct TourGuideProfileView: View {
                             .padding(.bottom,10)
                         
                         HStack {
+                            
                             ForEach(0..<Int(vm.guide?.rate ?? 3.0)) { index in
                                 Image(systemName: index < Int(vm.guide?.rate ?? 3) ? "star.fill" :
                                         (index == Int(vm.guide?.rate ?? 3) && 5.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
