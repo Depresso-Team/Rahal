@@ -9,21 +9,24 @@ import SwiftUI
 
 struct ViewProfileSubView: View {
     var body: some View {
-        VStack{
-            VStack{
-                Image("user")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 140, height: 140)
-                    .cornerRadius(70)
-
-                Text("Abdelrahman Esmail").bold().font(.system(size: 24))
-                    .padding(.top,5)
-                    .padding(.bottom,20)
-            }
-        }
+        VStack {
+          Image("logo")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 128, height: 128)
+          
+              Text("""
+          Copyright © Depresso Team
+          All right reserved
+          Explore Egypt ♡ Like a local
+          """)
+            .font(.footnote)
+            .multilineTextAlignment(.center)
+        } //: VSTACK
+        .padding()
+        .opacity(0.4)
+      }
     }
-}
 
 struct ViewProfileSubView_Previews: PreviewProvider {
     static var previews: some View {
