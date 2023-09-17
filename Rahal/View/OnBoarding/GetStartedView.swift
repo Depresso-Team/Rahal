@@ -13,17 +13,20 @@ struct GetStartedView: View {
             ZStack {
                 Image("StartScreen")
                     .resizable()
-                    .scaledToFill()
                     .ignoresSafeArea()
 
                 VStack {
-                    Text("Lets start our Journey...")
-                        .font(.largeTitle)
-                        .padding()
-                    
-                    Text("Who are you ?")
-                        .font(.title)
-                        .padding(.horizontal)
+                    VStack {
+                        Text("Lets start our Journey...")
+                            .font(.largeTitle)
+                            .minimumScaleFactor(0.5)
+                            .padding()
+                        Text("Who are you ?")
+                            .font(.title)
+                            .padding(.horizontal)
+                    }
+                    .padding(.top, 32)
+                    .foregroundColor(.white)
                     
                     Spacer()
                     
@@ -53,24 +56,27 @@ struct GetStartedView: View {
                             .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
                             
                             // LOGIN BUTTON
-                            HStack (spacing: 2){
-                                Text("Do you have an account ?").foregroundColor(.black)
-                                NavigationLink{
-                                    LoginView()
-                                        .navigationBarBackButtonHidden(true)
-                                }label: {
-                                    Text("Login")
-                                        .foregroundColor(.black)
-                                        .fontWeight(.heavy)
-                                        .font(.system(size: 18))
-                                }
-                            }.padding(.top,16)
                         }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 20)
+                        HStack (spacing: 2){
+                            Text("Do you have an account ?").foregroundColor(.black)
+                            NavigationLink{
+                                LoginView()
+                                    .navigationBarBackButtonHidden(true)
+                            }label: {
+                                Text("Login")
+                                    .foregroundColor(.black)
+                                    .fontWeight(.heavy)
+                                    .font(.system(size: 18))
+                            }
+                        }
+                        .padding(.vertical,16)
                     }
                     .padding()
                     .background(BlurView(style: .systemUltraThinMaterial))
-                    .frame(width: 320, height: UIScreen.main.bounds.height*0.45)
-                    .cornerRadius(20)
+                    .cornerRadius(16)
+                    Spacer()
                 }
             }
         }

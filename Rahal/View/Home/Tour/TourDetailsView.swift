@@ -9,9 +9,6 @@ import SwiftUI
 
 struct TourDetailsView: View {
     // MARK: - PROPERTIES
-    let rating: Double
-    let price: Double
-    let minTime: Int
     @State private var selectedSegment = 0
     let tourImages: [String] = ["abuSimbleTemple", "sphinx"]
 
@@ -42,13 +39,13 @@ struct TourDetailsView: View {
                         
                         HStack {
                             ForEach(0..<5) { index in
-                                Image(systemName: index < Int(rating) ? "star.fill" :
-                                        (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
+                                Image(systemName: index < Int(4.5) ? "star.fill" :
+                                        (index == Int(4.5) && 4.5.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
                                 .foregroundColor(.yellow)
                                 .font(.system(size: 14))
                             }.padding(.vertical,2)
                             
-                            Text("\(rating,specifier: "%.1f")").bold().font(.footnote)
+                            Text("\(4.5,specifier: "%.1f")").bold().font(.footnote)
                             Text("(25000 reviews)")
                                 .font(.footnote)
                                 .foregroundColor(.secondary)
@@ -84,8 +81,8 @@ struct TourDetailsView: View {
                                         Text("Abdo").bold()
                                         HStack {
                                             ForEach(0..<5) { index in
-                                                Image(systemName: index < Int(rating) ? "star.fill" :
-                                                        (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
+                                                Image(systemName: index < Int(4.5) ? "star.fill" :
+                                                        (index == Int(4.5) && 4.5.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
                                                     .foregroundColor(.yellow)
                                                     .font(.system(size: 14))
                                             }
@@ -116,7 +113,7 @@ struct TourDetailsView: View {
                                 }.font(.footnote)
                                     .foregroundColor(.secondary)
 
-                                Text("\(minTime) Hours")
+                                Text("5 Hours")
                                     .bold()
                             }
                             Spacer()
@@ -127,7 +124,7 @@ struct TourDetailsView: View {
                                 }.font(.footnote)
                                     .foregroundColor(.secondary)
 
-                                Text("$ \(price,specifier: "%.1f")")
+                                Text("$ 350")
                                     .bold()
                             }
                         }
@@ -156,7 +153,7 @@ struct TourDetailsView: View {
 
 struct TourDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        TourDetailsView(rating: 4.5, price: 350, minTime: 6)
+        TourDetailsView()
     }
 }
 

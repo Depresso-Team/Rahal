@@ -18,13 +18,17 @@ struct ToursView: View {
             ScrollView (.vertical, showsIndicators: false) {
                 VStack {
                     ForEach(vm.tripDetails) { trip in
-                        TourCardExtended(image: trip.photo ?? "",
-                                         tourName: trip.name,
-                                         price: trip.price,
-                                         desc: trip.description,
-                                         rating: trip.rate,
-                                         location: trip.location,
-                                         duration: trip.duration)
+                        NavigationLink {
+                            TourDetailsView()
+                        } label: {
+                            TourCardExtended(image: trip.photo ?? "",
+                                             tourName: trip.name,
+                                             price: trip.price,
+                                             desc: trip.description,
+                                             rating: trip.rate,
+                                             location: trip.location,
+                                             duration: trip.duration)
+                        }
                     }
                 }
                 .padding()
