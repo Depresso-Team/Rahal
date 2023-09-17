@@ -24,6 +24,6 @@ struct DetaildTrip: Identifiable, Codable {
     let saved: Bool
     let photo: String?
     let guide: Int?
-    let reviews: [Review]
+    let reviews: [Review]?
 }
 

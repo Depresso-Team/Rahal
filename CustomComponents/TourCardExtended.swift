@@ -61,7 +61,7 @@ struct TourCardExtended: View {
                     .font(.footnote)
                     .padding(.vertical,1)
                     HStack{
-                        Text("\(price)USD").bold()
+                        Text("\(price) USD").bold()
                         Text("/ \(duration) Day").bold()
                             .foregroundColor(.secondary)
                             .font(.footnote)

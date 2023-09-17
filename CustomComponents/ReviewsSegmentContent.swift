@@ -18,9 +18,10 @@ struct ReviewsSegmentContent: View {
         VStack (spacing: 20) {
             HStack {
                 VStack (alignment: .leading) {
-                    Text(user).bold()
-                        .padding(.vertical, 2)
                     HStack {
+                        Text(user).bold()
+                            .padding(.vertical, 2)
+                        Spacer()
                         ForEach(0..<5) { index in
                             Image(systemName: index < Int(rating) ? "star.fill" :
                                     (index == Int(rating) && rating.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))

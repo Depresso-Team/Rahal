@@ -83,7 +83,6 @@ struct TourDetailsView: View {
                         VStack {
                             ForEach(vm.trip?.reviews ?? [Review(id: 1, review: "", reviewer_username: "", date: "")]) { review in
                                 ReviewsSegmentContent(user: review.reviewer_username, desc: review.review, rating: 3.5)
-                                    .padding()
                             }
                         }
                         .padding()
@@ -119,7 +118,7 @@ struct TourDetailsView: View {
         }
         .onAppear {
             Task {
-                try await vm.fetchTripDetails(tripID: 2)
+                try await vm.fetchTripDetails(tripID: tourId)
             }
         }
         .ignoresSafeArea()
