@@ -96,7 +96,7 @@ struct HomeView: View {
                                 .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
                                 .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
                         )
-                })
+                }).padding(.bottom,10)
                 // NOTIFICATION BUTTON
                 NavigationLink(destination: NotificationView(), label: {
                     Image(systemName: "bell")
@@ -110,7 +110,7 @@ struct HomeView: View {
                                 .foregroundColor(Color("CustomDarkGreenColor").opacity(0.2))
                                 .shadow(color: Color.black.opacity(0.3), radius: 2, x: 0, y: 6)
                         )
-                })
+                }).padding(.bottom,10)
             })
             .navigationBarTitleDisplayMode(.large)
         }

@@ -20,7 +20,7 @@ struct TourGuideView: View {
     var body: some View {
             ScrollView (.vertical, showsIndicators: false) {
                 VStack {
-                    LazyVGrid(columns: grids, spacing: 14) {
+                    LazyVGrid(columns: grids, spacing: 10) {
                         ForEach(vm.guides) { guide in
                             NavigationLink {
                                 TourGuideProfileView()
