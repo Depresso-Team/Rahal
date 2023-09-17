@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TripDetailsViewModel {
+class TripDetailsViewModel: ObservableObject {
     static let shared = TripDetailsViewModel()
     private var services: TripDetailsServices!
     

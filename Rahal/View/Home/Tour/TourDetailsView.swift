@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TourDetailsView: View {
     // MARK: - PROPERTIES
-    private let vm = TripDetailsViewModel.shared
+    @StateObject private var vm = TripDetailsViewModel.shared
     var tourId: Int
     @State private var selectedSegment = 0
     let tourImages: [String] = ["abuSimbleTemple", "sphinx"]
@@ -76,13 +76,15 @@ struct TourDetailsView: View {
                                     .padding(.bottom, 8)
                                 Spacer()
                             }
-                            Text(vm.trip?.description ?? "")                            
+                            Text(vm.trip?.description ?? "")
                         }
                         .padding()
                     } else if selectedSegment == 1 {
                         VStack {
-                            Image(systemName: "eye.slash.fill")
-                            Text("Now reviews to show")
+                            ForEach(vm.trip?.reviews ?? [Review(id: 1, review: "", reviewer_username: "", date: "")]) { review in
+                                ReviewsSegmentContent(user: review.reviewer_username, desc: review.review, rating: 3.5)
+                                    .padding()
+                            }
                         }
                         .padding()
                     }
