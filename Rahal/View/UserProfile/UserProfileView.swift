@@ -14,9 +14,9 @@ struct ProfileItems: Identifiable {
 }
 
 struct UserProfileView: View {
-    
     @State private var showLogoutAction: Bool = false
     @State private var showDeleteAccount: Bool = false
+    private let userData = UserData.getUserModel()
     
     private let profileData: [ProfileItems] = [
         .init(id: 1, image: Image(systemName: "person"), title: "View profile"),
@@ -39,14 +39,20 @@ struct UserProfileView: View {
                     VStack{
                         // USER PROFILE IMAGE
                         VStack{
-                            Image(systemName: "person.crop.circle.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .foregroundColor(Color("CustomDarkGreenColor"))
-                                .frame(width: 100, height: 100)
-                                .clipShape(Circle())
+                            AsyncImage(url: URL(string: userData?.photo_url ?? "")) { image in
+                                image
+                                    .resizable()
+                            } placeholder: {
+                                Image(systemName: "person.crop.circle.fill")
+                                    .resizable()
+                            }
+                            .aspectRatio(contentMode: .fill)
+                            .foregroundColor(Color("CustomDarkGreenColor"))
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+
                             
-                            Text("Abdelrahman Esmail").bold().font(.system(size: 24))
+                            Text(userData?.username ?? "Abdalazem saleh").bold().font(.system(size: 24))
                                 .padding(.top,5)
                                 .padding(.bottom,20)
                         }
