@@ -10,6 +10,7 @@ import SwiftUI
 struct SplashView: View {
     // MARK: - PROPERTIES
     @State private var isStarted: Bool = false
+    @State private var showMainAppView: Bool = false
     // MARK: - BODY
     var body: some View {
         ZStack() {
@@ -27,9 +28,16 @@ struct SplashView: View {
                 .scaledToFit()
                 .scaleEffect(isStarted ? 1.0: 0.0)
                 .onAppear {
-                    withAnimation(.linear(duration: 1.5)) {isStarted = true
+                    withAnimation(.linear(duration: 1.5)) {
+                        isStarted = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                            showMainAppView = true
+                        }
                     }
                 }
+        }
+        .fullScreenCover(isPresented: $showMainAppView) {
+            OnBoardingOneView()
         }
     }
 }
