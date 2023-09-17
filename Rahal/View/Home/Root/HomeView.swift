@@ -73,7 +73,12 @@ struct HomeView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 20) {
                             ForEach(vm.guides) { guide in
-                                GuideCard(image: guide.personal_photo, guideName: guide.username, rating: Double(guide.rate), location: "Location")
+                                let userName = guide.username.replacingOccurrences(of: "_", with: " ")
+                                NavigationLink {
+                                    TourGuideProfileView(guideId: guide.id)
+                                } label: {
+                                    GuideCard(image: "https://rahal-app-efe3e7eff0b7.herokuapp.com\(guide.personal_photo)", guideName: userName, rating: Double(guide.rate), location: guide.address)
+                                }
                             }
                         }
                         .padding(.horizontal)

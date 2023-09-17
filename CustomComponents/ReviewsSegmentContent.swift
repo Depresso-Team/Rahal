@@ -19,6 +19,7 @@ struct ReviewsSegmentContent: View {
             HStack {
                 VStack (alignment: .leading) {
                     Text(user).bold()
+                        .padding(.vertical, 4)
                     HStack {
                         ForEach(0..<5) { index in
                             Image(systemName: index < Int(rating) ? "star.fill" :
@@ -27,6 +28,7 @@ struct ReviewsSegmentContent: View {
                                 .font(.system(size: 14))
                         }
                     }
+                    .padding(.vertical, 4)
                     Text(desc)
                         .foregroundColor(.secondary)
                         .font(.footnote)

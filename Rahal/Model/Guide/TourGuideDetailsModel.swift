@@ -14,7 +14,7 @@ struct GuideDetailsModel: Identifiable, Codable {
     let age: Int
     let license: Int
     let address: String
-    let rate: Float
+    let rate: Double
     let review: [Review]
     let tour_list: [GuideToursModel]
 }

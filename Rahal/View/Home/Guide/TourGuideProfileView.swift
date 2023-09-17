@@ -29,7 +29,7 @@ struct TourGuideProfileView: View {
                                 .resizable()
                         }
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 100, height: 100)
+                        .frame(width: 164, height: 164)
                         .clipShape(Circle())
                         
                         Text(vm.guide?.username ?? "").bold().font(.system(size: 20))
@@ -37,9 +37,9 @@ struct TourGuideProfileView: View {
                             .padding(.bottom,10)
                         
                         HStack {
-                            ForEach(0..<5) { index in
-                                Image(systemName: index < Int(5) ? "star.fill" :
-                                        (index == Int(5) && 5.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
+                            ForEach(0..<Int(vm.guide?.rate ?? 3.0)) { index in
+                                Image(systemName: index < Int(vm.guide?.rate ?? 3) ? "star.fill" :
+                                        (index == Int(vm.guide?.rate ?? 3) && 5.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
                                 .foregroundColor(.yellow)
                                 .font(.system(size: 18))
                             }.padding(.bottom,2)
