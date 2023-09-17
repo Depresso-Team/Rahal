@@ -16,9 +16,6 @@ class TourGuideDetailsViewModel: ObservableObject {
     
     private init() {
         services = TourGuideDetailsServices()
-        Task {
-            try await fetchTourGuideDetails(userID: 2)
-        }
     }
     
     @MainActor
@@ -26,7 +23,6 @@ class TourGuideDetailsViewModel: ObservableObject {
         do {
             let guide = try await services.fetchTourGuideDetails(userID: userID)
             self.guide = guide
-            print(guide)
         } catch {
             print( error)
         }

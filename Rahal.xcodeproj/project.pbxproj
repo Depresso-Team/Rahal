@@ -398,8 +398,8 @@
 		CC0A1CC22AAFB41900CF678D /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				CC0A1CC32AAFB41900CF678D /* EndPoints */,
 				CC0A1CC82AAFB41900CF678D /* Base */,
+				CC0A1CC32AAFB41900CF678D /* EndPoints */,
 				CC0A1CCC2AAFB41900CF678D /* Services */,
 			);
 			path = NetworkLayer;

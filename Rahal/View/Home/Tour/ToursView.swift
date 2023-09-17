@@ -18,7 +18,7 @@ struct ToursView: View {
                 VStack {
                     ForEach(vm.tripDetails) { trip in
                         NavigationLink {
-                            TourDetailsView()
+                            TourDetailsView(tourId: trip.id)
                         } label: {
                             TourCardExtended(image: trip.photo ?? "",
                                              tourName: trip.name,
@@ -35,7 +35,6 @@ struct ToursView: View {
             .navigationTitle("Tours")
             .navigationBarTitleDisplayMode(.automatic)
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-        
         
         .alert(isPresented: Binding(
             get: { vm.showAlert },

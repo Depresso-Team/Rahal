@@ -11,6 +11,7 @@ struct TourGuideProfileView: View {
     // MARK: - PROPERTIES
     @StateObject private var vm = TourGuideDetailsViewModel.shared
     @State private var selectedSegment = 0
+    var guideId: Int
     
     // MARK: - BODY
     var body: some View {
@@ -54,13 +55,15 @@ struct TourGuideProfileView: View {
                     .padding()
                     
                     if selectedSegment == 0 {
-                        AboutSegmentView(guide: vm.guide ?? GuideDetailsModel(id: 1, username: "", personal_photo: "", age: 1, license: 1, address: "", rate: "", review: [Review(review: "")], tour_list: [GuideToursModel(id: 1, name: "", price: 1, state_id: "", location: "", duration: 1)]))
+                        AboutSegmentView(guide: vm.guide ?? GuideDetailsModel(id: 1, username: "", personal_photo: "", age: 1, license: 1, address: "", rate: 4.5, review: [Review(id: 1, review: "", reviewer_username: "", date: "")], tour_list: [GuideToursModel(id: 1, photo: "", name: "", price: 1, state_id: "", location: "", duration: 1)]))
                     } else if selectedSegment == 1 {
-                        ReviewsSegmentContent(user: "Ali Osman", desc: "From Egypt, I’m 32 years old, license number 12345,Three years...", rating: 4.5)
-                            .padding()
+                        ForEach(vm.guide?.review ?? [Review(id: 1, review: "", reviewer_username: "", date: "")]) { review in
+                            ReviewsSegmentContent(user: review.reviewer_username, desc: review.review, rating: 3.5)
+                                .padding()
+                        }
                     } else if selectedSegment == 2 {
-                        ForEach(vm.guide?.tour_list ?? [GuideToursModel(id: 1, name: "Giza Pyramids", price: 360, state_id: "1", location: "", duration: 1)]) { tour in
-                            TourCardExtended(image: "pyramids",
+                        ForEach(vm.guide?.tour_list ?? [GuideToursModel(id: 1, photo: "", name: "Giza Pyramids", price: 360, state_id: "1", location: "", duration: 1)]) { tour in
+                            TourCardExtended(image: tour.photo,
                                              tourName: tour.name,
                                              price: tour.price,
                                              desc: "In the shadow of the Giza  Pyramids...",
@@ -72,13 +75,18 @@ struct TourGuideProfileView: View {
                     Spacer()
                 }
             }
+            .onAppear {
+                Task {
+                    try await vm.fetchTourGuideDetails(userID: guideId)
+                }
+            }
         }
     }
 }
 
 struct TourGuideProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        TourGuideProfileView()
+        TourGuideProfileView(guideId: 0)
     }
 }
 

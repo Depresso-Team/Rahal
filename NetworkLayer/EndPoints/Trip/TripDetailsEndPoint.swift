@@ -14,8 +14,8 @@ enum TripDetailsEndpoint {
 extension TripDetailsEndpoint: EndPoint {
     var path: String {
         switch self {
-        case .fetchTripDetails(_):
-            return "the link when the back makes it"
+        case .fetchTripDetails(let id):
+            return "/tours/\(id)/"
         }
     }
     

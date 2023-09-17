@@ -23,10 +23,10 @@ struct TourGuideView: View {
                     LazyVGrid(columns: grids, spacing: 10) {
                         ForEach(vm.guides) { guide in
                             NavigationLink {
-                                TourGuideProfileView()
+                                TourGuideProfileView(guideId: guide.id)
                             } label: {
                                 GuideCard(image: guide.personal_photo,
-                                          guideName: "Abdalarhamn",
+                                          guideName: guide.username,
                                           rating: guide.rate,
                                           location: guide.address)
                             }

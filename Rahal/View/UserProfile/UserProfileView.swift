@@ -102,7 +102,7 @@ struct UserProfileView: View {
                     ActionSheet(title: Text("Woops"), message: Text("Are you sure you want logout?"), buttons: [
                         .destructive(Text("Logout"),
                                      action: {
-                                         print("Logout")
+                                         UserData.resetDefaults()
                                      }),
                         .cancel(Text("Cancel"))
                     ])
