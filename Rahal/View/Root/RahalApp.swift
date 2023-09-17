@@ -11,7 +11,11 @@ import SwiftUI
 struct RahalApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            if UserData.getUserModel() != nil {
+                MainTabView()
+            } else {
+                SplashView()
+            }
         }
     }
 }

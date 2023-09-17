@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     //MARK: - PROPERTIES
     @ObservedObject var vm = LoginViewModel.shared
+    @State private var loginSuccess: Bool = false
 
     // MARK: - BODY
     var body: some View {
@@ -23,11 +24,11 @@ struct LoginView: View {
                     // FORM FIELDS
                     VStack (alignment: .leading, spacing: 18) {
                         Text("Login").font(.title).fontWeight(.bold).foregroundColor(Color("CustomDarkGreenColor"))
-                        CurvedTextField(text: $vm.email, placeholder: "",title: "Email Address").textInputAutocapitalization(.none)
+                        CurvedTextField(text: $vm.email, placeholder: "",title: "Email Address")
+                            .textInputAutocapitalization(.none)
                         CurvedTextField(text: $vm.password, placeholder: "", title: "Password",isSecureField: true)
                     }.padding(.horizontal)
                         .padding(.top,28)
-                    
                     
                     // Forget Password
                     HStack{
@@ -49,8 +50,8 @@ struct LoginView: View {
                         vm.login()
                         vm.responseHandler = {result in
                             switch result {
-                            case.success(let msg):
-                                print(msg)
+                            case.success(_):
+                                loginSuccess = true
                             case.failure(let error):
                                 print(error)
                             }
@@ -80,6 +81,9 @@ struct LoginView: View {
                     Spacer()
                     
                 }
+            }
+            .fullScreenCover(isPresented: $loginSuccess) {
+                MainTabView()
             }
             .navigationTitle("Login")
             .navigationBarTitleDisplayMode(.inline)

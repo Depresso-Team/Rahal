@@ -29,8 +29,8 @@ class LoginViewModel: ObservableObject {
         Task {
             let parms = ["username": email, "password": password]
             do {
-                let _ = try await services.login(parms: parms)
-                
+                let user = try await services.login(parms: parms)
+                UserData.chacheUserModel(user: user)
                 responseHandler?(.success("Login successfully "))
             } catch {
                 responseHandler?(.failure(error))
