@@ -38,13 +38,17 @@ struct TourGuideProfileView: View {
                         
                         HStack {
                             
-                            ForEach(0..<Int(vm.guide?.rate ?? 3.0)) { index in
-                                Image(systemName: index < Int(vm.guide?.rate ?? 3) ? "star.fill" :
-                                        (index == Int(vm.guide?.rate ?? 3) && 5.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
-                                .foregroundColor(.yellow)
-                                .font(.system(size: 18))
-                            }.padding(.bottom,2)
-                        }.padding(.bottom,10)
+                            ForEach(0..<5) { index in
+                                if let rate = vm.guide?.rate {
+                                    Image(systemName: index < Int(rate) ? "star.fill" :
+                                            (index == Int(rate) && rate.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
+                                    .foregroundColor(.yellow)
+                                    .font(.system(size: 14))
+                                }
+                            }
+                            .padding(.bottom,2)
+                        }
+                        .padding(.bottom,10)
                     }
                     
                     Picker(selection: $selectedSegment, label: Text("Segment")) {

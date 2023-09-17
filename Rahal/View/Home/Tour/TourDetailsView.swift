@@ -35,7 +35,7 @@ struct TourDetailsView: View {
                 
                 VStack {
                     HStack {
-                        Text("Giza Pyramids")
+                        Text(vm.trip?.name ?? "No Name")
                             .fontWeight(.heavy)
                             .font(.system(size: 25))
                             .padding(.vertical,2)
@@ -71,35 +71,12 @@ struct TourDetailsView: View {
                     
                     if selectedSegment == 0 {
                         VStack (alignment: .leading) {
-                            Text("About Trip").bold()
-                                .padding(.bottom, 8)
-                            Text(vm.trip?.description ?? "")
-                            
                             HStack {
-                                Image("user")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 45, height: 45)
-                                    .padding(.horizontal,6)
-                                    .clipShape(Circle())
-                                
-                                VStack (alignment: .leading){
-                                    Text("Abdo").bold()
-                                    HStack {
-                                        ForEach(0..<5) { index in
-                                            Image(systemName: index < Int(4.5) ? "star.fill" :
-                                                    (index == Int(4.5) && 4.5.truncatingRemainder(dividingBy: 1) == 0.5 ? "star.lefthalf.fill" : "star"))
-                                            .foregroundColor(.yellow)
-                                            .font(.system(size: 14))
-                                        }
-                                    }
-                                    Text("From Egypt, I’m 32 years old, license number 12345,Three years...")
-                                        .foregroundColor(.secondary)
-                                        .font(.footnote)
-                                        .fontWeight(.semibold)
-                                    
-                                }
+                                Text("About Trip").bold()
+                                    .padding(.bottom, 8)
+                                Spacer()
                             }
+                            Text(vm.trip?.description ?? "")                            
                         }
                         .padding()
                     } else if selectedSegment == 1 {
@@ -119,7 +96,7 @@ struct TourDetailsView: View {
                             }.font(.footnote)
                                 .foregroundColor(.secondary)
                             
-                            Text("\(vm.trip?.duration ?? 5)")
+                            Text("\(vm.trip?.duration ?? 4)")
                                 .bold()
                         }
                         Spacer()
@@ -137,10 +114,10 @@ struct TourDetailsView: View {
                 }
                 .padding()
             }
-            .onAppear {
-                Task {
-                    try await vm.fetchTripDetails(tripID: tourId)
-                }
+        }
+        .onAppear {
+            Task {
+                try await vm.fetchTripDetails(tripID: 2)
             }
         }
         .ignoresSafeArea()
@@ -149,6 +126,6 @@ struct TourDetailsView: View {
 
 struct TourDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        TourDetailsView(tourId: 1)
+        TourDetailsView(tourId: 2)
     }
 }
