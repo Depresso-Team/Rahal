@@ -14,7 +14,6 @@ struct ToursView: View {
 
     // MARK: - BODY
     var body: some View {
-        NavigationView {
             ScrollView (.vertical, showsIndicators: false) {
                 VStack {
                     ForEach(vm.tripDetails) { trip in
@@ -36,7 +35,8 @@ struct ToursView: View {
             .navigationTitle("Tours")
             .navigationBarTitleDisplayMode(.automatic)
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-        }
+        
+        
         .alert(isPresented: Binding(
             get: { vm.showAlert },
             set: { newValue in vm.showAlert = newValue }

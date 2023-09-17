@@ -18,7 +18,6 @@ struct TourGuideView: View {
     ]
     // MARK: - BODY
     var body: some View {
-        NavigationView {
             ScrollView (.vertical, showsIndicators: false) {
                 VStack {
                     LazyVGrid(columns: grids, spacing: 14) {
@@ -39,7 +38,6 @@ struct TourGuideView: View {
             .navigationTitle("Tour Guides")
             .navigationBarTitleDisplayMode(.automatic)
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-        }
     }
 }
 

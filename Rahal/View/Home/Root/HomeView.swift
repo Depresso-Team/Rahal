@@ -48,7 +48,7 @@ struct HomeView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 10) {
                             ForEach(vm.trips) { trip in
-                                TourCard(imageName: "pyramids", tourName: trip.name, rating: Double(trip.rate), location: trip.location, duration: "3 days")
+                                TourCard(imageName: trip.photo, tourName: trip.name, rating: Double(trip.rate), location: trip.location, duration: "\(trip.duration) days")
                             }
                         }
                         .padding(.horizontal)

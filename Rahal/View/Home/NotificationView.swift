@@ -10,7 +10,6 @@ import SwiftUI
 struct NotificationView: View {
     // MARK: - BODY
     var body: some View {
-        NavigationView {
             VStack {
                 HStack{
                     Text("New").bold().padding(.horizontal,16)
@@ -26,7 +25,6 @@ struct NotificationView: View {
                 .listStyle(GroupedListStyle())
             }
             .navigationTitle("Notification")
-        }
     }
 }
 
