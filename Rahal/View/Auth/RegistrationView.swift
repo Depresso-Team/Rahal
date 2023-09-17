@@ -87,6 +87,8 @@ struct RegistrationView: View {
                     
                 }
             }
+            .navigationTitle("Sign up")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     

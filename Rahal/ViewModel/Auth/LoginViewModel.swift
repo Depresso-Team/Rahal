@@ -27,12 +27,11 @@ class LoginViewModel: ObservableObject {
     func login() {
         
         Task {
-            let parms = ["email": email, "password": password , "username": username]
+            let parms = ["username": email, "password": password]
             do {
                 let _ = try await services.login(parms: parms)
                 
                 responseHandler?(.success("Login successfully "))
-
             } catch {
                 responseHandler?(.failure(error))
             }

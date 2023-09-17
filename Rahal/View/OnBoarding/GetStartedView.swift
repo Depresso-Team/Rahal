@@ -61,8 +61,7 @@ struct GetStartedView: View {
                             Text("Do you have an account ?").foregroundColor(.black)
                             NavigationLink{
                                 LoginView()
-                                    .navigationBarBackButtonHidden(true)
-                            }label: {
+                            } label: {
                                 Text("Login")
                                     .foregroundColor(.black)
                                     .fontWeight(.heavy)
