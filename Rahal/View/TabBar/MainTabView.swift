@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct MainTabView: View {
+    // MARK: - PROPERTIES
     @State private var selectedIndex = 0
     
+    // MARK: - BODY
     var body: some View {
         TabView(selection: $selectedIndex) {
             HomeView()

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GetStartedView: View {
+    // MARK: - BODY
     var body: some View {
         NavigationView {
             ZStack {
@@ -16,28 +17,25 @@ struct GetStartedView: View {
                     .ignoresSafeArea()
 
                 VStack {
-                    VStack {
-                        Text("Lets start our Journey...")
-                            .font(.largeTitle)
-                            .minimumScaleFactor(0.5)
-                            .padding()
-                        Text("Who are you ?")
-                            .font(.title)
-                            .padding(.horizontal)
-                    }
-                    .padding(.top, 32)
-                    .foregroundColor(.white)
-                    
                     Spacer()
-                    
                     VStack{
+                        VStack {
+                            Text("Lets start our Journey...")
+                                .font(.largeTitle)
+                                .minimumScaleFactor(0.5)
+                                .padding()
+                            Text("Who are you ?")
+                                .font(.title)
+                                .padding(.horizontal)
+                        }
+                        .padding(.top, 32)
                         // SELECT USER MODE
                         VStack (spacing: 22) {
                             // User button
                             NavigationLink {
                                 RegistrationView(isGuide: false)
                             } label: {
-                                Text("User").fontWeight(.semibold).foregroundColor(.black)
+                                Text("Tourist").fontWeight(.semibold).foregroundColor(.black)
                                     .font(.system(size: 18))
                                     .frame(width: UIScreen.main.bounds.width - 120,height: 52).font(.system(size: 26))
                             }

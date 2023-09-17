@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SplashView: View {
-    
+    // MARK: - PROPERTIES
     @State private var isStarted: Bool = false
-    
+    // MARK: - BODY
     var body: some View {
         ZStack() {
             Rectangle()
@@ -27,7 +27,7 @@ struct SplashView: View {
                 .scaledToFit()
                 .scaleEffect(isStarted ? 1.0: 0.0)
                 .onAppear {
-                    withAnimation(.linear(duration: 1.5)) {                        isStarted = true
+                    withAnimation(.linear(duration: 1.5)) {isStarted = true
                     }
                 }
         }
